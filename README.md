@@ -2,7 +2,14 @@
 
 Code to reverse-engineer the original checklist html and create a bootstrap version.
 The most important file to edit is probably [mock_template.html](mock_template.html) , which controls the template. 
-To render, install the packages from requirements.txt and call [mock.py](mock.py)
+To render, install the packages from requirements.txt and call [mock.py](mock.py), e.g. something like:
+
+```
+python3 -m venv env
+env/bin/pip install -r requirements.txt
+env/bin/python mock.py
+firefox mock.html
+```
 
 ## Files:
 
