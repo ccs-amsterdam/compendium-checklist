@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="COMPENDIUM | Open Science">
+    <meta name="author" content="CCS Amsterdam">
+    <title>COMPENDIUM | Open Science</title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+
+    <!-- GOOGLE WEB FONT -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<link href="css/menu.css" rel="stylesheet">
+	<link href="css/vendors.min.css" rel="stylesheet">
+	<link href="css/icon_fonts/css/all_icons.min.css" rel="stylesheet">
+	<link href="css/skins/square/grey.css" rel="stylesheet">
+
+    <!-- YOUR CUSTOM CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+	
+	<script src="js/modernizr.js"></script>
+	<!-- Modernizr -->
+
+</head>
+
+<body>
+	
+	<div id="preloader">
+		<div data-loader="circle-side"></div>
+	</div><!-- /Preload -->
+	
+	<div id="loader_form">
+		<div data-loader="circle-side-2"></div>
+	</div><!-- /loader_form -->
+	
+	<header>
+		<div class="container-fluid">
+		    <div class="row">
+                <div class="col-3">
+                    <div id="logo_home">
+                        <h1><a href="index.html">COMPENDIUM | Open Science</a></h1>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <nav>
+                        <ul class="cd-primary-nav">
+                            <li><a href="about.html" class="animated_link">About</a></li>
+                            <li><a href="contacts.html" class="animated_link">Contacts</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+		</div>
+		<!-- /container -->
+	</header>
+	<!-- /Header -->
+	
+	<main>
+		<div class="container">
+			<div id="wizard_container">
+				<form name="example-1" id="wrapped" method="POST">
+					<input id="website" name="website" type="text" value="">
+					<!-- Leave input above for security protection, read docs for details -->
+					<div id="middle-wizard">
+						
+						<!-- First branch Have you ever used the Compendium =========================== -->
+						<div class="step" data-state="branchtype">
+							<div class="question_title">
+								<h3>Have you used the Standardized Research Compendium for your research project before?</h3>
+								<p>You might need some more instructions if you are here the first time.</p>
+							</div>
+							<div class="row justify-content-center">
+								<div class="col-lg-4">
+									<div class="item">
+										<input id="answer_1" type="radio" name="branch_1_group_0" value="Used_before" class="required">
+										<label for="answer_1"><img src="img/yes.svg" alt="" height = "100"><strong>Yes</strong>I know what to do. </label>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="item">
+										<input id="answer_2" name="branch_1_group_0" type="radio" value="First_time_user" class="required">
+										<label for="answer_2"><img src="img/info.svg" alt="" height = "100"><strong>No</strong> I need some help to know where to start.</label>
+									</div>
+								</div>
+							</div>
+							<!-- /row-->
+						</div>
+
+						<!-- /First branch First_time_user ============================== -->
+						
+						<!-- /Have you ever used the Compendium > Version Control ============================== -->
+
+						<div class="branch" id="First_time_user">
+							<div class="step" data-state="branchtype">
+								<div class="question_title">
+									<h3>Have you ever worked with Version Control before?</h3>
+									<p>Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_1" type="radio" name="branch_1_group_1" value="Git_next" class="required">
+											<label for="branch_1_answer_1"><img src="img/yes.svg" height = "100" alt=""><strong>Yes</strong>I know version control and have used it before.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_2" name="branch_1_group_1" type="radio" value="Git_next" class="required">
+											<label for="branch_1_answer_2"><img src="img/info.svg" height = "100" alt=""><strong>No</strong>I have never used version control before</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+							<!-- /step -->
+						</div>
+
+						<!-- First branch Used_before ============================== -->
+
+						<!-- /Have you ever used the Compendium > Install Check ============================== -->
+						
+						<div class="branch" id="Used_before">
+							<div class="step" data-state="branchtype">
+								<div class="question_title">
+									<h3>Do you have Git, Python, and Doit installed on the computer you are working on?</h3>
+									<p>All the things you need.</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_2_answer_1" type="radio" name="branch_2_group_1" value="Repo" class="required">
+											<label for="branch_2_answer_1"><img src="img/yes.svg" alt="" height = "100"><strong>Yes</strong>I have all of this installed.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_2_answer_2" name="branch_2_group_1" type="radio" value="Git_next" class="required">
+											<label for="branch_2_answer_2"><img src="img/info.svg" alt="" height = "100"><strong>No</strong>I need help with it.</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+						</div>
+
+						<!-- /Version Control > Git Check ============================== -->
+						
+						<!-- First branch Git Check ============================== -->
+						<div class="branch" id="Git_next">
+							<div class="step" data-state="branchtype">
+								<div class="question_title">
+									<h3>Do you have Git installed on the computer you are working on?</h3>
+									<p>To get you all the code.</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_3" type="radio" name="branch_1_group_2" value="Git_installed" class="required">
+											<label for="branch_1_answer_3"><img src="img/yes.svg" alt="" height = "100"><strong>Yes</strong>I have Git installed.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_4" name="branch_1_group_2" type="radio" value="Git_installed" class="required">
+											<label for="branch_1_answer_4"><img src="img/info.svg" alt="" height = "100"><strong>No</strong>I need help with it.</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+						</div>
+
+
+						<!-- /Git Check > Python Check ============================== -->
+						
+						<!-- First branch Git Check ============================== -->
+						<div class="branch" id="Git_installed">
+							<div class="step" data-state="branchtype">
+								<div class="question_title">
+									<h3>Do you have Python version x installed on the computer you are working on?</h3>
+									<p>To not get any conflicts.</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_5" type="radio" name="branch_1_group_3" value="Python_installed" class="required">
+											<label for="branch_1_answer_5"><img src="img/yes.svg" alt="" height = "100"><strong>Yes</strong>I have this Python version installed.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_6" name="branch_1_group_3" type="radio" value="Python_installed" class="required">
+											<label for="branch_1_answer_6"><img src="img/info.svg" alt="" height = "100"><strong>No</strong>I need help with it.</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+						</div>
+
+						<!-- /Python Check > Doit Check ============================== -->
+						
+						<!-- First branch Python Check ============================== -->
+						<div class="branch" id="Python_installed">
+							<div class="step" data-state="branchtype">
+								<div class="question_title">
+									<h3>Do you have the Python package <a href="https://pydoit.org/contents.html">Doit</a> installed on the computer you are working on?</h3>
+									<p>To follow the workflow.</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_7" type="radio" name="branch_1_group_4" value="Repo" class="required">
+											<label for="branch_1_answer_7"><img src="img/yes.svg" alt="" height = "100"><strong>Yes</strong>I have Doit installed.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_8" name="branch_1_group_4" type="radio" value="Repo" class="required">
+											<label for="branch_1_answer_8"><img src="img/info.svg" alt="" height = "100"><strong>No</strong>I need help with it.</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+						</div>
+
+
+						<!-- /Doit Check > Version Control Repo ============================== -->
+						
+						<!-- First branch Doit Check ============================== -->
+						<div class="branch" id="Repo">
+							<div class="step" data-state="branchtype">
+								<div class="question_title">
+									<h3>Did you already create a version control repository for this project?</h3>
+									<p>To follow the workflow.</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_9" type="radio" name="branch_1_group_5" value="Git_forked" class="required">
+											<label for="branch_1_answer_9"><img src="img/yes.svg" alt="" height = "100"><strong>Yes</strong>I have created a version control repo.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_10" name="branch_1_group_5" type="radio" value="Git_forked" class="required">
+											<label for="branch_1_answer_10"><img src="img/info.svg" alt="" height = "100"><strong>No</strong>I need help with it.</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+						</div>
+
+
+						<!-- /Version Control Repo > Git comp forked ============================== -->
+						
+						<!-- First branch Version Control Repo ============================== -->
+						<div class="branch" id="Git_forked">
+							<div class="step" data-state="branchtype">
+								<div class="question_title">
+									<h3>Have you already forked, copied or cloned the Version Control Structure proposed by the Standardixed Research Compendium</h3>
+									<p>You can find it on the authors <a href = "https://github.com/ccs-amsterdam/compendium.git">Github page</a>.</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_11" type="radio" name="branch_1_group_6" value="doit_install" class="required">
+											<label for="branch_1_answer_11"><img src="img/yes.svg" alt="" height = "100"><strong>Yes</strong>I have forked, copied or cloned it.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_12" name="branch_1_group_6" type="radio" value="doit_install" class="required">
+											<label for="branch_1_answer_12"><img src="img/info.svg" alt="" height = "100"><strong>No</strong>I need help with it.</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+						</div>
+
+						<!-- /Git comp forked > Doit install  ============================== -->
+						
+						<!-- First branch Git comp forked ============================== -->
+						<div class="branch" id="doit_install">
+							<div class="step" data-state="branchtype">
+								<div class="question_title">
+									<h3>Have you run <b>doit install</b> in the command line to set up the necessary Python and/or R environment for you research project?</h3>
+									<p>Getting the system running.</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_13" type="radio" name="branch_1_group_7" value="preregistration" class="required">
+											<label for="branch_1_answer_13"><img src="img/yes.svg" alt="" height = "100"><strong>Yes</strong>I have run doit install.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_14" name="branch_1_group_7" type="radio" value="preregistration" class="required">
+											<label for="branch_1_answer_14"><img src="img/info.svg" alt="" height = "100"><strong>No</strong>I need help with it.</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+						</div>
+
+						<!-- /Doit Install > Preregistration ============================== -->
+						
+						<!-- First branch Doit Install ============================== -->
+						<div class="branch" id="preregistration">
+							<div class="step" data-state="branchtype">
+								<div class="question_title">
+									<h3>Have you considered pre-registering your study?</h3>
+									<p>Promoting open science.</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_15" type="radio" name="branch_1_group_8" value="phase_2" class="required">
+											<label for="branch_1_answer_15"><img src="img/yes.svg" alt="" height = "100"><strong>Yes</strong>I plan to preregister my study.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_16" name="branch_1_group_8" type="radio" value="phase_2" class="required">
+											<label for="branch_1_answer_16"><img src="img/info.svg" alt="" height = "100"><strong>No</strong>Not applicable for my study (anymore).</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+						</div>
+
+
+						<!-- /Doit Install > Preregistration ============================== -->
+						
+						<!-- First branch Doit Install ============================== -->
+						<div class="branch" id="phase_2">
+							<div class="step" data-state="branchtype">
+								<div class="question_title">
+									<h3>Starting Phase 2: Version control for you Program/Langauge</h3>
+									<p>These questions allow you to set up the version control for the program and/or language you are working with when conducting your research. If you think you do not need any explanations regarding this part, you can just skip it.</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_17" type="radio" name="branch_1_group_9" value="what_language" class="required">
+											<label for="branch_1_answer_17"><img src="img/yes.svg" alt="" height = "100"><strong>Yes</strong>I want to continue and receive information on setting up version control.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_18" name="branch_1_group_9" type="radio" value="what_language" class="required">
+											<label for="branch_1_answer_18"><img src="img/info.svg" alt="" height = "100"><strong>No</strong>I want to skip this part and go to Phase 3: Structure of your Git Folders.</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+						</div>					
+
+						<!-- First branch What language ============================== -->
+						<div class="branch" id="what_language">
+							<div class="step" data-state="branchtype">
+								<div class="question_title">
+									<h3>In which langauge or program are you planning to conduct your research? Multiple answers are possible.</h3>
+									<p>There are different steps to run the compendium for <strong>Python</strong>, <strong>R</strong>, or <strong>other Systems</strong>.</p>
+								</div>
+								<div class="row">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_19" type="radio" name="branch_1_group_10" value="Python" class="required">
+											<label for="branch_1_answer_19"><img src="img/python.svg" alt="" height = "100"><strong>Python</strong>Python is an interpreted, high-level, general-purpose programming language.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_20" name="branch_1_group_10" type="radio" value="R" class="required">
+											<label for="branch_1_answer_20"><img src="img/r.svg" alt="" height = "100"><strong>R</strong> R is a programming language for statistical computing and graphics.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_21" name="branch_1_group_10" type="radio" value="Other" class="required">
+											<label for="branch_1_answer_21"><img src="img/spreadsheet.svg" alt="" height = "100"><strong>Other</strong>If you used SPSS/Stata/SAS/MatLAb or anything else.</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+						</div>
+
+						<!-- /What language > Python ============================== -->
+						
+						<!-- First branch Python============================== -->
+						<div class="branch" id="Python">
+							<div class="step" data-state="branchtype">
+								<div class="question_title">
+									<h3>Have you activated the environment for version control of the package?</h3>
+									<p>This means...</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_22" type="radio" name="branch_1_group_11" value="Phase_3" class="required">
+											<label for="branch_1_answer_22"><img src="img/yes.svg" alt="" height = "100"><strong>Yes</strong>I have activated it.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_23" name="branch_1_group_11" type="radio" value="Phase_3" class="required">
+											<label for="branch_1_answer_23"><img src="img/info.svg" alt="" height = "100"><strong>No</strong>I need help with it.</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+						</div>
+
+						<!-- /What language > R ============================== -->
+						
+						<!-- First branch R============================== -->
+						<div class="branch" id="R">
+							<div class="step" data-state="branchtype">
+								<div class="question_title">
+									<h3>Have you installed the packrat package?</h3>
+									<p>You can find it <a href = "https://rstudio.github.io/packrat/">here</a>.</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_24" type="radio" name="branch_1_group_12" value="Phase_3" class="required">
+											<label for="branch_1_answer_24"><img src="img/yes.svg" alt="" height = "100"><strong>Yes</strong>I have installed it.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_25" name="branch_1_group_12" type="radio" value="Phase_3" class="required">
+											<label for="branch_1_answer_25"><img src="img/info.svg" alt="" height = "100"><strong>No</strong>I need help with it.</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+						</div>
+
+
+						<!-- /What language > Other ============================== -->
+						
+						<!-- First branch Other============================== -->
+							<div class = "step" id = "Other" data-state="Other_1">
+							<div class="question_title">
+								<h3>Questions about the program you are using</h3>
+								<p>We need some more info.</p>
+							</div>
+							<div class="row justify-content-center">
+								<div class="col-lg-5">
+									<div class="box_general">
+										<div class="form-group">
+											<input type="text" name="program_name" class="required form-control" placeholder="Program name">
+										</div>
+										<div class="form-group">
+											<input type="text" name="program_version" class="required form-control" placeholder="Version of the Program">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					
+
+
+						<!-- /Other > Extensions ============================== -->
+						
+						<!-- Follow up on extensions for other programs============================== -->
+						<div class="branch" id="Other_1">
+							<div class="step" data-state="branchtype">
+								<div class="question_title">
+									<h3>Do you install any extensions when cleaning, processing and/or analyzing the data in your research project?</h3>
+									<p>So that others know what they need for your project.</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_26" type="radio" name="branch_1_group_13" value="Extensions" class="required">
+											<label for="branch_1_answer_26"><img src="img/yes.svg" alt="" height = "100"><strong>Yes</strong>I have installed extensions.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_27" name="branch_1_group_13" type="radio" value="Phase_3" class="required">
+											<label for="branch_1_answer_27"><img src="img/info.svg" alt="" height = "100"><strong>No</strong>I have not installed any extensions.</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+						</div>
+
+						<!-- /Extensions > more info ============================== -->
+						
+						<!-- Follow up on more detailed info on extensions============================== -->
+						<div class="step" id="Extensions" data-state="Phase_3">
+							<div class="question_title">
+								<h3>Questions about the extensions you are using</h3>
+								<p>We need some more info.</p>
+							</div>
+							<div class="row justify-content-center">
+								<div class="col-lg-5">
+									<div class="box_general">
+										<div class="form-group">
+											<input type="text" name="extension_name" class="required form-control" placeholder="Name of the extensions">
+										</div>
+										<div class="form-group">
+											<input type="text" name="extension_date" class="required form-control" placeholder="Date you installed the extensions">
+										</div>
+									</div>
+									<!-- /box_general -->
+								</div>
+							</div>
+							<!-- /row -->
+						</div>
+					</div>	
+
+						<!-- First branch Doit Install ============================== -->
+						<div class="branch" id="Phase_3">
+							<div class="step" data-state="branchtype">
+								<div class="question_title">
+									<h3>Starting Phase 3: Structure of your Git Folders</h3>
+									<p>These questions ... If you think you do not need any explanations regarding this part, you can just skip it.</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_28" type="radio" name="branch_1_group_14" value="Work_alone" class="required">
+											<label for="branch_1_answer_28"><img src="img/yes.svg" alt="" height = "100"><strong>Yes</strong>I want to continue and receive information on the structure of the Git folders.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_29" name="branch_1_group_14" type="radio" value="Phase_4" class="required">
+											<label for="branch_1_answer_29"><img src="img/info.svg" alt="" height = "100"><strong>No</strong>I want to skip this part and go to Phase 4: Before Submitting Your Manuscript.</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+						</div>
+
+						<!-- First branch Doit Install ============================== -->
+						<div class="branch" id="Work_alone">
+							<div class="step" data-state="branchtype">
+								<div class="question_title">
+									<h3>Do you work alone or in a research project?</h3>
+									<p>Important to keep track of who does what.</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_30" type="radio" name="branch_1_group_15" value="Prop_data" class="required">
+											<label for="branch_1_answer_30"><img src="img/individual.svg" alt="" height = "100"><strong>Alone</strong>I work alone on this project.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_31" name="branch_1_group_15" type="radio" value="Prop_data" class="required">
+											<label for="branch_1_answer_31"><img src="img/group.svg" alt="" height = "100"><strong>Team</strong>I work in a project team.</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+						</div>
+
+						<!-- First branch Doit Install ============================== -->
+						<div class="branch" id="Prop_data">
+							<div class="step" data-state="branchtype">
+								<div class="question_title">
+									<h3>Do you work with proprietary data?</h3>
+									<p>Explanation</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_32" type="radio" name="branch_1_group_16" value="Encryption" class="required">
+											<label for="branch_1_answer_32"><img src="img/yes.svg" alt="" height = "100"><strong>Yes</strong>I work with proprietary data.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_33" name="branch_1_group_16" type="radio" value="Encryption" class="required">
+											<label for="branch_1_answer_33"><img src="img/info.svg" alt="" height = "100"><strong>No</strong>I do not work with proprietary data.</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+						</div>
+
+						
+						<!-- First branch Doit Install ============================== -->
+						<div class="branch" id="Encryption">
+							<div class="step" data-state="branchtype">
+								<div class="question_title">
+									<h3>Do you want to encrypt your data?</h3>
+									<p>Explanation</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_33" type="radio" name="branch_1_group_17" value="Data_type" class="required">
+											<label for="branch_1_answer_33"><img src="img/yes.svg" alt="" height = "100"><strong>Yes</strong>I want to encrypt my data.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_34" name="branch_1_group_17" type="radio" value="Data_type" class="required">
+											<label for="branch_1_answer_34"><img src="img/info.svg" alt="" height = "100"><strong>No</strong>I do not want to encrypt my data.</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+						</div>
+
+						<!-- First branch Doit Install ============================== -->
+						<div class="branch" id="Data_type">
+							<div class="step" data-state="branchtype">
+								<div class="question_title">
+									<h3>Do you process the data or work with the raw data in your research project?</h3>
+									<p>Explanation</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_35" type="radio" name="branch_1_group_18" value="Phase_4" class="required">
+											<label for="branch_1_answer_35"><img src="img/raw-file.svg" alt="" height = "100"><strong>Raw</strong>I work with the raw data.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_36" name="branch_1_group_18" type="radio" value="Functions" class="required">
+											<label for="branch_1_answer_36"><img src="img/process.svg" alt="" height = "100"><strong>Processed</strong>I work with processed data.</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+						</div>
+
+
+						<!-- First branch Doit Install ============================== -->
+						<div class="branch" id="Functions">
+							<div class="step" data-state="branchtype">
+								<div class="question_title">
+									<h3>Have you written functions yourself on which the data-processing or analysis depend?</h3>
+									<p>Explanation</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_37" type="radio" name="branch_1_group_19" value="Saved_Functions" class="required">
+											<label for="branch_1_answer_37"><img src="img/yes.svg" alt="" height = "100"><strong>Yes</strong>I wrote functions myself.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_38" name="branch_1_group_19" type="radio" value="Saved_data_cleaning" class="required">
+											<label for="branch_1_answer_38"><img src="img/info.svg" alt="" height = "100"><strong>No</strong>I did not write any functions myself.</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+						</div>
+
+						<!-- First branch Doit Install ============================== -->
+						<div class="branch" id="Saved_Functions">
+							<div class="step" data-state="branchtype">
+								<div class="question_title">
+									<h3>Have you saved the functions in a script in the folder src/lib?</h3>
+									<p>Explanation</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_39" type="radio" name="branch_1_group_20" value="Saved_data_cleaning" class="required">
+											<label for="branch_1_answer_39"><img src="img/yes.svg" alt="" height = "100"><strong>Yes</strong>I have saved them.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_40" name="branch_1_group_20" type="radio" value="Saved_data_cleaning" class="required">
+											<label for="branch_1_answer_40"><img src="img/info.svg" alt="" height = "100"><strong>No</strong>I did not save them.</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+						</div>
+
+													<!-- First branch Doit Install ============================== -->
+						<div class="branch" id="Saved_data_cleaning">
+							<div class="step" data-state="branchtype">
+								<div class="question_title">
+									<h3>Have you saved the data cleaning / processing sripts that generate any intermediate or temporary data files needed by the analyses in src/data-processing?</h3>
+									<p>Explanation</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_41" type="radio" name="branch_1_group_21" value="Saved_analysis" class="required">
+											<label for="branch_1_answer_41"><img src="img/yes.svg" alt="" height = "100"><strong>Yes</strong>I have saved them.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_42" name="branch_1_group_21" type="radio" value="Saved_analysis" class="required">
+											<label for="branch_1_answer_42"><img src="img/info.svg" alt="" height = "100"><strong>No</strong>I did not save them.</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+						</div>
+
+						<!-- First branch Doit Install ============================== -->
+						<div class="branch" id="Saved_analysis">
+							<div class="step" data-state="branchtype">
+								<div class="question_title">
+									<h3>Have you saved scripts or notebooks that contain the actual analysis; should produce the files in the folder report?</h3>
+									<p>Explanation</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_42" type="radio" name="branch_1_group_22" value="Saved_datasets" class="required">
+											<label for="branch_1_answer_42"><img src="img/yes.svg" alt="" height = "100"><strong>Yes</strong>I have saved them.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_43" name="branch_1_group_22" type="radio" value="Saved_datasets" class="required">
+											<label for="branch_1_answer_43"><img src="img/info.svg" alt="" height = "100"><strong>No</strong>I did not save them.</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+						</div>
+
+						<!-- First branch Doit Install ============================== -->
+						<div class="branch" id="Saved_datasets">
+							<div class="step" data-state="branchtype">
+								<div class="question_title">
+									<h3>Have you saved the finished data sets that are of general interest in results/datasets?</h3>
+									<p>Explanation</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_44" type="radio" name="branch_1_group_23" value="Saved_descriptions" class="required">
+											<label for="branch_1_answer_44"><img src="img/yes.svg" alt="" height = "100"><strong>Yes</strong>I have saved them.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_45" name="branch_1_group_23" type="radio" value="Saved_descriptions" class="required">
+											<label for="branch_1_answer_45"><img src="img/info.svg" alt="" height = "100"><strong>No</strong>I did not save them.</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+						</div>
+
+
+						<!-- First branch Doit Install ============================== -->
+						<div class="branch" id="Saved_descriptions">
+							<div class="step" data-state="branchtype">
+								<div class="question_title">
+									<h3>Have you saved the written descriptions of results, i.e. a final paper in results/report?</h3>
+									<p>Explanation</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_46" type="radio" name="branch_1_group_24" value="Visualization" class="required">
+											<label for="branch_1_answer_46"><img src="img/yes.svg" alt="" height = "100"><strong>Yes</strong>I have saved them.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_47" name="branch_1_group_24" type="radio" value="Visualization" class="required">
+											<label for="branch_1_answer_47"><img src="img/info.svg" alt="" height = "100"><strong>No</strong>I did not save them.</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+						</div>
+
+													<!-- First branch Doit Install ============================== -->
+						<div class="branch" id="Visualization">
+							<div class="step" data-state="branchtype">
+								<div class="question_title">
+									<h3>Are your analyses in the paper visualized?</h3>
+									<p>Explanation</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_48" type="radio" name="branch_1_group_25" value="Saved_fig" class="required">
+											<label for="branch_1_answer_48"><img src="img/yes.svg" alt="" height = "100"><strong>Yes</strong>The results are visualized.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_49" name="branch_1_group_25" type="radio" value="Phase_4" class="required">
+											<label for="branch_1_answer_49"><img src="img/info.svg" alt="" height = "100"><strong>No</strong>The results are not visualized.</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+						</div>
+							
+																				<!-- First branch Doit Install ============================== -->
+						<div class="branch" id="Saved_fig">
+							<div class="step" data-state="branchtype">
+								<div class="question_title">
+									<h3>Have you saved the figures in results/figures?</h3>
+									<p>Explanation</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_50" type="radio" name="branch_1_group_26" value="Phase_4" class="required">
+											<label for="branch_1_answer_50"><img src="img/yes.svg" alt="" height = "100"><strong>Yes</strong>I have saved them.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_51" name="branch_1_group_26" type="radio" value="Phase_4" class="required">
+											<label for="branch_1_answer_51"><img src="img/info.svg" alt="" height = "100"><strong>No</strong>I did not save them.</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+						</div>
+
+						<!-- First branch Doit Install ============================== -->
+						<div class="branch" id="Phase_4">
+							<div class="step" data-state="branchtype">
+								<div class="question_title">
+									<h3>Phase 4: Before Submitting Your Manuscript.</h3>
+									<p>These questions ... If you think you do not need any explanations regarding this part, you can just skip it.</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_52" type="radio" name="branch_1_group_27" value="Code_produce" class="required">
+											<label for="branch_1_answer_52"><img src="img/yes.svg" alt="" height = "100"><strong>Yes</strong>I want to continue and receive information on last steps before the submission.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_53" name="branch_1_group_27" type="radio" value="Checklist" class="required">
+											<label for="branch_1_answer_53"><img src="img/info.svg" alt="" height = "100"><strong>No</strong>I want to skip this part and go directly to the checklist.</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+						</div>
+													<!-- First branch Doit Install ============================== -->
+						<div class="branch" id="Code_produce">
+							<div class="step" data-state="branchtype">
+								<div class="question_title">
+									<h3>Does the code in your compendium produce all statistics, tables, figures, etc. in your manuscript?</h3>
+									<p>Explanation.</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_54" type="radio" name="branch_1_group_28" value="Refer_Compendium" class="required">
+											<label for="branch_1_answer_54"><img src="img/yes.svg" alt="" height = "100"><strong>Yes</strong>The code produces everything.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_55" name="branch_1_group_28" type="radio" value="Refer_Compendium" class="required">
+											<label for="branch_1_answer_55"><img src="img/info.svg" alt="" height = "100"><strong>No</strong>The code does not produce everything.</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+						</div>
+
+						<!-- First branch Doit Install ============================== -->
+						<div class="branch" id="Refer_Compendium">
+							<div class="step" data-state="branchtype">
+								<div class="question_title">
+									<h3>Does the manuscript refer to the compendium?</h3>
+									<p>Explanation.</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_56" type="radio" name="branch_1_group_29" value="Other_computer" class="required">
+											<label for="branch_1_answer_56"><img src="img/yes.svg" alt="" height = "100"><strong>Yes</strong>It refers to the compendium.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_57" name="branch_1_group_29" type="radio" value="Other_computer" class="required">
+											<label for="branch_1_answer_57"><img src="img/info.svg" alt="" height = "100"><strong>No</strong>It does not refer to the compendium.</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+						</div>
+							
+							
+						<!-- First branch Doit Install ============================== -->
+						<div class="branch" id="Other_computer">
+							<div class="step" data-state="branchtype">
+								<div class="question_title">
+									<h3>Did you have another person or another computer try to run the compendium, and checked the results?</h3>
+									<p>Explanation.</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_58" type="radio" name="branch_1_group_30" value="Encryption" class="required">
+											<label for="branch_1_answer_58"><img src="img/yes.svg" alt="" height = "100"><strong>Yes</strong>I checked it on another computer.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_59" name="branch_1_group_30" type="radio" value="Encryption" class="required">
+											<label for="branch_1_answer_59"><img src="img/info.svg" alt="" height = "100"><strong>No</strong>I did not check it on another computer.</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+								<!-- /row-->
+
+
+
+			
+							<!-- Last step ============================== -->
+							<div class="submit step" id="end">
+								<div class="question_title">
+									<h3>Plase fill with your details</h3>
+									<p>Ei duo homero postea dignissim.</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-5">
+										<div class="box_general">
+											<div class="form-group">
+												<input type="text" name="first_last_name" class="required form-control" placeholder="First and Last name">
+											</div>
+											<div class="form-group">
+												<input type="email" name="email" class="required form-control" placeholder="Your Email">
+											</div>
+											<div class="form-group">
+												<input type="text" name="telephone" class="form-control" placeholder="Your Telephone">
+											</div>
+											<div class="form-group add_bottom_30">
+												<div class="styled-select">
+													<select class="required" name="country">
+														<option value="" selected>Select your country</option>
+														<option value="Europe">Europe</option>
+														<option value="Asia">Asia</option>
+														<option value="North America">North America</option>
+														<option value="South America">South America</option>
+													</select>
+												</div>
+											</div>
+											<div class="checkbox_questions">
+												<input name="terms" type="checkbox" class="icheck required" value="yes">
+												<label>Please accept <a href="#" data-toggle="modal" data-target="#terms-txt">terms and conditions</a>.</label>
+											</div>
+										</div>
+										<!-- /box_general -->
+									</div>
+								</div>
+								<!-- /row -->
+							</div>
+							<!-- /Last step ============================== -->
+						</div>
+					</div>
+					<!-- /middle-wizard -->
+					<div id="bottom-wizard">
+						<button type="button" name="backward" class="backward">Backward </button>
+						<button type="button" name="forward" class="forward">Forward</button>
+						<button type="submit" name="process" class="submit">Submit</button>
+					</div>
+					<!-- /bottom-wizard -->
+				</form>
+			</div>
+			<!-- /Wizard container -->
+		</div>
+		<!-- /Container -->
+	</main>
+	<!-- /main -->
+	
+	
+	<div class="cd-overlay-nav">
+		<span></span>
+	</div>
+	<!-- /cd-overlay-nav -->
+
+	<div class="cd-overlay-content">
+		<span></span>
+	</div>
+	<!-- /cd-overlay-content -->
+
+	<a href="#0" class="cd-nav-trigger">Menu<span class="cd-icon"></span></a>
+	<!-- /cd-nav-trigger -->
+	
+	<!-- Modal terms -->
+	<div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="termsLabel">Terms and conditions</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+				</div>
+				<div class="modal-body">
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in <strong>nec quod novum accumsan</strong>, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus. Lorem ipsum dolor sit amet, <strong>in porro albucius qui</strong>, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /Modal terms -->
+	
+	<!-- COMMON SCRIPTS -->
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/common_scripts.min.js"></script>
+	<script src="js/menu.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/wizard_func_multiple_branch.js"></script>	
+	
+</body>
+</html>
