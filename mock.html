@@ -1,0 +1,1003 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style>
+
+        .qquestion, .qcheck, .qadvice {
+            background: rgb(248, 249, 250);
+            margin-top: 2px;
+            margin-bottom: 2px;
+
+        }
+        .qcheck {
+            display: flex;
+            align-items: center}
+        .qquestion {border-radius: 25px 0px 0px 25px}
+        .qadvice   {border-radius: 0px 25px 25px 0px}
+
+
+        .yes::before {
+            display: inline-block;
+            content: "";
+            /*background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'><path fill-rule='evenodd' d='M13.854 3.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3.5-3.5a.5.5 0 11.708-.708L6.5 10.293l6.646-6.647a.5.5 0 01.708 0z' clip-rule='evenodd'/></svg>");*/
+            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'><path fill-rule='evenodd' d='M15.354 2.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L8 9.293l6.646-6.647a.5.5 0 01.708 0z' clip-rule='evenodd'/><path fill-rule='evenodd' d='M8 2.5A5.5 5.5 0 1013.5 8a.5.5 0 011 0 6.5 6.5 0 11-3.25-5.63.5.5 0 11-.5.865A5.472 5.472 0 008 2.5z' clip-rule='evenodd'/></svg>");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: 2em; height: 2em;
+        }
+
+        .no::before {
+            display: inline-block;
+            content: "";
+            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'><path fill-rule='evenodd' d='M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z' clip-rule='evenodd'/><path fill-rule='evenodd' d='M11.854 4.146a.5.5 0 010 .708l-7 7a.5.5 0 01-.708-.708l7-7a.5.5 0 01.708 0z' clip-rule='evenodd'/><path fill-rule='evenodd' d='M4.146 4.146a.5.5 0 000 .708l7 7a.5.5 0 00.708-.708l-7-7a.5.5 0 00-.708 0z' clip-rule='evenodd'/></svg>");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: 2em; height: 2em;
+        }
+
+        .btn-yes, btn-yes:hover {
+            color: white !important;
+            background-color: #A7DFB3;
+            border-color: #A7DFB3;
+        }
+
+        .btn-yes.active {
+            background-color: #28cF4C;
+        }
+
+        .btn-no, btn-no:hover {
+            color: white !important;
+            background-color: #FFC0C0;
+            border-color: #A7DFB3;
+        }
+
+        .btn-no.active {
+            background-color: #FF4040;
+        }
+
+    </style>
+
+    <title>Open up!</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Transparency Checklist</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+</nav>
+
+<div class="container" style="padding-bottom: 2em; padding-top: 2em">
+    <ul class="nav nav-pills " style="padding-bottom: 1em" role="tablist" id="topictabs">
+        
+        
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" role="tab"
+               href="#phase1" aria-controls="phase1" aria-selected="True">
+                1. Getting Started
+            </a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link " data-toggle="tab" role="tab"
+               href="#phase2" aria-controls="phase2" aria-selected="False">
+                2. Version control for you Program/Langauge
+            </a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link " data-toggle="tab" role="tab"
+               href="#phase3" aria-controls="phase3" aria-selected="False">
+                3. Structure of your Project Folders
+            </a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link " data-toggle="tab" role="tab"
+               href="#phase4" aria-controls="phase4" aria-selected="False">
+                4. Before Submitting Your Manuscript.
+            </a>
+        </li>
+        
+    </ul>
+
+    <div class="tab-content" id="topictabscontent">
+    
+        <div class="tab-pane fade show active" id="phase1"
+             role="tabpanel" aria-labelledby="phase1-tab">
+        
+            <div class="row question " id="Q1_1">
+                <div class="col-md-6 qquestion" style="padding-right: 2em">
+                    <h4>Have you used the Standardized Research Compendium for your research project before?</h4>
+                    <p class="lead">You might need some more instructions if you are here the first time.</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('Q1_1', true)">
+                            <input type="radio" name="options" id="#Q1_1_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('Q1_1', false)">
+                            <input type="radio" name="options" id="#Q1_1_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="Q1_1_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="Q1_1_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row question collapse" id="Q1_2">
+                <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
+                    <h4>Have you ever worked with Version Control before?</h4>
+                    <p class="lead">Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('Q1_2', true)">
+                            <input type="radio" name="options" id="#Q1_2_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('Q1_2', false)">
+                            <input type="radio" name="options" id="#Q1_2_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="Q1_2_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="Q1_2_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row question " id="Q1_3">
+                <div class="col-md-6 qquestion" style="padding-right: 2em">
+                    <h4>Do you have Git, Python, and Doit installed on the computer you are working on?</h4>
+                    <p class="lead">All the things you need.</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('Q1_3', true)">
+                            <input type="radio" name="options" id="#Q1_3_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('Q1_3', false)">
+                            <input type="radio" name="options" id="#Q1_3_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="Q1_3_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="Q1_3_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row question collapse" id="Q1_4">
+                <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
+                    <h4>Do you have Git installed on the computer you are working on?</h4>
+                    <p class="lead">To get you all the code.</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('Q1_4', true)">
+                            <input type="radio" name="options" id="#Q1_4_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('Q1_4', false)">
+                            <input type="radio" name="options" id="#Q1_4_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="Q1_4_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="Q1_4_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row question collapse" id="Q1_5">
+                <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
+                    <h4>Do you have Python version x installed on the computer you are working on?</h4>
+                    <p class="lead">To not get any conflicts.</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('Q1_5', true)">
+                            <input type="radio" name="options" id="#Q1_5_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('Q1_5', false)">
+                            <input type="radio" name="options" id="#Q1_5_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="Q1_5_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="Q1_5_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row question collapse" id="Q1_6">
+                <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
+                    <h4>Do you have the Python package Doit installed on the computer you are working on?</h4>
+                    <p class="lead">To follow the workflow.</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('Q1_6', true)">
+                            <input type="radio" name="options" id="#Q1_6_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('Q1_6', false)">
+                            <input type="radio" name="options" id="#Q1_6_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="Q1_6_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="Q1_6_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row question " id="Q1_7">
+                <div class="col-md-6 qquestion" style="padding-right: 2em">
+                    <h4>Did you already create a version control repository for this project?</h4>
+                    <p class="lead">To follow the workflow.</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('Q1_7', true)">
+                            <input type="radio" name="options" id="#Q1_7_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('Q1_7', false)">
+                            <input type="radio" name="options" id="#Q1_7_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="Q1_7_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="Q1_7_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row question " id="Q1_8">
+                <div class="col-md-6 qquestion" style="padding-right: 2em">
+                    <h4>Have you already forked, copied or cloned the Version Control Structure proposed by the Standardixed Research Compendium</h4>
+                    <p class="lead">You can find it on the authors Github page.</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('Q1_8', true)">
+                            <input type="radio" name="options" id="#Q1_8_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('Q1_8', false)">
+                            <input type="radio" name="options" id="#Q1_8_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="Q1_8_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="Q1_8_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row question " id="Q1_9">
+                <div class="col-md-6 qquestion" style="padding-right: 2em">
+                    <h4>Have you run doit install in the command line to set up the necessary Python and/or R environment for you research project?</h4>
+                    <p class="lead">Getting the system running.</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('Q1_9', true)">
+                            <input type="radio" name="options" id="#Q1_9_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('Q1_9', false)">
+                            <input type="radio" name="options" id="#Q1_9_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="Q1_9_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="Q1_9_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row question " id="Q1_10">
+                <div class="col-md-6 qquestion" style="padding-right: 2em">
+                    <h4>Have you considered pre-registering your study?</h4>
+                    <p class="lead">Promoting open science.</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('Q1_10', true)">
+                            <input type="radio" name="options" id="#Q1_10_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('Q1_10', false)">
+                            <input type="radio" name="options" id="#Q1_10_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="Q1_10_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="Q1_10_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        
+        <div class="tab-pane fade " id="phase2"
+             role="tabpanel" aria-labelledby="phase2-tab">
+        
+            <div class="row question " id="Q2_0">
+                <div class="col-md-6 qquestion" style="padding-right: 2em">
+                    <h4>Starting Phase 2: Version control for you Program/Langauge</h4>
+                    <p class="lead">These questions allow you to set up the version control for the program and/or language you are working with when conducting your research. If you think you do not need any explanations regarding this part, you can just skip it.</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('Q2_0', true)">
+                            <input type="radio" name="options" id="#Q2_0_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('Q2_0', false)">
+                            <input type="radio" name="options" id="#Q2_0_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="Q2_0_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="Q2_0_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row question " id="Q2_1">
+                <div class="col-md-6 qquestion" style="padding-right: 2em">
+                    <h4>Does your project use python?</h4>
+                    <p class="lead">Python is an interpreted, high-level, general-purpose programming language.</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('Q2_1', true)">
+                            <input type="radio" name="options" id="#Q2_1_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('Q2_1', false)">
+                            <input type="radio" name="options" id="#Q2_1_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="Q2_1_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="Q2_1_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row question collapse" id="Q2_2">
+                <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
+                    <h4>Have you activated the environment for version control of the package?</h4>
+                    <p class="lead">This means...</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('Q2_2', true)">
+                            <input type="radio" name="options" id="#Q2_2_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('Q2_2', false)">
+                            <input type="radio" name="options" id="#Q2_2_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="Q2_2_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="Q2_2_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row question " id="Q2_3">
+                <div class="col-md-6 qquestion" style="padding-right: 2em">
+                    <h4>Does your project use R?</h4>
+                    <p class="lead"> R is a programming language for statistical computing and graphics.</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('Q2_3', true)">
+                            <input type="radio" name="options" id="#Q2_3_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('Q2_3', false)">
+                            <input type="radio" name="options" id="#Q2_3_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="Q2_3_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="Q2_3_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row question collapse" id="Q2_4">
+                <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
+                    <h4>Have you installed the packrat package?</h4>
+                    <p class="lead">You can find it here.</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('Q2_4', true)">
+                            <input type="radio" name="options" id="#Q2_4_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('Q2_4', false)">
+                            <input type="radio" name="options" id="#Q2_4_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="Q2_4_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="Q2_4_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row question " id="Q2_5">
+                <div class="col-md-6 qquestion" style="padding-right: 2em">
+                    <h4>Does your project use another analysis language</h4>
+                    <p class="lead">If you used SPSS/Stata/SAS/MatLAb or anything else.</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('Q2_5', true)">
+                            <input type="radio" name="options" id="#Q2_5_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('Q2_5', false)">
+                            <input type="radio" name="options" id="#Q2_5_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="Q2_5_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="Q2_5_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row question collapse" id="Q2_6">
+                <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
+                    <h4>Do you install any extensions when cleaning, processing and/or analyzing the data in your research project?</h4>
+                    <p class="lead">So that others know what they need for your project.</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('Q2_6', true)">
+                            <input type="radio" name="options" id="#Q2_6_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('Q2_6', false)">
+                            <input type="radio" name="options" id="#Q2_6_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="Q2_6_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="Q2_6_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        
+        <div class="tab-pane fade " id="phase3"
+             role="tabpanel" aria-labelledby="phase3-tab">
+        
+            <div class="row question " id="Q3_2">
+                <div class="col-md-6 qquestion" style="padding-right: 2em">
+                    <h4>Are multiple researchers involved in this project?</h4>
+                    <p class="lead">Important to keep track of who does what.</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('Q3_2', true)">
+                            <input type="radio" name="options" id="#Q3_2_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('Q3_2', false)">
+                            <input type="radio" name="options" id="#Q3_2_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="Q3_2_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="Q3_2_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row question " id="Q3_3">
+                <div class="col-md-6 qquestion" style="padding-right: 2em">
+                    <h4>Do you work with proprietary data?</h4>
+                    <p class="lead">Explanation</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('Q3_3', true)">
+                            <input type="radio" name="options" id="#Q3_3_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('Q3_3', false)">
+                            <input type="radio" name="options" id="#Q3_3_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="Q3_3_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="Q3_3_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row question " id="Q3_4">
+                <div class="col-md-6 qquestion" style="padding-right: 2em">
+                    <h4>Do you want to encrypt your data?</h4>
+                    <p class="lead">Explanation</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('Q3_4', true)">
+                            <input type="radio" name="options" id="#Q3_4_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('Q3_4', false)">
+                            <input type="radio" name="options" id="#Q3_4_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="Q3_4_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="Q3_4_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row question " id="Q3_5">
+                <div class="col-md-6 qquestion" style="padding-right: 2em">
+                    <h4>Does your project involve data processing or cleaning?</h4>
+                    <p class="lead">Explanation [WvA: not sure I actually understood this question]</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('Q3_5', true)">
+                            <input type="radio" name="options" id="#Q3_5_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('Q3_5', false)">
+                            <input type="radio" name="options" id="#Q3_5_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="Q3_5_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="Q3_5_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row question collapse" id="Q3_6">
+                <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
+                    <h4>Have you written functions yourself on which the data-processing or analysis depend?</h4>
+                    <p class="lead">Explanation</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('Q3_6', true)">
+                            <input type="radio" name="options" id="#Q3_6_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('Q3_6', false)">
+                            <input type="radio" name="options" id="#Q3_6_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="Q3_6_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="Q3_6_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row question collapse" id="Q3_7">
+                <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
+                    <h4>Have you saved the functions in a script in the folder src/lib?</h4>
+                    <p class="lead">Explanation</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('Q3_7', true)">
+                            <input type="radio" name="options" id="#Q3_7_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('Q3_7', false)">
+                            <input type="radio" name="options" id="#Q3_7_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="Q3_7_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="Q3_7_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row question collapse" id="Q3_8">
+                <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
+                    <h4>Have you saved the data cleaning / processing sripts that generate any intermediate or temporary data files needed by the analyses in src/data-processing?</h4>
+                    <p class="lead">Explanation</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('Q3_8', true)">
+                            <input type="radio" name="options" id="#Q3_8_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('Q3_8', false)">
+                            <input type="radio" name="options" id="#Q3_8_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="Q3_8_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="Q3_8_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row question collapse" id="Q3_9">
+                <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
+                    <h4>Have you saved scripts or notebooks that contain the actual analysis; should produce the files in the folder report?</h4>
+                    <p class="lead">Explanation</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('Q3_9', true)">
+                            <input type="radio" name="options" id="#Q3_9_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('Q3_9', false)">
+                            <input type="radio" name="options" id="#Q3_9_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="Q3_9_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="Q3_9_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row question collapse" id="Q3_10">
+                <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
+                    <h4>Have you saved the finished data sets that are of general interest in results/datasets?</h4>
+                    <p class="lead">Explanation</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('Q3_10', true)">
+                            <input type="radio" name="options" id="#Q3_10_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('Q3_10', false)">
+                            <input type="radio" name="options" id="#Q3_10_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="Q3_10_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="Q3_10_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row question collapse" id="Q3_11">
+                <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
+                    <h4>Have you saved the written descriptions of results, i.e. a final paper in results/report?</h4>
+                    <p class="lead">Explanation</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('Q3_11', true)">
+                            <input type="radio" name="options" id="#Q3_11_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('Q3_11', false)">
+                            <input type="radio" name="options" id="#Q3_11_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="Q3_11_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="Q3_11_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row question collapse" id="Q3_12">
+                <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
+                    <h4>Are your analyses in the paper visualized?</h4>
+                    <p class="lead">Explanation</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('Q3_12', true)">
+                            <input type="radio" name="options" id="#Q3_12_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('Q3_12', false)">
+                            <input type="radio" name="options" id="#Q3_12_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="Q3_12_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="Q3_12_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row question collapse" id="Q3_13">
+                <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
+                    <h4>Have you saved the figures in results/figures?</h4>
+                    <p class="lead">Explanation</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('Q3_13', true)">
+                            <input type="radio" name="options" id="#Q3_13_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('Q3_13', false)">
+                            <input type="radio" name="options" id="#Q3_13_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="Q3_13_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="Q3_13_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        
+        <div class="tab-pane fade " id="phase4"
+             role="tabpanel" aria-labelledby="phase4-tab">
+        
+            <div class="row question " id="Q4_2">
+                <div class="col-md-6 qquestion" style="padding-right: 2em">
+                    <h4>Does the code in your compendium produce all statistics, tables, figures, etc. in your manuscript?</h4>
+                    <p class="lead">Explanation.</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('Q4_2', true)">
+                            <input type="radio" name="options" id="#Q4_2_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('Q4_2', false)">
+                            <input type="radio" name="options" id="#Q4_2_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="Q4_2_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="Q4_2_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row question " id="Q4_3">
+                <div class="col-md-6 qquestion" style="padding-right: 2em">
+                    <h4>Does the manuscript refer to the compendium?</h4>
+                    <p class="lead">Explanation.</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('Q4_3', true)">
+                            <input type="radio" name="options" id="#Q4_3_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('Q4_3', false)">
+                            <input type="radio" name="options" id="#Q4_3_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="Q4_3_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="Q4_3_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row question " id="Q4_4">
+                <div class="col-md-6 qquestion" style="padding-right: 2em">
+                    <h4>Did you have another person or another computer try to run the compendium, and checked the results?</h4>
+                    <p class="lead">Explanation.</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('Q4_4', true)">
+                            <input type="radio" name="options" id="#Q4_4_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('Q4_4', false)">
+                            <input type="radio" name="options" id="#Q4_4_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="Q4_4_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="Q4_4_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        
+    </div>
+
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script>
+    // AFAIK, I can't prevent the collapse from toggling (if you click e.g. "no" twice) with the data-toggles attribute
+    // so we do it in JS
+    const dependencies = {"Q1_1": {"no": ["Q1_2"]}, "Q1_3": {"no": ["Q1_4", "Q1_5", "Q1_6"]}, "Q2_1": {"yes": ["Q2_2"]}, "Q2_3": {"yes": ["Q2_4"]}, "Q2_5": {"yes": ["Q2_6"]}, "Q3_12": {"yes": ["Q3_13"]}, "Q3_5": {"yes": ["Q3_6", "Q3_8", "Q3_9", "Q3_10", "Q3_11", "Q3_12"]}, "Q3_6": {"yes": ["Q3_7"]}};
+
+    function get_deps(q, yes) {
+        const attr = yes?"yes":"no";
+        if (!dependencies.hasOwnProperty(q)) return [];
+        if (!dependencies[q].hasOwnProperty(attr)) return [];
+        return dependencies[q][attr]
+
+    }
+
+    function toggle(q, yes) {
+        console.log([q, yes]);
+        // Get dependencies to show and hide
+        to_show = get_deps(q, yes);
+        to_hide = get_deps(q, !yes);
+        // Add advice block
+        to_show = to_show.concat(q+'_'+(yes?"yes":"no")+"_advice");
+        to_hide = to_hide.concat(q+'_'+(!yes?"yes":"no")+"_advice");
+
+        to_show.forEach(function(e) {$('#'+e).collapse('show')});
+        to_hide.forEach(function(e) {$('#'+e).collapse('hide')});
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+id,title,explanation,icon,answer,long_answer,next_step
+,Have you used the Standardized Research Compendium for your research project before?,You might need some more instructions if you are here the first time.,img/yes.svg,Yes,I know what to do. ,Used_before
+,Have you used the Standardized Research Compendium for your research project before?,You might need some more instructions if you are here the first time.,img/info.svg,No, I need some help to know where to start.,First_time_user
+First_time_user,Have you ever worked with Version Control before?,Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.,img/yes.svg,Yes,I know version control and have used it before.,Git_next
+First_time_user,Have you ever worked with Version Control before?,Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.,img/info.svg,No,I have never used version control before,Git_next
+Used_before,"Do you have Git, Python, and Doit installed on the computer you are working on?",All the things you need.,img/yes.svg,Yes,I have all of this installed.,Repo
+Used_before,"Do you have Git, Python, and Doit installed on the computer you are working on?",All the things you need.,img/info.svg,No,I need help with it.,Git_next
+Git_next,Do you have Git installed on the computer you are working on?,To get you all the code.,img/yes.svg,Yes,I have Git installed.,Git_installed
+Git_next,Do you have Git installed on the computer you are working on?,To get you all the code.,img/info.svg,No,I need help with it.,Git_installed
+Git_installed,Do you have Python version x installed on the computer you are working on?,To not get any conflicts.,img/yes.svg,Yes,I have this Python version installed.,Python_installed
+Git_installed,Do you have Python version x installed on the computer you are working on?,To not get any conflicts.,img/info.svg,No,I need help with it.,Python_installed
+Python_installed,Do you have the Python package Doit installed on the computer you are working on?,To follow the workflow.,img/yes.svg,Yes,I have Doit installed.,Repo
+Python_installed,Do you have the Python package Doit installed on the computer you are working on?,To follow the workflow.,img/info.svg,No,I need help with it.,Repo
+Repo,Did you already create a version control repository for this project?,To follow the workflow.,img/yes.svg,Yes,I have created a version control repo.,Git_forked
+Repo,Did you already create a version control repository for this project?,To follow the workflow.,img/info.svg,No,I need help with it.,Git_forked
+Git_forked,"Have you already forked, copied or cloned the Version Control Structure proposed by the Standardixed Research Compendium",You can find it on the authors Github page.,img/yes.svg,Yes,"I have forked, copied or cloned it.",doit_install
+Git_forked,"Have you already forked, copied or cloned the Version Control Structure proposed by the Standardixed Research Compendium",You can find it on the authors Github page.,img/info.svg,No,I need help with it.,doit_install
+doit_install,Have you run doit install in the command line to set up the necessary Python and/or R environment for you research project?,Getting the system running.,img/yes.svg,Yes,I have run doit install.,preregistration
+doit_install,Have you run doit install in the command line to set up the necessary Python and/or R environment for you research project?,Getting the system running.,img/info.svg,No,I need help with it.,preregistration
+preregistration,Have you considered pre-registering your study?,Promoting open science.,img/yes.svg,Yes,I plan to preregister my study.,phase_2
+preregistration,Have you considered pre-registering your study?,Promoting open science.,img/info.svg,No,Not applicable for my study (anymore).,phase_2
+phase_2,Starting Phase 2: Version control for you Program/Langauge,"These questions allow you to set up the version control for the program and/or language you are working with when conducting your research. If you think you do not need any explanations regarding this part, you can just skip it.",img/yes.svg,Yes,I want to continue and receive information on setting up version control.,what_language
+phase_2,Starting Phase 2: Version control for you Program/Langauge,"These questions allow you to set up the version control for the program and/or language you are working with when conducting your research. If you think you do not need any explanations regarding this part, you can just skip it.",img/info.svg,No,I want to skip this part and go to Phase 3: Structure of your Git Folders.,what_language
+what_language,In which langauge or program are you planning to conduct your research? Multiple answers are possible.,"There are different steps to run the compendium for Python, R, or other Systems.",img/python.svg,Python,"Python is an interpreted, high-level, general-purpose programming language.",Python
+what_language,In which langauge or program are you planning to conduct your research? Multiple answers are possible.,"There are different steps to run the compendium for Python, R, or other Systems.",img/r.svg,R, R is a programming language for statistical computing and graphics.,R
+what_language,In which langauge or program are you planning to conduct your research? Multiple answers are possible.,"There are different steps to run the compendium for Python, R, or other Systems.",img/spreadsheet.svg,Other,If you used SPSS/Stata/SAS/MatLAb or anything else.,Other
+Python,Have you activated the environment for version control of the package?,This means...,img/yes.svg,Yes,I have activated it.,Phase_3
+Python,Have you activated the environment for version control of the package?,This means...,img/info.svg,No,I need help with it.,Phase_3
+R,Have you installed the packrat package?,You can find it here.,img/yes.svg,Yes,I have installed it.,Phase_3
+R,Have you installed the packrat package?,You can find it here.,img/info.svg,No,I need help with it.,Phase_3
+Other_1,"Do you install any extensions when cleaning, processing and/or analyzing the data in your research project?",So that others know what they need for your project.,img/yes.svg,Yes,I have installed extensions.,Extensions
+Other_1,"Do you install any extensions when cleaning, processing and/or analyzing the data in your research project?",So that others know what they need for your project.,img/info.svg,No,I have not installed any extensions.,Phase_3
+Phase_3,Starting Phase 3: Structure of your Git Folders,"These questions ... If you think you do not need any explanations regarding this part, you can just skip it.",img/yes.svg,Yes,I want to continue and receive information on the structure of the Git folders.,Work_alone
+Phase_3,Starting Phase 3: Structure of your Git Folders,"These questions ... If you think you do not need any explanations regarding this part, you can just skip it.",img/info.svg,No,I want to skip this part and go to Phase 4: Before Submitting Your Manuscript.,Phase_4
+Work_alone,Do you work alone or in a research project?,Important to keep track of who does what.,img/individual.svg,Alone,I work alone on this project.,Prop_data
+Work_alone,Do you work alone or in a research project?,Important to keep track of who does what.,img/group.svg,Team,I work in a project team.,Prop_data
+Prop_data,Do you work with proprietary data?,Explanation,img/yes.svg,Yes,I work with proprietary data.,Encryption
+Prop_data,Do you work with proprietary data?,Explanation,img/info.svg,No,I do not work with proprietary data.,Encryption
+Encryption,Do you want to encrypt your data?,Explanation,img/yes.svg,Yes,I want to encrypt my data.,Data_type
+Encryption,Do you want to encrypt your data?,Explanation,img/info.svg,No,I do not want to encrypt my data.,Data_type
+Data_type,Do you process the data or work with the raw data in your research project?,Explanation,img/raw-file.svg,Raw,I work with the raw data.,Phase_4
+Data_type,Do you process the data or work with the raw data in your research project?,Explanation,img/process.svg,Processed,I work with processed data.,Functions
+Functions,Have you written functions yourself on which the data-processing or analysis depend?,Explanation,img/yes.svg,Yes,I wrote functions myself.,Saved_Functions
+Functions,Have you written functions yourself on which the data-processing or analysis depend?,Explanation,img/info.svg,No,I did not write any functions myself.,Saved_data_cleaning
+Saved_Functions,Have you saved the functions in a script in the folder src/lib?,Explanation,img/yes.svg,Yes,I have saved them.,Saved_data_cleaning
+Saved_Functions,Have you saved the functions in a script in the folder src/lib?,Explanation,img/info.svg,No,I did not save them.,Saved_data_cleaning
+Saved_data_cleaning,Have you saved the data cleaning / processing sripts that generate any intermediate or temporary data files needed by the analyses in src/data-processing?,Explanation,img/yes.svg,Yes,I have saved them.,Saved_analysis
+Saved_data_cleaning,Have you saved the data cleaning / processing sripts that generate any intermediate or temporary data files needed by the analyses in src/data-processing?,Explanation,img/info.svg,No,I did not save them.,Saved_analysis
+Saved_analysis,Have you saved scripts or notebooks that contain the actual analysis; should produce the files in the folder report?,Explanation,img/yes.svg,Yes,I have saved them.,Saved_datasets
+Saved_analysis,Have you saved scripts or notebooks that contain the actual analysis; should produce the files in the folder report?,Explanation,img/info.svg,No,I did not save them.,Saved_datasets
+Saved_datasets,Have you saved the finished data sets that are of general interest in results/datasets?,Explanation,img/yes.svg,Yes,I have saved them.,Saved_descriptions
+Saved_datasets,Have you saved the finished data sets that are of general interest in results/datasets?,Explanation,img/info.svg,No,I did not save them.,Saved_descriptions
+Saved_descriptions,"Have you saved the written descriptions of results, i.e. a final paper in results/report?",Explanation,img/yes.svg,Yes,I have saved them.,Visualization
+Saved_descriptions,"Have you saved the written descriptions of results, i.e. a final paper in results/report?",Explanation,img/info.svg,No,I did not save them.,Visualization
+Visualization,Are your analyses in the paper visualized?,Explanation,img/yes.svg,Yes,The results are visualized.,Saved_fig
+Visualization,Are your analyses in the paper visualized?,Explanation,img/info.svg,No,The results are not visualized.,Phase_4
+Saved_fig,Have you saved the figures in results/figures?,Explanation,img/yes.svg,Yes,I have saved them.,Phase_4
+Saved_fig,Have you saved the figures in results/figures?,Explanation,img/info.svg,No,I did not save them.,Phase_4
+Phase_4,Phase 4: Before Submitting Your Manuscript.,"These questions ... If you think you do not need any explanations regarding this part, you can just skip it.",img/yes.svg,Yes,I want to continue and receive information on last steps before the submission.,Code_produce
+Phase_4,Phase 4: Before Submitting Your Manuscript.,"These questions ... If you think you do not need any explanations regarding this part, you can just skip it.",img/info.svg,No,I want to skip this part and go directly to the checklist.,Checklist
+Code_produce,"Does the code in your compendium produce all statistics, tables, figures, etc. in your manuscript?",Explanation.,img/yes.svg,Yes,The code produces everything.,Refer_Compendium
+Code_produce,"Does the code in your compendium produce all statistics, tables, figures, etc. in your manuscript?",Explanation.,img/info.svg,No,The code does not produce everything.,Refer_Compendium
+Refer_Compendium,Does the manuscript refer to the compendium?,Explanation.,img/yes.svg,Yes,It refers to the compendium.,Other_computer
+Refer_Compendium,Does the manuscript refer to the compendium?,Explanation.,img/info.svg,No,It does not refer to the compendium.,Other_computer
+Other_computer,"Did you have another person or another computer try to run the compendium, and checked the results?",Explanation.,img/yes.svg,Yes,I checked it on another computer.,Encryption
+Other_computer,"Did you have another person or another computer try to run the compendium, and checked the results?",Explanation.,img/info.svg,No,I did not check it on another computer.,Encryption

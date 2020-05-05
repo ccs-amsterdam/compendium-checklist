@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style>
+
+        .qquestion, .qcheck, .qadvice {
+            background: rgb(248, 249, 250);
+            margin-top: 2px;
+            margin-bottom: 2px;
+
+        }
+        .qcheck {
+            display: flex;
+            align-items: center}
+        .qquestion {border-radius: 25px 0px 0px 25px}
+        .qadvice   {border-radius: 0px 25px 25px 0px}
+
+
+        .yes::before {
+            display: inline-block;
+            content: "";
+            /*background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'><path fill-rule='evenodd' d='M13.854 3.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3.5-3.5a.5.5 0 11.708-.708L6.5 10.293l6.646-6.647a.5.5 0 01.708 0z' clip-rule='evenodd'/></svg>");*/
+            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'><path fill-rule='evenodd' d='M15.354 2.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L8 9.293l6.646-6.647a.5.5 0 01.708 0z' clip-rule='evenodd'/><path fill-rule='evenodd' d='M8 2.5A5.5 5.5 0 1013.5 8a.5.5 0 011 0 6.5 6.5 0 11-3.25-5.63.5.5 0 11-.5.865A5.472 5.472 0 008 2.5z' clip-rule='evenodd'/></svg>");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: 2em; height: 2em;
+        }
+
+        .no::before {
+            display: inline-block;
+            content: "";
+            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'><path fill-rule='evenodd' d='M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z' clip-rule='evenodd'/><path fill-rule='evenodd' d='M11.854 4.146a.5.5 0 010 .708l-7 7a.5.5 0 01-.708-.708l7-7a.5.5 0 01.708 0z' clip-rule='evenodd'/><path fill-rule='evenodd' d='M4.146 4.146a.5.5 0 000 .708l7 7a.5.5 0 00.708-.708l-7-7a.5.5 0 00-.708 0z' clip-rule='evenodd'/></svg>");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: 2em; height: 2em;
+        }
+
+        .btn-yes, btn-yes:hover {
+            color: white !important;
+            background-color: #A7DFB3;
+            border-color: #A7DFB3;
+        }
+
+        .btn-yes.active {
+            background-color: #28cF4C;
+        }
+
+        .btn-no, btn-no:hover {
+            color: white !important;
+            background-color: #FFC0C0;
+            border-color: #A7DFB3;
+        }
+
+        .btn-no.active {
+            background-color: #FF4040;
+        }
+
+    </style>
+
+    <title>Open up!</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Transparency Checklist</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+</nav>
+
+<div class="container" style="padding-bottom: 2em; padding-top: 2em">
+    <ul class="nav nav-pills " style="padding-bottom: 1em" role="tablist" id="topictabs">
+        {# <span class="lead" style="margin-top: 8px">Topics:&nbsp;&nbsp;</span> #}
+        {% for phase in phases %}
+        <li class="nav-item">
+            <a class="nav-link {%if loop.first %}active{% endif %}" data-toggle="tab" role="tab"
+               href="#phase{{loop.index}}" aria-controls="phase{{loop.index}}" aria-selected="{{loop.first}}">
+                {{loop.index}}. {{ phase }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <div class="tab-content" id="topictabscontent">
+    {% for phase, questions in phases.items() %}
+        <div class="tab-pane fade {% if loop.first %}show active{% endif %}" id="phase{{loop.index}}"
+             role="tabpanel" aria-labelledby="phase{{loop.index}}-tab">
+        {% for q in questions %}
+            <div class="row question {% if q.followup %}collapse{% endif %}" id="{{q.q}}">
+                <div class="col-md-6 qquestion" style="{% if q.followup %}margin-left: 2em; margin-right: -2em;{% endif %}padding-right: 2em">
+                    <h4>{{ q.title }}</h4>
+                    <p class="lead">{{q.explanation}}</p>
+
+                </div>
+                <div class="col-md-2 qcheck">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-yes yes" onclick="toggle('{{q.q}}', true)">
+                            <input type="radio" name="options" id="#{{q.q}}_yes" onclick="event.stopPropagation()">Yes
+                        </label>
+                        <label class="btn btn-no no" onclick="toggle('{{q.q}}', false)">
+                            <input type="radio" name="options" id="#{{q.q}}_no" onclick="event.stopPropagation()">No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 qadvice">
+                    <div class="collapse" id="{{q.q}}_no_advice">
+                        <p class="lead">No? Well, here is some advice for you!</p>
+                    </div>
+                    <div class="collapse" id="{{q.q}}_yes_advice">
+                        <p class="lead">Yes? Well, here is some advice for you!</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script>
+    // AFAIK, I can't prevent the collapse from toggling (if you click e.g. "no" twice) with the data-toggles attribute
+    // so we do it in JS
+    const dependencies = {{ dependencies|tojson }};
+
+    function get_deps(q, yes) {
+        const attr = yes?"yes":"no";
+        if (!dependencies.hasOwnProperty(q)) return [];
+        if (!dependencies[q].hasOwnProperty(attr)) return [];
+        return dependencies[q][attr]
+
+    }
+
+    function toggle(q, yes) {
+        console.log([q, yes]);
+        // Get dependencies to show and hide
+        to_show = get_deps(q, yes);
+        to_hide = get_deps(q, !yes);
+        // Add advice block
+        to_show = to_show.concat(q+'_'+(yes?"yes":"no")+"_advice");
+        to_hide = to_hide.concat(q+'_'+(!yes?"yes":"no")+"_advice");
+
+        to_show.forEach(function(e) {$('#'+e).collapse('show')});
+        to_hide.forEach(function(e) {$('#'+e).collapse('hide')});
+    }
+</script>
+</body>
+</html>

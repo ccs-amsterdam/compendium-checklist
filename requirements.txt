@@ -1,0 +1,4 @@
+cssselect
+Jinja2
+lxml
+requests
