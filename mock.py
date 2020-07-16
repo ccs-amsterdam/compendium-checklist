@@ -5,7 +5,7 @@ from jinja2 import Template
 
 template = Template(open("mock_template.html").read())
 
-PHASES = ["Getting Started", "Version control for you Program/Langauge", "Structure of your Project Folders", "Before Submitting Your Manuscript."]
+PHASES = ["Getting Started", "Version Control for Your Program/Langauge", "Structure of Your Project Folders", "Checks Before Submitting Your Manuscript"]
 
 
 class Question:
