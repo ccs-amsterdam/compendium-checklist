@@ -62,7 +62,8 @@
 
         .nav-pills{
           background-color: rgb(41, 49, 51);
-
+          display: flex;
+          justify-content: center;
         }
 
         .pill a {
@@ -89,7 +90,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="https://github.com/vanatteveldt/compendium-checklist" target="_blank">
-      Compendium Checklist to Make Open Science Fun &amp Easy!<br />
+      Compendium Checklist to Make Open Science Fun &amp Easy!<br/>
       <i>Wouter van Atteveldt, Anne Kroon, Felicia Loecherbach, Mickey Steijaert, Joanna Strychach, Damian Trilling, Mariken A.C.G. van der Velden &amp Kasper Welbers </i> </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -181,11 +182,8 @@
                 <div class="col-md-4 qadvice">
                     <div class="collapse" id="Q1_2_no_advice">
                         <p class="lead">Ever produced a text document, script or datafile with a title looking like this: "FinalVersion2.0_REVISITED18may_FL"?  <br/>
-
 When working on vast, collaborative scientific projects, keeping track of different versions of your work can be a burden. Still, it is important to store older versions - not only because you might want to revert changes later on in the process, but also because you want to get insight into what changes your coworkers made to your precious file. <br/>
-
 Luckily, there now exist digital version control systems, that make version control easy and understandable. Such version control systems save not only new files that you save to the system, but also the changes between the old and new version. This way, you can easily keep track of changes and revert to old versions (or even combine different "branches" of a file) as you please.  <br/>
-
 Right now, the most popular software amongst scientists for doing this is Git, a prrogram that manages "repositories" (the "folder" with your project), which stores files and each file's revision history. Github.com is an cloud web server which offers the opportunity to store your repository remotely, to easily collabore on projects with colleagues.</p>
                     </div>
                     <div class="collapse" id="Q1_2_yes_advice">
