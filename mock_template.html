@@ -3,18 +3,21 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=Yes">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
     <style>
+
+        .nav{
+          background: rgb(41, 49, 51);
+        }
 
         .qquestion, .qcheck, .qadvice {
             background: rgb(248, 249, 250);
+            color: rgb(41, 49, 51);
             margin-top: 2px;
             margin-bottom: 2px;
-
         }
         .qcheck {
             display: flex;
@@ -64,20 +67,21 @@
 
     </style>
 
-    <title>Open Science: Fun and Easy!</title>
+    <title>Open Science: Fun &amp Easy!</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Transparency Checklist</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <div class="p-3 mb-2 bg-light text-dark">.bg-light</div>
+    <a class="navbar-brand" href="#">Compendium Checklist Makes Open Science Fun &amp Easy!</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
 </nav>
 
-<div class="container" style="padding-bottom: 2em; padding-top: 2em">
-    <ul class="nav nav-pills " style="padding-bottom: 1em" role="tablist" id="topictabs">
-        {# <span class="lead" style="margin-top: 8px">Topics:&nbsp;&nbsp;</span> #}
+<div class="container-fluid" style="padding-bottom: 2em; padding-top: 2em; padding-left: 15em; padding-right: 15em">
+    <ul class="nav nav-pills " style="padding-bottom: 2em" role="tablist" id="topictabs">
+        {# <span class="lead" style="margin-top: 2px">Topics:&nbsp;&nbsp;</span> #}
         {% for phase in phases %}
         <li class="nav-item">
             <a class="nav-link {%if loop.first %}active{% endif %}" data-toggle="tab" role="tab"
@@ -91,7 +95,7 @@
     <div class="tab-content" id="topictabscontent">
     {% for phase, questions in phases.items() %}
         <div class="tab-pane fade {% if loop.first %}show active{% endif %}" id="phase{{loop.index}}"
-             role="tabpanel" aria-labelledby="phase{{loop.index}}-tab">
+             role="tabpanel" aria-labelledby="phase{{loop.index}}-tab" style="margin-left: 1em; margin-right: -1em;padding-right: 2em">
         {% for q in questions %}
             <div class="row question {% if q.followup %}collapse{% endif %}" id="{{q.q}}">
                 <div class="col-md-6 qquestion" style="{% if q.followup %}margin-left: 2em; margin-right: -2em;{% endif %}padding-right: 2em">
@@ -111,10 +115,10 @@
                 </div>
                 <div class="col-md-4 qadvice">
                     <div class="collapse" id="{{q.q}}_no_advice">
-                        <p class="lead">No? Well, here is some advice for you!</p>
+                        <p class="lead">No worries, the Compendium Checklist guides you through this process step-by-step! Answer the follow-up questions and/or click on the explanation boxes for more help.</p>
                     </div>
                     <div class="collapse" id="{{q.q}}_yes_advice">
-                        <p class="lead">Yes? Well, that's great!</p>
+                        <p class="lead">That's great, let's continue!</p>
                     </div>
                 </div>
             </div>
