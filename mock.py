@@ -9,13 +9,15 @@ PHASES = ["Getting Started", "Version Control for Your Program/Langauge", "Struc
 
 
 class Question:
-    def __init__(self, phase, q, followup, followup_if, title, explanation, **_):
+    def __init__(self, phase, q, followup, followup_if, title, explanation, yes_explanation, no_explanation, **_):
         self.phase = PHASES[int(phase) - 1]
         self.q = q.replace(".", "_")
         self.followup = followup.replace(".", "_")
         self.followup_if = followup_if
         self.title = title
         self.explanation = explanation
+        self.yes_explanation = yes_explanation
+        self.no_explanation = no_explanation
 
 phases = {phase: [] for phase in PHASES}
 

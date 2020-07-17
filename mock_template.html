@@ -13,13 +13,17 @@
             background: rgb(248, 249, 250);
             color: rgb(41, 49, 51);
             margin-top: 2px;
-            margin-bottom: 2px;
+            margin-bottom: 1px;
         }
         .qcheck {
             display: flex;
             align-items: center}
         .qquestion {border-radius: 25px 0px 0px 25px}
         .qadvice   {border-radius: 0px 25px 25px 0px}
+
+        .container-fluid{
+          border-radius: 25px 25px 25px 25px;
+        }
 
 
         .yes::before {
@@ -74,6 +78,7 @@
           color: rgb(41, 49, 51)!important;
         }
 
+
     </style>
 
     <title>Open Science: Fun &amp Easy!</title>
@@ -87,8 +92,8 @@
 
 </nav>
 
-<div class="container-fluid" style="padding-bottom: 2em; padding-top: 2em; padding-left: 15em; padding-right: 15em">
-    <ul class="nav navbar-dark bg-dark nav-pills" style="padding-bottom: 2em" role="tablist" id="topictabs">
+<div class="container-fluid" style="padding-bottom: 1em; padding-top: 1em; padding-left: 5em; padding-right: 5em">
+    <ul class="nav navbar-dark bg-dark nav-pills" style="padding-bottom: 0" role="tablist" id="topictabs">
         {# <span class="lead" style="margin-top: 2px">Topics:&nbsp;&nbsp;</span> #}
         {% for phase in phases %}
         <li class="nav-item pill">
@@ -123,10 +128,10 @@
                 </div>
                 <div class="col-md-4 qadvice">
                     <div class="collapse" id="{{q.q}}_no_advice">
-                        <p class="lead">No worries, the Compendium Checklist guides you through this process step-by-step! Answer the follow-up questions and/or click on the explanation boxes for more help.</p>
+                        <p class="lead">{{q.no_explanation}}</p>
                     </div>
                     <div class="collapse" id="{{q.q}}_yes_advice">
-                        <p class="lead">That's great, let's continue!</p>
+                        <p class="lead">{{q.yes_explanation}}</p>
                     </div>
                 </div>
             </div>
