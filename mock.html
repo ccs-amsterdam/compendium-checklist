@@ -9,17 +9,56 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <style>
 
+    p{
+      text-align: justify;
+      font-family: Arial, Verdana, sans-serif;
+      font-size: 16px;
+      line-height: 1.8em;
+      background-color: rgb(248, 249, 250);
+      border-radius: 25px 25px 25px 25px;
+      padding-left: 1em;
+      padding-right: 1em;
+      margin-left: .5px;
+      margin-right: .5px;}
+
+    h3{
+      line-height: 2.5em;
+      font-family: Arial, Verdana, sans-serif;
+      text-align: center;
+      background-color: rgb(248, 249, 250);
+      border-radius: 25px 25px 25px 25px;
+      padding-left: 1em;
+      padding-right: 1em;}
+
+    hr{
+      height: 2px;
+      background-color: rgb(41, 49, 51);
+      border: none;}
+
+    body{
+      background-color: rgb(255, 255, 255);
+      opacity: 0.9;
+      font-size: 16px;
+    }
+
+
         .qquestion, .qcheck, .qadvice {
             background: rgb(248, 249, 250);
             color: rgb(41, 49, 51);
+            border-color: rgb(41, 49, 51);
             margin-top: 2px;
             margin-bottom: 1px;
+            font-family: Arial, Verdana, sans-serif;
+            font-size: 16px;
         }
         .qcheck {
             display: flex;
-            align-items: center}
-        .qquestion {border-radius: 25px 0px 0px 25px}
-        .qadvice   {border-radius: 0px 25px 25px 0px}
+            align-items: center;
+            border-color: rgb(41, 49, 51);}
+        .qquestion {border-radius: 25px 0px 0px 25px;
+          border-color: rgb(41, 49, 51);}
+        .qadvice   {border-radius: 0px 25px 25px 0px;
+          border-color: rgb(41, 49, 51);}
 
         .yes::before {
             display: inline-block;
@@ -64,6 +103,7 @@
           background-color: rgb(41, 49, 51);
           display: flex;
           justify-content: center;
+          font-size: 1.3em;
         }
 
         .pill a {
@@ -73,6 +113,7 @@
         .pill .nav-link.active {
           background-color: rgb(248, 249, 250)!important;
           color: rgb(41, 49, 51)!important;
+          cursor:pointer;
         }
 
         .navbar-brand {
@@ -80,8 +121,30 @@
           padding: 15px;
           text-align: center;
           width: 100%;
-}
+        }
 
+        .btn-primary {
+          background-color: rgb(41, 49, 51);
+          border-color: rgb(41, 49, 51);
+          color: rgb(248, 249, 250);
+        }
+
+        .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+          background-color: rgb(41, 49, 51)!important;
+          border-color: rgb(41, 49, 51)!important;
+          color: rgb(248, 249, 250)!important;
+        }
+
+        .btn-secondary {
+          background-color: rgb(41, 49, 51);
+          border-color: rgb(41, 49, 51);
+          color: rgb(248, 249, 250);
+        }
+
+        .btn-secondary:active {
+          color: rgb(248, 249, 250)!important;
+          background-color: rgb(41, 49, 51)!important;
+        }
 
     </style>
 
@@ -90,7 +153,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="https://github.com/vanatteveldt/compendium-checklist" target="_blank">
-      Compendium Checklist to Make Open Science Fun &amp Easy!<br/>
+      <h1>Compendium Checklist to Make Open Science Fun &amp Easy!<br/></h1>
       <i>Wouter van Atteveldt, Anne Kroon, Felicia Loecherbach, Mickey Steijaert, Joanna Strychach, Damian Trilling, Mariken A.C.G. van der Velden &amp Kasper Welbers </i> </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -103,28 +166,28 @@
         
         
         <li class="nav-item pill">
-            <a class="nav-link active" data-toggle="tab" role="tab"
+            <a class="nav-link active" id="pillphase1" data-toggle="tab" role="tab"
                href="#phase1" aria-controls="phase1" aria-selected="True">
                 1. Getting Started
             </a>
         </li>
         
         <li class="nav-item pill">
-            <a class="nav-link " data-toggle="tab" role="tab"
+            <a class="nav-link " id="pillphase2" data-toggle="tab" role="tab"
                href="#phase2" aria-controls="phase2" aria-selected="False">
                 2. Version Control for Your Program/Langauge
             </a>
         </li>
         
         <li class="nav-item pill">
-            <a class="nav-link " data-toggle="tab" role="tab"
+            <a class="nav-link " id="pillphase3" data-toggle="tab" role="tab"
                href="#phase3" aria-controls="phase3" aria-selected="False">
                 3. Structure of Your Project Folders
             </a>
         </li>
         
         <li class="nav-item pill">
-            <a class="nav-link " data-toggle="tab" role="tab"
+            <a class="nav-link " id="pillphase4" data-toggle="tab" role="tab"
                href="#phase4" aria-controls="phase4" aria-selected="False">
                 4. Checks Before Submitting Your Manuscript
             </a>
@@ -137,860 +200,1604 @@
         <div class="tab-pane fade show active" id="phase1"
              role="tabpanel" aria-labelledby="phase1-tab" style="margin-left: 1em; margin-right: -1em;padding-right: 2em">
         
-            <div class="row question " id="Q1_1">
-                <div class="col-md-6 qquestion" style="padding-right: 2em">
-                    <h4>Have you used the Standardized Research Compendium for your research project before?</h4>
-                    <p class="lead">Welcome to our Compendium Checklist!</p>
-
-                </div>
-                <div class="col-md-2 qcheck">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-yes yes" onclick="toggle('Q1_1', true)">
-                            <input type="radio" name="options" id="#Q1_1_yes" onclick="event.stopPropagation()">Yes
-                        </label>
-                        <label class="btn btn-no no" onclick="toggle('Q1_1', false)">
-                            <input type="radio" name="options" id="#Q1_1_no" onclick="event.stopPropagation()">No
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4 qadvice">
-                    <div class="collapse" id="Q1_1_no_advice">
-                        <p class="lead">This website created by the Computational Communication Lab Amsterdam is designed to walk you through the different steps of creating an open science compendium for your own research project. <br/> The whole process is divided into four phases (on the top) and for each phase you can answer questions that are either aimed at reminding you of things that need to be done or give you additional information on what to install/how to set things up if you are not yet familiar with it. <br/> On the right side you will see additional information and links. At the end of the last phase you can generate a PDF summarizing the most important information and giving an overview of how many things you have fulfilled on your way to making your project and code open source. <br/> Also feel free to skip certain questions or phases if you feel you do not need any information or help for those parts. </p>
-                    </div>
-                    <div class="collapse" id="Q1_1_yes_advice">
-                        <p class="lead">Great, thanks for using our Compendium Checklist again! <br/> Feel free to skip certain questions or phases if you feel you do not need any information or help for those parts</p>
-                    </div>
-                </div>
-            </div>
+          <h3>Welcome to our Compendium Checklist!</h3> <hr />
+          <p> This website created by the <a href = "http://ccs.amsterdam/" target="_blank">Computational Communication Science Amsterdam</a>
+               is designed to walk you through the different steps of creating an <em>Open Science Compendium</em> for your own research project.
+               The whole process is divided into four phases (on the top) and for each phase you can answer questions that are either aimed at reminding you
+               of things that need to be done or give you additional information on what to install/how to set things up if you are not yet familiar with it.
+               On the right side you will see additional information and links.
+               The first couple of questions are checking whether the computer you are working on for this research project has all necessary
+               applications to work with the <a href = "https://github.com/ccs-amsterdam/compendium" target="_blank"> Standardized Research Compendium</a>.
+               <ins>Feel free to skip certain questions or phases if you feel you do not need any information or help for those parts.</ins> </p>
         
-            <div class="row question collapse" id="Q1_2">
-                <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-                    <h4>Have you ever worked with Version Control before?</h4>
-                    <p class="lead">Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.</p>
-
-                </div>
-                <div class="col-md-2 qcheck">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-yes yes" onclick="toggle('Q1_2', true)">
-                            <input type="radio" name="options" id="#Q1_2_yes" onclick="event.stopPropagation()">Yes
-                        </label>
-                        <label class="btn btn-no no" onclick="toggle('Q1_2', false)">
-                            <input type="radio" name="options" id="#Q1_2_no" onclick="event.stopPropagation()">No
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4 qadvice">
-                    <div class="collapse" id="Q1_2_no_advice">
-                        <p class="lead">Ever produced a text document, script or datafile with a title looking like this: "FinalVersion2.0_REVISITED18may_FL"?  <br/>
-When working on vast, collaborative scientific projects, keeping track of different versions of your work can be a burden. Still, it is important to store older versions - not only because you might want to revert changes later on in the process, but also because you want to get insight into what changes your coworkers made to your precious file. <br/>
-Luckily, there now exist digital version control systems, that make version control easy and understandable. Such version control systems save not only new files that you save to the system, but also the changes between the old and new version. This way, you can easily keep track of changes and revert to old versions (or even combine different "branches" of a file) as you please.  <br/>
-Right now, the most popular software amongst scientists for doing this is Git, a prrogram that manages "repositories" (the "folder" with your project), which stores files and each file's revision history. Github.com is an cloud web server which offers the opportunity to store your repository remotely, to easily collabore on projects with colleagues.</p>
-                    </div>
-                    <div class="collapse" id="Q1_2_yes_advice">
-                        <p class="lead">I know version control and have used it before.</p>
-                    </div>
-                </div>
-            </div>
         
-            <div class="row question " id="Q1_3">
-                <div class="col-md-6 qquestion" style="padding-right: 2em">
-                    <h4>Do you have Git, Python, and Doit installed on the computer you are working on?</h4>
-                    <p class="lead">All the things you need.</p>
-
-                </div>
-                <div class="col-md-2 qcheck">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-yes yes" onclick="toggle('Q1_3', true)">
-                            <input type="radio" name="options" id="#Q1_3_yes" onclick="event.stopPropagation()">Yes
-                        </label>
-                        <label class="btn btn-no no" onclick="toggle('Q1_3', false)">
-                            <input type="radio" name="options" id="#Q1_3_no" onclick="event.stopPropagation()">No
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4 qadvice">
-                    <div class="collapse" id="Q1_3_no_advice">
-                        <p class="lead">I need help with it.</p>
-                    </div>
-                    <div class="collapse" id="Q1_3_yes_advice">
-                        <p class="lead">I have all of this installed.</p>
-                    </div>
-                </div>
+          <div class="row question " id="Q1_1">
+            <div class="col-md-6 qquestion" style="padding-right: 2em">
+              <p class="lead"> <b>Is it the first time you are working with Version Control?</b> </p>
+              <p> Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.</p>
             </div>
+            <div class="col-md-2 qcheck">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-yes yes" onclick="toggle('Q1_1', true)">
+                  <input type="radio" name="options" id="#Q1_1_yes" onclick="event.stopPropagation()">Yes
+                </label>
+                <label class="btn btn-no no" onclick="toggle('Q1_1', false)">
+                  <input type="radio" name="options" id="#Q1_1_no" onclick="event.stopPropagation()">No
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4 qadvice">
+              <div class="collapse" id="Q1_1_no_advice">
+                <p >I know version control and have worked with it before. </br> </br> If you want to (re)visit or look up some principles of working with version control, A you can find a comprehensive documentation <a href="https://git-scm.com/book/en/v2/" target="_blank"> here</a>.</p>
+              </div>
+              <div class="collapse" id="Q1_1_yes_advice">
+                <p>Ever produced a text document, script or datafile with a title looking like this: <em>"FinalVersion2.0_REVISITED18may_FL"</em>?</br> Click on more information to learn how to organize your scripts in a reproducible, open, and transparent manner.</p>
+                <!-- Button to Open the Modal -->
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+                    <b> More Information</b>
+                  </button>
+                </div>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title">Version control</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <p>  When working on vast, collaborative scientific projects, keeping track of different versions of your work can be a burden. Still, it is important to store older versions - not only because you might want to revert changes later on in the process, but also because you want to get insight into what changes your coworkers made to your precious file. <br/> Luckily, there now exist digital version control systems, that make version control easy and understandable. Such version control systems save not only new files that you save to the system, but also the changes between the old and new version. This way, you can easily keep track of changes and revert to old versions (or even combine different "branches" of a file) as you please.  <br/> Right now, the most popular software amongst scientists for doing this is Git, a prrogram that manages "repositories" (the "folder" with your project), which stores files and each file's revision history. <a href="https://github.com/" target="_blank"> Github.com </a> is an cloud web server which offers the opportunity to store your repository remotely, to easily collabore on projects with colleagues. A comprehensive documentation on getting started with Git can be found <a href="https://git-scm.com/book/en/v2/" target="_blank"> here</a>. </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         
-            <div class="row question collapse" id="Q1_4">
-                <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-                    <h4>Do you have Git installed on the computer you are working on?</h4>
-                    <p class="lead">To get you all the code.</p>
-
-                </div>
-                <div class="col-md-2 qcheck">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-yes yes" onclick="toggle('Q1_4', true)">
-                            <input type="radio" name="options" id="#Q1_4_yes" onclick="event.stopPropagation()">Yes
-                        </label>
-                        <label class="btn btn-no no" onclick="toggle('Q1_4', false)">
-                            <input type="radio" name="options" id="#Q1_4_no" onclick="event.stopPropagation()">No
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4 qadvice">
-                    <div class="collapse" id="Q1_4_no_advice">
-                        <p class="lead">I need help with it.</p>
-                    </div>
-                    <div class="collapse" id="Q1_4_yes_advice">
-                        <p class="lead">I have Git installed.</p>
-                    </div>
-                </div>
+          <div class="row question " id="Q1_2">
+            <div class="col-md-6 qquestion" style="padding-right: 2em">
+              <p class="lead"> <b>Is it the first time you are working with Git, Python, and Doit on your current computer?</b> </p>
+              <p> All the things you need.</p>
             </div>
+            <div class="col-md-2 qcheck">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-yes yes" onclick="toggle('Q1_2', true)">
+                  <input type="radio" name="options" id="#Q1_2_yes" onclick="event.stopPropagation()">Yes
+                </label>
+                <label class="btn btn-no no" onclick="toggle('Q1_2', false)">
+                  <input type="radio" name="options" id="#Q1_2_no" onclick="event.stopPropagation()">No
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4 qadvice">
+              <div class="collapse" id="Q1_2_no_advice">
+                <p >I have all of this installed. </br> </br> If you want to look into the advantages of the combination of Git, Python and Doit, have a look at <a href = "https://github.com/ccs-amsterdam/compendium" target="_blank"> our Github page</a>. </p>
+              </div>
+              <div class="collapse" id="Q1_2_yes_advice">
+                <p>I need help with it</p>
+                <!-- Button to Open the Modal -->
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+                    <b> More Information</b>
+                  </button>
+                </div>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title">Working from a Terminal</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <p>  Add info for Windows, Mac and Linux. </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         
-            <div class="row question collapse" id="Q1_5">
-                <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-                    <h4>Do you have Python version x installed on the computer you are working on?</h4>
-                    <p class="lead">To not get any conflicts.</p>
-
-                </div>
-                <div class="col-md-2 qcheck">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-yes yes" onclick="toggle('Q1_5', true)">
-                            <input type="radio" name="options" id="#Q1_5_yes" onclick="event.stopPropagation()">Yes
-                        </label>
-                        <label class="btn btn-no no" onclick="toggle('Q1_5', false)">
-                            <input type="radio" name="options" id="#Q1_5_no" onclick="event.stopPropagation()">No
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4 qadvice">
-                    <div class="collapse" id="Q1_5_no_advice">
-                        <p class="lead">I need help with it.</p>
-                    </div>
-                    <div class="collapse" id="Q1_5_yes_advice">
-                        <p class="lead">I have this Python version installed.</p>
-                    </div>
-                </div>
+          <div class="row question collapse" id="Q1_3">
+            <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
+              <p class="lead"> <b>Is this the first time you are working with Git on this computer?</b> </p>
+              <p> To get you all the code.</p>
             </div>
+            <div class="col-md-2 qcheck">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-yes yes" onclick="toggle('Q1_3', true)">
+                  <input type="radio" name="options" id="#Q1_3_yes" onclick="event.stopPropagation()">Yes
+                </label>
+                <label class="btn btn-no no" onclick="toggle('Q1_3', false)">
+                  <input type="radio" name="options" id="#Q1_3_no" onclick="event.stopPropagation()">No
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4 qadvice">
+              <div class="collapse" id="Q1_3_no_advice">
+                <p >I have this Python version installed.</p>
+              </div>
+              <div class="collapse" id="Q1_3_yes_advice">
+                <p>I need help with it.</p>
+                <!-- Button to Open the Modal -->
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+                    <b> More Information</b>
+                  </button>
+                </div>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title">Installing Git</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <p>  Installing the digital version control system Git is easy - but works differently depending on your operating system.
+
+Visit this webpage to find the specific installation manual for your operating system:
+https://gist.github.com/derhuerst/1b15ff4652a867391f03 </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         
-            <div class="row question collapse" id="Q1_6">
-                <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-                    <h4>Do you have the Python package Doit installed on the computer you are working on?</h4>
-                    <p class="lead">To follow the workflow.</p>
-
-                </div>
-                <div class="col-md-2 qcheck">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-yes yes" onclick="toggle('Q1_6', true)">
-                            <input type="radio" name="options" id="#Q1_6_yes" onclick="event.stopPropagation()">Yes
-                        </label>
-                        <label class="btn btn-no no" onclick="toggle('Q1_6', false)">
-                            <input type="radio" name="options" id="#Q1_6_no" onclick="event.stopPropagation()">No
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4 qadvice">
-                    <div class="collapse" id="Q1_6_no_advice">
-                        <p class="lead">I need help with it.</p>
-                    </div>
-                    <div class="collapse" id="Q1_6_yes_advice">
-                        <p class="lead">I have Doit installed.</p>
-                    </div>
-                </div>
+          <div class="row question collapse" id="Q1_4">
+            <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
+              <p class="lead"> <b>Is this the first time you are working with Python version x on your current computer?</b> </p>
+              <p> To not get any conflicts.</p>
             </div>
+            <div class="col-md-2 qcheck">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-yes yes" onclick="toggle('Q1_4', true)">
+                  <input type="radio" name="options" id="#Q1_4_yes" onclick="event.stopPropagation()">Yes
+                </label>
+                <label class="btn btn-no no" onclick="toggle('Q1_4', false)">
+                  <input type="radio" name="options" id="#Q1_4_no" onclick="event.stopPropagation()">No
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4 qadvice">
+              <div class="collapse" id="Q1_4_no_advice">
+                <p >I have this Python version installed.</p>
+              </div>
+              <div class="collapse" id="Q1_4_yes_advice">
+                <p>I have not yet installed this Python version. </p>
+                <!-- Button to Open the Modal -->
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+                    <b> More Information</b>
+                  </button>
+                </div>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title">Installing Python</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <p>  Python is a programming language that is used by professionals from a wide variety of fields to write software. In Python, many packages (small programs) are written that offer you a specific type of functionality, like the 'doit'-package that we use in the compendium. 
+
+Visit this webpage to find the specific installation manual for your operating system:
+https://wiki.python.org/moin/BeginnersGuide/Download </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         
-            <div class="row question " id="Q1_7">
-                <div class="col-md-6 qquestion" style="padding-right: 2em">
-                    <h4>Did you already create a version control repository for this project?</h4>
-                    <p class="lead">To follow the workflow.</p>
-
-                </div>
-                <div class="col-md-2 qcheck">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-yes yes" onclick="toggle('Q1_7', true)">
-                            <input type="radio" name="options" id="#Q1_7_yes" onclick="event.stopPropagation()">Yes
-                        </label>
-                        <label class="btn btn-no no" onclick="toggle('Q1_7', false)">
-                            <input type="radio" name="options" id="#Q1_7_no" onclick="event.stopPropagation()">No
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4 qadvice">
-                    <div class="collapse" id="Q1_7_no_advice">
-                        <p class="lead">I need help with it.</p>
-                    </div>
-                    <div class="collapse" id="Q1_7_yes_advice">
-                        <p class="lead">I have created a version control repo.</p>
-                    </div>
-                </div>
+          <div class="row question collapse" id="Q1_5">
+            <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
+              <p class="lead"> <b>Is it the first time you will be working with the Python package Doit on the current computer?</b> </p>
+              <p> To follow the workflow.</p>
             </div>
+            <div class="col-md-2 qcheck">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-yes yes" onclick="toggle('Q1_5', true)">
+                  <input type="radio" name="options" id="#Q1_5_yes" onclick="event.stopPropagation()">Yes
+                </label>
+                <label class="btn btn-no no" onclick="toggle('Q1_5', false)">
+                  <input type="radio" name="options" id="#Q1_5_no" onclick="event.stopPropagation()">No
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4 qadvice">
+              <div class="collapse" id="Q1_5_no_advice">
+                <p >I have Doit installed.</p>
+              </div>
+              <div class="collapse" id="Q1_5_yes_advice">
+                <p>I need help with it.</p>
+                <!-- Button to Open the Modal -->
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+                    <b> More Information</b>
+                  </button>
+                </div>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title">Installing doit</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <p>  Doit is a powerful automation tool Python package. Simply put, it is a package that enables you to define simple tasks for a program to perform (like building and maintaining a research compendium!). Visit this page for more information about doit: https://pydoit.org/index.html
+
+To install doit, simply type "pip3 install doit" (Windows) or "sudo pip3 install doit" (Linux / Mac) in the terminal. 
+
+Note: 'pip' is a package installer for Python, which mostly comes pre-installed with your Python version. If, for whatever reason, you have to (re-)install pip, visit this website for an installation guide for different systems: https://pip.pypa.io/en/stable/ </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         
-            <div class="row question " id="Q1_8">
-                <div class="col-md-6 qquestion" style="padding-right: 2em">
-                    <h4>Have you already forked, copied or cloned the Version Control Structure proposed by the Standardixed Research Compendium</h4>
-                    <p class="lead">You can find it on the authors Github page.</p>
-
-                </div>
-                <div class="col-md-2 qcheck">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-yes yes" onclick="toggle('Q1_8', true)">
-                            <input type="radio" name="options" id="#Q1_8_yes" onclick="event.stopPropagation()">Yes
-                        </label>
-                        <label class="btn btn-no no" onclick="toggle('Q1_8', false)">
-                            <input type="radio" name="options" id="#Q1_8_no" onclick="event.stopPropagation()">No
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4 qadvice">
-                    <div class="collapse" id="Q1_8_no_advice">
-                        <p class="lead">I need help with it.</p>
-                    </div>
-                    <div class="collapse" id="Q1_8_yes_advice">
-                        <p class="lead">I have forked, copied or cloned it.</p>
-                    </div>
-                </div>
+          <div class="row question " id="Q1_6">
+            <div class="col-md-6 qquestion" style="padding-right: 2em">
+              <p class="lead"> <b>Is it the first time you are creating a version control repository? Or is a version control for this project non-existing?</b> </p>
+              <p> To follow the workflow.</p>
             </div>
+            <div class="col-md-2 qcheck">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-yes yes" onclick="toggle('Q1_6', true)">
+                  <input type="radio" name="options" id="#Q1_6_yes" onclick="event.stopPropagation()">Yes
+                </label>
+                <label class="btn btn-no no" onclick="toggle('Q1_6', false)">
+                  <input type="radio" name="options" id="#Q1_6_no" onclick="event.stopPropagation()">No
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4 qadvice">
+              <div class="collapse" id="Q1_6_no_advice">
+                <p >I have created a version control repo.</p>
+              </div>
+              <div class="collapse" id="Q1_6_yes_advice">
+                <p>I need help with it.</p>
+                <!-- Button to Open the Modal -->
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+                    <b> More Information</b>
+                  </button>
+                </div>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title">The compendium structure</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <p>  To make your project easily understandable and interpetable for others, we advise you to use our standardized research compendium for structuring your project. To do so, we explain you how to copy the blueprint for this structure in the next step.
+
+If you still feel like creating your own folder structure, you can visit this webpage to learn how to create a Github repository: https://help.github.com/en/github/getting-started-with-github/create-a-repo </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         
-            <div class="row question " id="Q1_9">
-                <div class="col-md-6 qquestion" style="padding-right: 2em">
-                    <h4>Have you run doit install in the command line to set up the necessary Python and/or R environment for you research project?</h4>
-                    <p class="lead">Getting the system running.</p>
-
-                </div>
-                <div class="col-md-2 qcheck">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-yes yes" onclick="toggle('Q1_9', true)">
-                            <input type="radio" name="options" id="#Q1_9_yes" onclick="event.stopPropagation()">Yes
-                        </label>
-                        <label class="btn btn-no no" onclick="toggle('Q1_9', false)">
-                            <input type="radio" name="options" id="#Q1_9_no" onclick="event.stopPropagation()">No
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4 qadvice">
-                    <div class="collapse" id="Q1_9_no_advice">
-                        <p class="lead">I need help with it.</p>
-                    </div>
-                    <div class="collapse" id="Q1_9_yes_advice">
-                        <p class="lead">I have run doit install.</p>
-                    </div>
-                </div>
+          <div class="row question " id="Q1_7">
+            <div class="col-md-6 qquestion" style="padding-right: 2em">
+              <p class="lead"> <b>Is it the first time you are going to fork, copy or clone the Version Control Structure proposed by the Standardixed Research Compendium?</b> </p>
+              <p> You can find it on the authors Github page.</p>
             </div>
+            <div class="col-md-2 qcheck">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-yes yes" onclick="toggle('Q1_7', true)">
+                  <input type="radio" name="options" id="#Q1_7_yes" onclick="event.stopPropagation()">Yes
+                </label>
+                <label class="btn btn-no no" onclick="toggle('Q1_7', false)">
+                  <input type="radio" name="options" id="#Q1_7_no" onclick="event.stopPropagation()">No
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4 qadvice">
+              <div class="collapse" id="Q1_7_no_advice">
+                <p >I have forked, copied or cloned it.</p>
+              </div>
+              <div class="collapse" id="Q1_7_yes_advice">
+                <p>I need help with it.</p>
+                <!-- Button to Open the Modal -->
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+                    <b> More Information</b>
+                  </button>
+                </div>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title">Forking the compendiium structure</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <p>  By 'forking' a repository on Github, you simply make your own copy of the repository which you can subsequently edit as you see fit. We advise you to fork the basic folder structure template from Github, to ensure that your project adheres to the standardized folder structure. You can find the template here: https://github.com/ccs-amsterdam/compendium
+
+To fork the template, go to the template page and click 'Fork' button on the top right corner of the screen. </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         
-            <div class="row question " id="Q1_10">
-                <div class="col-md-6 qquestion" style="padding-right: 2em">
-                    <h4>Have you considered pre-registering your study?</h4>
-                    <p class="lead">Promoting open science.</p>
-
-                </div>
-                <div class="col-md-2 qcheck">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-yes yes" onclick="toggle('Q1_10', true)">
-                            <input type="radio" name="options" id="#Q1_10_yes" onclick="event.stopPropagation()">Yes
-                        </label>
-                        <label class="btn btn-no no" onclick="toggle('Q1_10', false)">
-                            <input type="radio" name="options" id="#Q1_10_no" onclick="event.stopPropagation()">No
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4 qadvice">
-                    <div class="collapse" id="Q1_10_no_advice">
-                        <p class="lead">Not applicable for my study (anymore).</p>
-                    </div>
-                    <div class="collapse" id="Q1_10_yes_advice">
-                        <p class="lead">I plan to preregister my study.</p>
-                    </div>
-                </div>
+          <div class="row question " id="Q1_8">
+            <div class="col-md-6 qquestion" style="padding-right: 2em">
+              <p class="lead"> <b>Would you like guidance or more information about running doit install in the command line to set up the necessary Python and/or R environment for you research project?</b> </p>
+              <p> Getting the system running.</p>
             </div>
+            <div class="col-md-2 qcheck">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-yes yes" onclick="toggle('Q1_8', true)">
+                  <input type="radio" name="options" id="#Q1_8_yes" onclick="event.stopPropagation()">Yes
+                </label>
+                <label class="btn btn-no no" onclick="toggle('Q1_8', false)">
+                  <input type="radio" name="options" id="#Q1_8_no" onclick="event.stopPropagation()">No
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4 qadvice">
+              <div class="collapse" id="Q1_8_no_advice">
+                <p >I have run doit install or know how to do it.</p>
+              </div>
+              <div class="collapse" id="Q1_8_yes_advice">
+                <p>I need help with it.</p>
+                <!-- Button to Open the Modal -->
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+                    <b> More Information</b>
+                  </button>
+                </div>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title">Run doit install</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <p>  To get your repository up and running, you have to access the doit package to install all neccessary Python and/or R components to have your project all set up.
+
+This is done simply by opening your terminal, nagivating to your repository and running "doit install". </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="row question " id="Q1_9">
+            <div class="col-md-6 qquestion" style="padding-right: 2em">
+              <p class="lead"> <b>Have you considered pre-registering your study?</b> </p>
+              <p> Promoting open science.</p>
+            </div>
+            <div class="col-md-2 qcheck">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-yes yes" onclick="toggle('Q1_9', true)">
+                  <input type="radio" name="options" id="#Q1_9_yes" onclick="event.stopPropagation()">Yes
+                </label>
+                <label class="btn btn-no no" onclick="toggle('Q1_9', false)">
+                  <input type="radio" name="options" id="#Q1_9_no" onclick="event.stopPropagation()">No
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4 qadvice">
+              <div class="collapse" id="Q1_9_no_advice">
+                <p >Not applicable for my study (anymore).</p>
+              </div>
+              <div class="collapse" id="Q1_9_yes_advice">
+                <p>I plan to preregister my study.</p>
+                <!-- Button to Open the Modal -->
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+                    <b> More Information</b>
+                  </button>
+                </div>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <p>   </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         
         </div>
-        
+      
         <div class="tab-pane fade " id="phase2"
              role="tabpanel" aria-labelledby="phase2-tab" style="margin-left: 1em; margin-right: -1em;padding-right: 2em">
         
-            <div class="row question " id="Q2_0">
-                <div class="col-md-6 qquestion" style="padding-right: 2em">
-                    <h4>Starting Phase 2: Version control for you Program/Langauge</h4>
-                    <p class="lead">These questions allow you to set up the version control for the program and/or language you are working with when conducting your research. If you think you do not need any explanations regarding this part, you can just skip it.</p>
-
-                </div>
-                <div class="col-md-2 qcheck">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-yes yes" onclick="toggle('Q2_0', true)">
-                            <input type="radio" name="options" id="#Q2_0_yes" onclick="event.stopPropagation()">Yes
-                        </label>
-                        <label class="btn btn-no no" onclick="toggle('Q2_0', false)">
-                            <input type="radio" name="options" id="#Q2_0_no" onclick="event.stopPropagation()">No
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4 qadvice">
-                    <div class="collapse" id="Q2_0_no_advice">
-                        <p class="lead">I want to skip this part and go to Phase 3: Structure of your Git Folders.</p>
-                    </div>
-                    <div class="collapse" id="Q2_0_yes_advice">
-                        <p class="lead">I want to continue and receive information on setting up version control.</p>
-                    </div>
-                </div>
-            </div>
+          <h3>Set-Up Your Project's Version Control!</h3> <hr />
+          <p>These questions allow you to set up the version control for the program and/or language you are working with when conducting your research.
+               If you think you do not need any explanations regarding this part, <a href="#" onclick="skiptotab(3)">you can just skip it</a>. </p>
+       
         
-            <div class="row question " id="Q2_1">
-                <div class="col-md-6 qquestion" style="padding-right: 2em">
-                    <h4>Does your project use python?</h4>
-                    <p class="lead">Python is an interpreted, high-level, general-purpose programming language.</p>
-
-                </div>
-                <div class="col-md-2 qcheck">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-yes yes" onclick="toggle('Q2_1', true)">
-                            <input type="radio" name="options" id="#Q2_1_yes" onclick="event.stopPropagation()">Yes
-                        </label>
-                        <label class="btn btn-no no" onclick="toggle('Q2_1', false)">
-                            <input type="radio" name="options" id="#Q2_1_no" onclick="event.stopPropagation()">No
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4 qadvice">
-                    <div class="collapse" id="Q2_1_no_advice">
-                        <p class="lead"></p>
-                    </div>
-                    <div class="collapse" id="Q2_1_yes_advice">
-                        <p class="lead"></p>
-                    </div>
-                </div>
+          <div class="row question " id="Q2_0">
+            <div class="col-md-6 qquestion" style="padding-right: 2em">
+              <p class="lead"> <b>Does your project use python?</b> </p>
+              <p> Python is an interpreted, high-level, general-purpose programming language.</p>
             </div>
+            <div class="col-md-2 qcheck">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-yes yes" onclick="toggle('Q2_0', true)">
+                  <input type="radio" name="options" id="#Q2_0_yes" onclick="event.stopPropagation()">Yes
+                </label>
+                <label class="btn btn-no no" onclick="toggle('Q2_0', false)">
+                  <input type="radio" name="options" id="#Q2_0_no" onclick="event.stopPropagation()">No
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4 qadvice">
+              <div class="collapse" id="Q2_0_no_advice">
+                <p ></p>
+              </div>
+              <div class="collapse" id="Q2_0_yes_advice">
+                <p></p>
+                <!-- Button to Open the Modal -->
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+                    <b> More Information</b>
+                  </button>
+                </div>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <p>   </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         
-            <div class="row question collapse" id="Q2_2">
-                <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-                    <h4>Have you activated the environment for version control of the package?</h4>
-                    <p class="lead">This means...</p>
-
-                </div>
-                <div class="col-md-2 qcheck">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-yes yes" onclick="toggle('Q2_2', true)">
-                            <input type="radio" name="options" id="#Q2_2_yes" onclick="event.stopPropagation()">Yes
-                        </label>
-                        <label class="btn btn-no no" onclick="toggle('Q2_2', false)">
-                            <input type="radio" name="options" id="#Q2_2_no" onclick="event.stopPropagation()">No
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4 qadvice">
-                    <div class="collapse" id="Q2_2_no_advice">
-                        <p class="lead">I need help with it.</p>
-                    </div>
-                    <div class="collapse" id="Q2_2_yes_advice">
-                        <p class="lead">I have activated it.</p>
-                    </div>
-                </div>
+          <div class="row question collapse" id="Q2_1">
+            <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
+              <p class="lead"> <b>Have you activated the environment for version control of the package?</b> </p>
+              <p> This means...</p>
             </div>
+            <div class="col-md-2 qcheck">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-yes yes" onclick="toggle('Q2_1', true)">
+                  <input type="radio" name="options" id="#Q2_1_yes" onclick="event.stopPropagation()">Yes
+                </label>
+                <label class="btn btn-no no" onclick="toggle('Q2_1', false)">
+                  <input type="radio" name="options" id="#Q2_1_no" onclick="event.stopPropagation()">No
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4 qadvice">
+              <div class="collapse" id="Q2_1_no_advice">
+                <p >I need help with it.</p>
+              </div>
+              <div class="collapse" id="Q2_1_yes_advice">
+                <p>I have activated it.</p>
+                <!-- Button to Open the Modal -->
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+                    <b> More Information</b>
+                  </button>
+                </div>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <p>   </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         
-            <div class="row question " id="Q2_3">
-                <div class="col-md-6 qquestion" style="padding-right: 2em">
-                    <h4>Does your project use R?</h4>
-                    <p class="lead">R is a programming language for statistical computing and graphics.</p>
-
-                </div>
-                <div class="col-md-2 qcheck">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-yes yes" onclick="toggle('Q2_3', true)">
-                            <input type="radio" name="options" id="#Q2_3_yes" onclick="event.stopPropagation()">Yes
-                        </label>
-                        <label class="btn btn-no no" onclick="toggle('Q2_3', false)">
-                            <input type="radio" name="options" id="#Q2_3_no" onclick="event.stopPropagation()">No
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4 qadvice">
-                    <div class="collapse" id="Q2_3_no_advice">
-                        <p class="lead"></p>
-                    </div>
-                    <div class="collapse" id="Q2_3_yes_advice">
-                        <p class="lead"></p>
-                    </div>
-                </div>
+          <div class="row question " id="Q2_2">
+            <div class="col-md-6 qquestion" style="padding-right: 2em">
+              <p class="lead"> <b>Does your project use R?</b> </p>
+              <p> R is a programming language for statistical computing and graphics.</p>
             </div>
+            <div class="col-md-2 qcheck">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-yes yes" onclick="toggle('Q2_2', true)">
+                  <input type="radio" name="options" id="#Q2_2_yes" onclick="event.stopPropagation()">Yes
+                </label>
+                <label class="btn btn-no no" onclick="toggle('Q2_2', false)">
+                  <input type="radio" name="options" id="#Q2_2_no" onclick="event.stopPropagation()">No
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4 qadvice">
+              <div class="collapse" id="Q2_2_no_advice">
+                <p ></p>
+              </div>
+              <div class="collapse" id="Q2_2_yes_advice">
+                <p></p>
+                <!-- Button to Open the Modal -->
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+                    <b> More Information</b>
+                  </button>
+                </div>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <p>   </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         
-            <div class="row question collapse" id="Q2_4">
-                <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-                    <h4>Have you installed the packrat package?</h4>
-                    <p class="lead">You can find it here.</p>
-
-                </div>
-                <div class="col-md-2 qcheck">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-yes yes" onclick="toggle('Q2_4', true)">
-                            <input type="radio" name="options" id="#Q2_4_yes" onclick="event.stopPropagation()">Yes
-                        </label>
-                        <label class="btn btn-no no" onclick="toggle('Q2_4', false)">
-                            <input type="radio" name="options" id="#Q2_4_no" onclick="event.stopPropagation()">No
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4 qadvice">
-                    <div class="collapse" id="Q2_4_no_advice">
-                        <p class="lead">I need help with it.</p>
-                    </div>
-                    <div class="collapse" id="Q2_4_yes_advice">
-                        <p class="lead">I have installed it.</p>
-                    </div>
-                </div>
+          <div class="row question collapse" id="Q2_3">
+            <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
+              <p class="lead"> <b>Is it the first you will be working with the packrat package?</b> </p>
+              <p> You can find it here.</p>
             </div>
+            <div class="col-md-2 qcheck">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-yes yes" onclick="toggle('Q2_3', true)">
+                  <input type="radio" name="options" id="#Q2_3_yes" onclick="event.stopPropagation()">Yes
+                </label>
+                <label class="btn btn-no no" onclick="toggle('Q2_3', false)">
+                  <input type="radio" name="options" id="#Q2_3_no" onclick="event.stopPropagation()">No
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4 qadvice">
+              <div class="collapse" id="Q2_3_no_advice">
+                <p >I have installed it or worked with it before.</p>
+              </div>
+              <div class="collapse" id="Q2_3_yes_advice">
+                <p>I need help with it.</p>
+                <!-- Button to Open the Modal -->
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+                    <b> More Information</b>
+                  </button>
+                </div>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <p>   </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         
-            <div class="row question " id="Q2_5">
-                <div class="col-md-6 qquestion" style="padding-right: 2em">
-                    <h4>Does your project use another analysis language</h4>
-                    <p class="lead">If you used SPSS/Stata/SAS/MatLAb or anything else.</p>
-
-                </div>
-                <div class="col-md-2 qcheck">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-yes yes" onclick="toggle('Q2_5', true)">
-                            <input type="radio" name="options" id="#Q2_5_yes" onclick="event.stopPropagation()">Yes
-                        </label>
-                        <label class="btn btn-no no" onclick="toggle('Q2_5', false)">
-                            <input type="radio" name="options" id="#Q2_5_no" onclick="event.stopPropagation()">No
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4 qadvice">
-                    <div class="collapse" id="Q2_5_no_advice">
-                        <p class="lead"></p>
-                    </div>
-                    <div class="collapse" id="Q2_5_yes_advice">
-                        <p class="lead"></p>
-                    </div>
-                </div>
+          <div class="row question " id="Q2_4">
+            <div class="col-md-6 qquestion" style="padding-right: 2em">
+              <p class="lead"> <b>Does your project use another analysis language</b> </p>
+              <p> If you used SPSS/Stata/SAS/MatLAb or anything else.</p>
             </div>
+            <div class="col-md-2 qcheck">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-yes yes" onclick="toggle('Q2_4', true)">
+                  <input type="radio" name="options" id="#Q2_4_yes" onclick="event.stopPropagation()">Yes
+                </label>
+                <label class="btn btn-no no" onclick="toggle('Q2_4', false)">
+                  <input type="radio" name="options" id="#Q2_4_no" onclick="event.stopPropagation()">No
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4 qadvice">
+              <div class="collapse" id="Q2_4_no_advice">
+                <p ></p>
+              </div>
+              <div class="collapse" id="Q2_4_yes_advice">
+                <p></p>
+                <!-- Button to Open the Modal -->
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+                    <b> More Information</b>
+                  </button>
+                </div>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <p>   </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         
-            <div class="row question collapse" id="Q2_6">
-                <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-                    <h4>Do you install any extensions when cleaning, processing and/or analyzing the data in your research project?</h4>
-                    <p class="lead">So that others know what they need for your project.</p>
-
-                </div>
-                <div class="col-md-2 qcheck">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-yes yes" onclick="toggle('Q2_6', true)">
-                            <input type="radio" name="options" id="#Q2_6_yes" onclick="event.stopPropagation()">Yes
-                        </label>
-                        <label class="btn btn-no no" onclick="toggle('Q2_6', false)">
-                            <input type="radio" name="options" id="#Q2_6_no" onclick="event.stopPropagation()">No
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4 qadvice">
-                    <div class="collapse" id="Q2_6_no_advice">
-                        <p class="lead">I have not installed any extensions.</p>
-                    </div>
-                    <div class="collapse" id="Q2_6_yes_advice">
-                        <p class="lead">I have installed extensions.</p>
-                    </div>
-                </div>
+          <div class="row question collapse" id="Q2_5">
+            <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
+              <p class="lead"> <b>Do you install any extensions when cleaning, processing and/or analyzing the data in your research project?</b> </p>
+              <p> So that others know what they need for your project.</p>
             </div>
+            <div class="col-md-2 qcheck">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-yes yes" onclick="toggle('Q2_5', true)">
+                  <input type="radio" name="options" id="#Q2_5_yes" onclick="event.stopPropagation()">Yes
+                </label>
+                <label class="btn btn-no no" onclick="toggle('Q2_5', false)">
+                  <input type="radio" name="options" id="#Q2_5_no" onclick="event.stopPropagation()">No
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4 qadvice">
+              <div class="collapse" id="Q2_5_no_advice">
+                <p >I have not installed any extensions.</p>
+              </div>
+              <div class="collapse" id="Q2_5_yes_advice">
+                <p>I have installed extensions.</p>
+                <!-- Button to Open the Modal -->
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+                    <b> More Information</b>
+                  </button>
+                </div>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <p>   </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         
         </div>
-        
+      
         <div class="tab-pane fade " id="phase3"
              role="tabpanel" aria-labelledby="phase3-tab" style="margin-left: 1em; margin-right: -1em;padding-right: 2em">
         
-            <div class="row question " id="Q3_2">
-                <div class="col-md-6 qquestion" style="padding-right: 2em">
-                    <h4>Are multiple researchers involved in this project?</h4>
-                    <p class="lead">Important to keep track of who does what.</p>
-
-                </div>
-                <div class="col-md-2 qcheck">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-yes yes" onclick="toggle('Q3_2', true)">
-                            <input type="radio" name="options" id="#Q3_2_yes" onclick="event.stopPropagation()">Yes
-                        </label>
-                        <label class="btn btn-no no" onclick="toggle('Q3_2', false)">
-                            <input type="radio" name="options" id="#Q3_2_no" onclick="event.stopPropagation()">No
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4 qadvice">
-                    <div class="collapse" id="Q3_2_no_advice">
-                        <p class="lead">I worked alone on this project</p>
-                    </div>
-                    <div class="collapse" id="Q3_2_yes_advice">
-                        <p class="lead">This is a team project</p>
-                    </div>
-                </div>
-            </div>
+          <h3>Set-Up Your Project's Folder Structure!</h3> <hr />
+          <p>These questions allow you to set up the folder structure for your project. </p>
+       
         
-            <div class="row question " id="Q3_3">
-                <div class="col-md-6 qquestion" style="padding-right: 2em">
-                    <h4>Do you work with proprietary data?</h4>
-                    <p class="lead">Explanation</p>
-
-                </div>
-                <div class="col-md-2 qcheck">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-yes yes" onclick="toggle('Q3_3', true)">
-                            <input type="radio" name="options" id="#Q3_3_yes" onclick="event.stopPropagation()">Yes
-                        </label>
-                        <label class="btn btn-no no" onclick="toggle('Q3_3', false)">
-                            <input type="radio" name="options" id="#Q3_3_no" onclick="event.stopPropagation()">No
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4 qadvice">
-                    <div class="collapse" id="Q3_3_no_advice">
-                        <p class="lead">I do not work with proprietary data.</p>
-                    </div>
-                    <div class="collapse" id="Q3_3_yes_advice">
-                        <p class="lead">I work with proprietary data.</p>
-                    </div>
-                </div>
+          <div class="row question " id="Q3_1">
+            <div class="col-md-6 qquestion" style="padding-right: 2em">
+              <p class="lead"> <b>Are multiple researchers involved in this project?</b> </p>
+              <p> Important to keep track of who does what.</p>
             </div>
+            <div class="col-md-2 qcheck">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-yes yes" onclick="toggle('Q3_1', true)">
+                  <input type="radio" name="options" id="#Q3_1_yes" onclick="event.stopPropagation()">Yes
+                </label>
+                <label class="btn btn-no no" onclick="toggle('Q3_1', false)">
+                  <input type="radio" name="options" id="#Q3_1_no" onclick="event.stopPropagation()">No
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4 qadvice">
+              <div class="collapse" id="Q3_1_no_advice">
+                <p >I worked alone on this project</p>
+              </div>
+              <div class="collapse" id="Q3_1_yes_advice">
+                <p>This is a team project</p>
+                <!-- Button to Open the Modal -->
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+                    <b> More Information</b>
+                  </button>
+                </div>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title">Working alone or in a team</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <p>  If you work on a project no your own, it is very crucial that you commit the changes that you make to your project early and often. This way you can keep track of what you are doing, make sure no data or code is lost and have the ability to work on your project from anywhere. You can find more information on what that is and how to do it here (https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) and here (https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History).
+
+If you work together in a team, you also should commit early and often (see above), but you additionally also need to take care of managing a project or even an orgainzation. That way you make sure that the work of everyone gets organized the right way and you can all collaborate on one folder structure. You can find information on this here (https://git-scm.com/book/en/v2/GitHub-Maintaining-a-Project) and here (https://git-scm.com/book/en/v2/GitHub-Managing-an-organization). </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         
-            <div class="row question " id="Q3_4">
-                <div class="col-md-6 qquestion" style="padding-right: 2em">
-                    <h4>Do you want to encrypt your data?</h4>
-                    <p class="lead">Explanation</p>
-
-                </div>
-                <div class="col-md-2 qcheck">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-yes yes" onclick="toggle('Q3_4', true)">
-                            <input type="radio" name="options" id="#Q3_4_yes" onclick="event.stopPropagation()">Yes
-                        </label>
-                        <label class="btn btn-no no" onclick="toggle('Q3_4', false)">
-                            <input type="radio" name="options" id="#Q3_4_no" onclick="event.stopPropagation()">No
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4 qadvice">
-                    <div class="collapse" id="Q3_4_no_advice">
-                        <p class="lead">I do not want to encrypt my data.</p>
-                    </div>
-                    <div class="collapse" id="Q3_4_yes_advice">
-                        <p class="lead">I want to encrypt my data.</p>
-                    </div>
-                </div>
+          <div class="row question " id="Q3_2">
+            <div class="col-md-6 qquestion" style="padding-right: 2em">
+              <p class="lead"> <b>Do you work with proprietary data?</b> </p>
+              <p> Explanation</p>
             </div>
+            <div class="col-md-2 qcheck">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-yes yes" onclick="toggle('Q3_2', true)">
+                  <input type="radio" name="options" id="#Q3_2_yes" onclick="event.stopPropagation()">Yes
+                </label>
+                <label class="btn btn-no no" onclick="toggle('Q3_2', false)">
+                  <input type="radio" name="options" id="#Q3_2_no" onclick="event.stopPropagation()">No
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4 qadvice">
+              <div class="collapse" id="Q3_2_no_advice">
+                <p >I do not work with proprietary data.</p>
+              </div>
+              <div class="collapse" id="Q3_2_yes_advice">
+                <p>I work with proprietary data.</p>
+                <!-- Button to Open the Modal -->
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+                    <b> More Information</b>
+                  </button>
+                </div>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title">Proprietary data</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <p>  The data that you used for your project is owned by an individual or organization and is important enough to give them a competitive advantage. This could for example be usage data from a social network site or text from newspaper articles. This data is not open to the public and you thus need to take extra measures before you make your GitHub public to not violate any laws.  </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         
-            <div class="row question " id="Q3_5">
-                <div class="col-md-6 qquestion" style="padding-right: 2em">
-                    <h4>Does your project involve data processing or cleaning?</h4>
-                    <p class="lead">Explanation [WvA: not sure I actually understood this question]</p>
-
-                </div>
-                <div class="col-md-2 qcheck">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-yes yes" onclick="toggle('Q3_5', true)">
-                            <input type="radio" name="options" id="#Q3_5_yes" onclick="event.stopPropagation()">Yes
-                        </label>
-                        <label class="btn btn-no no" onclick="toggle('Q3_5', false)">
-                            <input type="radio" name="options" id="#Q3_5_no" onclick="event.stopPropagation()">No
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4 qadvice">
-                    <div class="collapse" id="Q3_5_no_advice">
-                        <p class="lead">I work with the raw data.</p>
-                    </div>
-                    <div class="collapse" id="Q3_5_yes_advice">
-                        <p class="lead">I work with processed data.</p>
-                    </div>
-                </div>
+          <div class="row question " id="Q3_3">
+            <div class="col-md-6 qquestion" style="padding-right: 2em">
+              <p class="lead"> <b>Do you want to encrypt your data?</b> </p>
+              <p> Explanation</p>
             </div>
+            <div class="col-md-2 qcheck">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-yes yes" onclick="toggle('Q3_3', true)">
+                  <input type="radio" name="options" id="#Q3_3_yes" onclick="event.stopPropagation()">Yes
+                </label>
+                <label class="btn btn-no no" onclick="toggle('Q3_3', false)">
+                  <input type="radio" name="options" id="#Q3_3_no" onclick="event.stopPropagation()">No
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4 qadvice">
+              <div class="collapse" id="Q3_3_no_advice">
+                <p >I do not want to encrypt my data.</p>
+              </div>
+              <div class="collapse" id="Q3_3_yes_advice">
+                <p>I want to encrypt my data.</p>
+                <!-- Button to Open the Modal -->
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+                    <b> More Information</b>
+                  </button>
+                </div>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title">Encryption</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <p>  Data encryption translates data into another form, or code, so that only people with access to a secret key (formally called a decryption key) or password can read it. Encrypted data is commonly referred to as ciphertext, while unencrypted data is called plaintext. Currently, encryption is one of the most popular and effective data security methods used by organizations. (source (https://digitalguardian.com/blog/what-data-encryption)). 
+
+Your data should be encrypted if it is not possible to share your data openly, either because it is proprietary or because it includes sensitive information that cannot be made public as plain text. If you are not sure about matters of encryption and what data need to be encrypted, you should first consult the ethical board of your research institution. 
+
+Information on how to encrypt your data in your research compendium can be found here: (ADD LINK) </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         
-            <div class="row question collapse" id="Q3_6">
-                <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-                    <h4>Have you written functions yourself on which the data-processing or analysis depend?</h4>
-                    <p class="lead">Explanation</p>
-
-                </div>
-                <div class="col-md-2 qcheck">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-yes yes" onclick="toggle('Q3_6', true)">
-                            <input type="radio" name="options" id="#Q3_6_yes" onclick="event.stopPropagation()">Yes
-                        </label>
-                        <label class="btn btn-no no" onclick="toggle('Q3_6', false)">
-                            <input type="radio" name="options" id="#Q3_6_no" onclick="event.stopPropagation()">No
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4 qadvice">
-                    <div class="collapse" id="Q3_6_no_advice">
-                        <p class="lead">I did not write any functions myself.</p>
-                    </div>
-                    <div class="collapse" id="Q3_6_yes_advice">
-                        <p class="lead">I wrote functions myself.</p>
-                    </div>
-                </div>
+          <div class="row question " id="Q3_4">
+            <div class="col-md-6 qquestion" style="padding-right: 2em">
+              <p class="lead"> <b>Does your project involve data processing or cleaning?</b> </p>
+              <p> Explanation [WvA: not sure I actually understood this question]</p>
             </div>
+            <div class="col-md-2 qcheck">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-yes yes" onclick="toggle('Q3_4', true)">
+                  <input type="radio" name="options" id="#Q3_4_yes" onclick="event.stopPropagation()">Yes
+                </label>
+                <label class="btn btn-no no" onclick="toggle('Q3_4', false)">
+                  <input type="radio" name="options" id="#Q3_4_no" onclick="event.stopPropagation()">No
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4 qadvice">
+              <div class="collapse" id="Q3_4_no_advice">
+                <p >I work with the raw data.</p>
+              </div>
+              <div class="collapse" id="Q3_4_yes_advice">
+                <p>I work with processed data.</p>
+                <!-- Button to Open the Modal -->
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+                    <b> More Information</b>
+                  </button>
+                </div>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title">Raw and processed data</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <p>  Raw data is the data that you collected e.g. in your survey, your experiment, the data you scraped or retrieved from an API. There are many different forms of raw data - the important thing is that it has not been through any form of processing yet. It is crucial to preserve the raw data of your project if possible. 
+
+Processed data is raw data that was modified by certain forms of data cleaning and processing such as dealing with missing values, making scales, aggregating data etc. 
+
+In a research compendium, you should put the raw data in the "raw" folder (possibly encrypted) (MORE INFO NEEDED HERE) </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         
-            <div class="row question collapse" id="Q3_7">
-                <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-                    <h4>Have you saved the functions in a script in the folder src/lib?</h4>
-                    <p class="lead">Explanation</p>
-
-                </div>
-                <div class="col-md-2 qcheck">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-yes yes" onclick="toggle('Q3_7', true)">
-                            <input type="radio" name="options" id="#Q3_7_yes" onclick="event.stopPropagation()">Yes
-                        </label>
-                        <label class="btn btn-no no" onclick="toggle('Q3_7', false)">
-                            <input type="radio" name="options" id="#Q3_7_no" onclick="event.stopPropagation()">No
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4 qadvice">
-                    <div class="collapse" id="Q3_7_no_advice">
-                        <p class="lead">I did not save them.</p>
-                    </div>
-                    <div class="collapse" id="Q3_7_yes_advice">
-                        <p class="lead">I have saved them.</p>
-                    </div>
-                </div>
+          <div class="row question collapse" id="Q3_5">
+            <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
+              <p class="lead"> <b>Have you written functions yourself on which the data-processing or analysis depend?</b> </p>
+              <p> Explanation</p>
             </div>
+            <div class="col-md-2 qcheck">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-yes yes" onclick="toggle('Q3_5', true)">
+                  <input type="radio" name="options" id="#Q3_5_yes" onclick="event.stopPropagation()">Yes
+                </label>
+                <label class="btn btn-no no" onclick="toggle('Q3_5', false)">
+                  <input type="radio" name="options" id="#Q3_5_no" onclick="event.stopPropagation()">No
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4 qadvice">
+              <div class="collapse" id="Q3_5_no_advice">
+                <p >I did not write any functions myself.</p>
+              </div>
+              <div class="collapse" id="Q3_5_yes_advice">
+                <p>I wrote functions myself.</p>
+                <!-- Button to Open the Modal -->
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+                    <b> More Information</b>
+                  </button>
+                </div>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title">Functions</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <p>  Often you use already existing functions (pieces of code to be reused) from packages. This is very common for example for R or Python. Sometimes, however, you will need your own specialized functions to deal with your data or do analyses. It is then important to preserve the code that you used in the compendium so that other researchers can re-run your analyses and adapt them where necessary. </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         
-            <div class="row question collapse" id="Q3_8">
-                <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-                    <h4>Have you saved the data cleaning / processing sripts that generate any intermediate or temporary data files needed by the analyses in src/data-processing?</h4>
-                    <p class="lead">Explanation</p>
-
-                </div>
-                <div class="col-md-2 qcheck">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-yes yes" onclick="toggle('Q3_8', true)">
-                            <input type="radio" name="options" id="#Q3_8_yes" onclick="event.stopPropagation()">Yes
-                        </label>
-                        <label class="btn btn-no no" onclick="toggle('Q3_8', false)">
-                            <input type="radio" name="options" id="#Q3_8_no" onclick="event.stopPropagation()">No
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4 qadvice">
-                    <div class="collapse" id="Q3_8_no_advice">
-                        <p class="lead">I did not save them.</p>
-                    </div>
-                    <div class="collapse" id="Q3_8_yes_advice">
-                        <p class="lead">I have saved them.</p>
-                    </div>
-                </div>
+          <div class="row question collapse" id="Q3_6">
+            <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
+              <p class="lead"> <b>Have you saved the functions in a script in the folder src/lib?</b> </p>
+              <p> Explanation</p>
             </div>
+            <div class="col-md-2 qcheck">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-yes yes" onclick="toggle('Q3_6', true)">
+                  <input type="radio" name="options" id="#Q3_6_yes" onclick="event.stopPropagation()">Yes
+                </label>
+                <label class="btn btn-no no" onclick="toggle('Q3_6', false)">
+                  <input type="radio" name="options" id="#Q3_6_no" onclick="event.stopPropagation()">No
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4 qadvice">
+              <div class="collapse" id="Q3_6_no_advice">
+                <p >I did not save them.</p>
+              </div>
+              <div class="collapse" id="Q3_6_yes_advice">
+                <p>I have saved them.</p>
+                <!-- Button to Open the Modal -->
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+                    <b> More Information</b>
+                  </button>
+                </div>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <p>   </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         
-            <div class="row question collapse" id="Q3_9">
-                <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-                    <h4>Have you saved scripts or notebooks that contain the actual analysis</h4>
-                    <p class="lead"> should produce the files in the folder report?</p>
-
-                </div>
-                <div class="col-md-2 qcheck">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-yes yes" onclick="toggle('Q3_9', true)">
-                            <input type="radio" name="options" id="#Q3_9_yes" onclick="event.stopPropagation()">Yes
-                        </label>
-                        <label class="btn btn-no no" onclick="toggle('Q3_9', false)">
-                            <input type="radio" name="options" id="#Q3_9_no" onclick="event.stopPropagation()">No
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4 qadvice">
-                    <div class="collapse" id="Q3_9_no_advice">
-                        <p class="lead">img/info.svg</p>
-                    </div>
-                    <div class="collapse" id="Q3_9_yes_advice">
-                        <p class="lead">img/yes.svg</p>
-                    </div>
-                </div>
+          <div class="row question collapse" id="Q3_7">
+            <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
+              <p class="lead"> <b>Have you saved the data cleaning / processing sripts that generate any intermediate or temporary data files needed by the analyses in src/data-processing?</b> </p>
+              <p> Explanation</p>
             </div>
+            <div class="col-md-2 qcheck">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-yes yes" onclick="toggle('Q3_7', true)">
+                  <input type="radio" name="options" id="#Q3_7_yes" onclick="event.stopPropagation()">Yes
+                </label>
+                <label class="btn btn-no no" onclick="toggle('Q3_7', false)">
+                  <input type="radio" name="options" id="#Q3_7_no" onclick="event.stopPropagation()">No
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4 qadvice">
+              <div class="collapse" id="Q3_7_no_advice">
+                <p >I did not save them.</p>
+              </div>
+              <div class="collapse" id="Q3_7_yes_advice">
+                <p>I have saved them.</p>
+                <!-- Button to Open the Modal -->
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+                    <b> More Information</b>
+                  </button>
+                </div>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <p>   </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         
-            <div class="row question collapse" id="Q3_10">
-                <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-                    <h4>Have you saved the finished data sets that are of general interest in results/datasets?</h4>
-                    <p class="lead">Explanation</p>
-
-                </div>
-                <div class="col-md-2 qcheck">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-yes yes" onclick="toggle('Q3_10', true)">
-                            <input type="radio" name="options" id="#Q3_10_yes" onclick="event.stopPropagation()">Yes
-                        </label>
-                        <label class="btn btn-no no" onclick="toggle('Q3_10', false)">
-                            <input type="radio" name="options" id="#Q3_10_no" onclick="event.stopPropagation()">No
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4 qadvice">
-                    <div class="collapse" id="Q3_10_no_advice">
-                        <p class="lead">I did not save them.</p>
-                    </div>
-                    <div class="collapse" id="Q3_10_yes_advice">
-                        <p class="lead">I have saved them.</p>
-                    </div>
-                </div>
+          <div class="row question collapse" id="Q3_8">
+            <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
+              <p class="lead"> <b>Have you saved scripts or notebooks that contain the actual analysis</b> </p>
+              <p>  should produce the files in the folder report?</p>
             </div>
+            <div class="col-md-2 qcheck">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-yes yes" onclick="toggle('Q3_8', true)">
+                  <input type="radio" name="options" id="#Q3_8_yes" onclick="event.stopPropagation()">Yes
+                </label>
+                <label class="btn btn-no no" onclick="toggle('Q3_8', false)">
+                  <input type="radio" name="options" id="#Q3_8_no" onclick="event.stopPropagation()">No
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4 qadvice">
+              <div class="collapse" id="Q3_8_no_advice">
+                <p >img/info.svg</p>
+              </div>
+              <div class="collapse" id="Q3_8_yes_advice">
+                <p>img/yes.svg</p>
+                <!-- Button to Open the Modal -->
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+                    <b> More Information</b>
+                  </button>
+                </div>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title">Saved_datasets</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <p>   </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         
-            <div class="row question collapse" id="Q3_11">
-                <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-                    <h4>Have you saved the written descriptions of results, i.e. a final paper in results/report?</h4>
-                    <p class="lead">Explanation</p>
-
-                </div>
-                <div class="col-md-2 qcheck">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-yes yes" onclick="toggle('Q3_11', true)">
-                            <input type="radio" name="options" id="#Q3_11_yes" onclick="event.stopPropagation()">Yes
-                        </label>
-                        <label class="btn btn-no no" onclick="toggle('Q3_11', false)">
-                            <input type="radio" name="options" id="#Q3_11_no" onclick="event.stopPropagation()">No
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4 qadvice">
-                    <div class="collapse" id="Q3_11_no_advice">
-                        <p class="lead">I did not save them.</p>
-                    </div>
-                    <div class="collapse" id="Q3_11_yes_advice">
-                        <p class="lead">I have saved them.</p>
-                    </div>
-                </div>
+          <div class="row question collapse" id="Q3_9">
+            <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
+              <p class="lead"> <b>Have you saved the finished data sets that are of general interest in results/datasets?</b> </p>
+              <p> Explanation</p>
             </div>
+            <div class="col-md-2 qcheck">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-yes yes" onclick="toggle('Q3_9', true)">
+                  <input type="radio" name="options" id="#Q3_9_yes" onclick="event.stopPropagation()">Yes
+                </label>
+                <label class="btn btn-no no" onclick="toggle('Q3_9', false)">
+                  <input type="radio" name="options" id="#Q3_9_no" onclick="event.stopPropagation()">No
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4 qadvice">
+              <div class="collapse" id="Q3_9_no_advice">
+                <p >I did not save them.</p>
+              </div>
+              <div class="collapse" id="Q3_9_yes_advice">
+                <p>I have saved them.</p>
+                <!-- Button to Open the Modal -->
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+                    <b> More Information</b>
+                  </button>
+                </div>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <p>   </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         
-            <div class="row question collapse" id="Q3_12">
-                <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-                    <h4>Are your analyses in the paper visualized?</h4>
-                    <p class="lead">Explanation</p>
-
-                </div>
-                <div class="col-md-2 qcheck">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-yes yes" onclick="toggle('Q3_12', true)">
-                            <input type="radio" name="options" id="#Q3_12_yes" onclick="event.stopPropagation()">Yes
-                        </label>
-                        <label class="btn btn-no no" onclick="toggle('Q3_12', false)">
-                            <input type="radio" name="options" id="#Q3_12_no" onclick="event.stopPropagation()">No
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4 qadvice">
-                    <div class="collapse" id="Q3_12_no_advice">
-                        <p class="lead">The results are not visualized.</p>
-                    </div>
-                    <div class="collapse" id="Q3_12_yes_advice">
-                        <p class="lead">The results are visualized.</p>
-                    </div>
-                </div>
+          <div class="row question collapse" id="Q3_10">
+            <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
+              <p class="lead"> <b>Have you saved the written descriptions of results, i.e. a final paper in results/report?</b> </p>
+              <p> Explanation</p>
             </div>
+            <div class="col-md-2 qcheck">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-yes yes" onclick="toggle('Q3_10', true)">
+                  <input type="radio" name="options" id="#Q3_10_yes" onclick="event.stopPropagation()">Yes
+                </label>
+                <label class="btn btn-no no" onclick="toggle('Q3_10', false)">
+                  <input type="radio" name="options" id="#Q3_10_no" onclick="event.stopPropagation()">No
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4 qadvice">
+              <div class="collapse" id="Q3_10_no_advice">
+                <p >I did not save them.</p>
+              </div>
+              <div class="collapse" id="Q3_10_yes_advice">
+                <p>I have saved them.</p>
+                <!-- Button to Open the Modal -->
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+                    <b> More Information</b>
+                  </button>
+                </div>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <p>   </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         
-            <div class="row question collapse" id="Q3_13">
-                <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-                    <h4>Have you saved the figures in results/figures?</h4>
-                    <p class="lead">Explanation</p>
-
-                </div>
-                <div class="col-md-2 qcheck">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-yes yes" onclick="toggle('Q3_13', true)">
-                            <input type="radio" name="options" id="#Q3_13_yes" onclick="event.stopPropagation()">Yes
-                        </label>
-                        <label class="btn btn-no no" onclick="toggle('Q3_13', false)">
-                            <input type="radio" name="options" id="#Q3_13_no" onclick="event.stopPropagation()">No
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4 qadvice">
-                    <div class="collapse" id="Q3_13_no_advice">
-                        <p class="lead">I did not save them.</p>
-                    </div>
-                    <div class="collapse" id="Q3_13_yes_advice">
-                        <p class="lead">I have saved them.</p>
-                    </div>
-                </div>
+          <div class="row question collapse" id="Q3_11">
+            <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
+              <p class="lead"> <b>Are your analyses in the paper visualized?</b> </p>
+              <p> Explanation</p>
             </div>
+            <div class="col-md-2 qcheck">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-yes yes" onclick="toggle('Q3_11', true)">
+                  <input type="radio" name="options" id="#Q3_11_yes" onclick="event.stopPropagation()">Yes
+                </label>
+                <label class="btn btn-no no" onclick="toggle('Q3_11', false)">
+                  <input type="radio" name="options" id="#Q3_11_no" onclick="event.stopPropagation()">No
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4 qadvice">
+              <div class="collapse" id="Q3_11_no_advice">
+                <p >The results are not visualized.</p>
+              </div>
+              <div class="collapse" id="Q3_11_yes_advice">
+                <p>The results are visualized.</p>
+                <!-- Button to Open the Modal -->
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+                    <b> More Information</b>
+                  </button>
+                </div>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <p>   </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="row question collapse" id="Q3_12">
+            <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
+              <p class="lead"> <b>Have you saved the figures in results/figures?</b> </p>
+              <p> Explanation</p>
+            </div>
+            <div class="col-md-2 qcheck">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-yes yes" onclick="toggle('Q3_12', true)">
+                  <input type="radio" name="options" id="#Q3_12_yes" onclick="event.stopPropagation()">Yes
+                </label>
+                <label class="btn btn-no no" onclick="toggle('Q3_12', false)">
+                  <input type="radio" name="options" id="#Q3_12_no" onclick="event.stopPropagation()">No
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4 qadvice">
+              <div class="collapse" id="Q3_12_no_advice">
+                <p >I did not save them.</p>
+              </div>
+              <div class="collapse" id="Q3_12_yes_advice">
+                <p>I have saved them.</p>
+                <!-- Button to Open the Modal -->
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+                    <b> More Information</b>
+                  </button>
+                </div>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <p>   </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         
         </div>
-        
+      
         <div class="tab-pane fade " id="phase4"
              role="tabpanel" aria-labelledby="phase4-tab" style="margin-left: 1em; margin-right: -1em;padding-right: 2em">
         
-            <div class="row question " id="Q4_2">
-                <div class="col-md-6 qquestion" style="padding-right: 2em">
-                    <h4>Does the code in your compendium produce all statistics, tables, figures, etc. in your manuscript?</h4>
-                    <p class="lead">Explanation.</p>
-
-                </div>
-                <div class="col-md-2 qcheck">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-yes yes" onclick="toggle('Q4_2', true)">
-                            <input type="radio" name="options" id="#Q4_2_yes" onclick="event.stopPropagation()">Yes
-                        </label>
-                        <label class="btn btn-no no" onclick="toggle('Q4_2', false)">
-                            <input type="radio" name="options" id="#Q4_2_no" onclick="event.stopPropagation()">No
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4 qadvice">
-                    <div class="collapse" id="Q4_2_no_advice">
-                        <p class="lead">The code does not produce everything.</p>
-                    </div>
-                    <div class="collapse" id="Q4_2_yes_advice">
-                        <p class="lead">The code produces everything.</p>
-                    </div>
-                </div>
-            </div>
+          <h3>Finish Your Project's Compendium!</h3> <hr />
+          <p>These questions allow you to conduct the final checks for your online compendium before submitting your manuscript.</p>
         
-            <div class="row question " id="Q4_3">
-                <div class="col-md-6 qquestion" style="padding-right: 2em">
-                    <h4>Does the manuscript refer to the compendium?</h4>
-                    <p class="lead">Explanation.</p>
-
-                </div>
-                <div class="col-md-2 qcheck">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-yes yes" onclick="toggle('Q4_3', true)">
-                            <input type="radio" name="options" id="#Q4_3_yes" onclick="event.stopPropagation()">Yes
-                        </label>
-                        <label class="btn btn-no no" onclick="toggle('Q4_3', false)">
-                            <input type="radio" name="options" id="#Q4_3_no" onclick="event.stopPropagation()">No
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4 qadvice">
-                    <div class="collapse" id="Q4_3_no_advice">
-                        <p class="lead">It does not refer to the compendium.</p>
-                    </div>
-                    <div class="collapse" id="Q4_3_yes_advice">
-                        <p class="lead">It refers to the compendium.</p>
-                    </div>
-                </div>
-            </div>
         
-            <div class="row question " id="Q4_4">
-                <div class="col-md-6 qquestion" style="padding-right: 2em">
-                    <h4>Did you have another person or another computer try to run the compendium, and checked the results?</h4>
-                    <p class="lead">Explanation.</p>
-
-                </div>
-                <div class="col-md-2 qcheck">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-yes yes" onclick="toggle('Q4_4', true)">
-                            <input type="radio" name="options" id="#Q4_4_yes" onclick="event.stopPropagation()">Yes
-                        </label>
-                        <label class="btn btn-no no" onclick="toggle('Q4_4', false)">
-                            <input type="radio" name="options" id="#Q4_4_no" onclick="event.stopPropagation()">No
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4 qadvice">
-                    <div class="collapse" id="Q4_4_no_advice">
-                        <p class="lead">I did not check it on another computer.</p>
-                    </div>
-                    <div class="collapse" id="Q4_4_yes_advice">
-                        <p class="lead">I checked it on another computer.</p>
-                    </div>
-                </div>
+          <div class="row question " id="Q4_2">
+            <div class="col-md-6 qquestion" style="padding-right: 2em">
+              <p class="lead"> <b>Does the code in your compendium produce all statistics, tables, figures, etc. in your manuscript?</b> </p>
+              <p> Explanation.</p>
             </div>
+            <div class="col-md-2 qcheck">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-yes yes" onclick="toggle('Q4_2', true)">
+                  <input type="radio" name="options" id="#Q4_2_yes" onclick="event.stopPropagation()">Yes
+                </label>
+                <label class="btn btn-no no" onclick="toggle('Q4_2', false)">
+                  <input type="radio" name="options" id="#Q4_2_no" onclick="event.stopPropagation()">No
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4 qadvice">
+              <div class="collapse" id="Q4_2_no_advice">
+                <p >The code does not produce everything.</p>
+              </div>
+              <div class="collapse" id="Q4_2_yes_advice">
+                <p>The code produces everything.</p>
+                <!-- Button to Open the Modal -->
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+                    <b> More Information</b>
+                  </button>
+                </div>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title">Refer to the Compendium</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <p>  If you use a compendium folder structure to organize and share your research, you should use the following citation: (ADD CITATION) </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="row question " id="Q4_3">
+            <div class="col-md-6 qquestion" style="padding-right: 2em">
+              <p class="lead"> <b>Does the manuscript refer to the compendium?</b> </p>
+              <p> Explanation.</p>
+            </div>
+            <div class="col-md-2 qcheck">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-yes yes" onclick="toggle('Q4_3', true)">
+                  <input type="radio" name="options" id="#Q4_3_yes" onclick="event.stopPropagation()">Yes
+                </label>
+                <label class="btn btn-no no" onclick="toggle('Q4_3', false)">
+                  <input type="radio" name="options" id="#Q4_3_no" onclick="event.stopPropagation()">No
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4 qadvice">
+              <div class="collapse" id="Q4_3_no_advice">
+                <p >It does not refer to the compendium.</p>
+              </div>
+              <div class="collapse" id="Q4_3_yes_advice">
+                <p>It refers to the compendium.</p>
+                <!-- Button to Open the Modal -->
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+                    <b> More Information</b>
+                  </button>
+                </div>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <p>   </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="row question " id="Q4_4">
+            <div class="col-md-6 qquestion" style="padding-right: 2em">
+              <p class="lead"> <b>Did you have another person or another computer try to run the compendium, and checked the results?</b> </p>
+              <p> Explanation.</p>
+            </div>
+            <div class="col-md-2 qcheck">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-yes yes" onclick="toggle('Q4_4', true)">
+                  <input type="radio" name="options" id="#Q4_4_yes" onclick="event.stopPropagation()">Yes
+                </label>
+                <label class="btn btn-no no" onclick="toggle('Q4_4', false)">
+                  <input type="radio" name="options" id="#Q4_4_no" onclick="event.stopPropagation()">No
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4 qadvice">
+              <div class="collapse" id="Q4_4_no_advice">
+                <p >I did not check it on another computer.</p>
+              </div>
+              <div class="collapse" id="Q4_4_yes_advice">
+                <p>I checked it on another computer.</p>
+                <!-- Button to Open the Modal -->
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+                    <b> More Information</b>
+                  </button>
+                </div>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <p>   </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         
         </div>
-        
+      
     </div>
-
 </div>
 
 <!-- Optional JavaScript -->
@@ -1002,7 +1809,7 @@ Right now, the most popular software amongst scientists for doing this is Git, a
 <script>
     // AFAIK, I can't prevent the collapse from toggling (if you click e.g. "no" twice) with the data-toggles attribute
     // so we do it in JS
-    const dependencies = {"Q1_1": {"no": ["Q1_2"]}, "Q1_3": {"no": ["Q1_4", "Q1_5", "Q1_6"]}, "Q2_1": {"yes": ["Q2_2"]}, "Q2_3": {"yes": ["Q2_4"]}, "Q2_5": {"yes": ["Q2_6"]}, "Q3_12": {"yes": ["Q3_13"]}, "Q3_5": {"yes": ["Q3_6", "Q3_8", "Q3_9", "Q3_10", "Q3_11", "Q3_12"]}, "Q3_6": {"yes": ["Q3_7"]}};
+    const dependencies = {"Q1_2": {"yes": ["Q1_3", "Q1_4", "Q1_5"]}, "Q2_0": {"yes": ["Q2_1"]}, "Q2_2": {"yes": ["Q2_3"]}, "Q2_4": {"yes": ["Q2_5"]}, "Q3_11": {"yes": ["Q3_12"]}, "Q3_4": {"yes": ["Q3_5", "Q3_7", "Q3_8", "Q3_9", "Q3_10", "Q3_11"]}, "Q3_5": {"yes": ["Q3_6"]}};
 
     function get_deps(q, yes) {
         const attr = yes?"yes":"no";
@@ -1024,6 +1831,12 @@ Right now, the most popular software amongst scientists for doing this is Git, a
         to_show.forEach(function(e) {$('#'+e).collapse('show')});
         to_hide.forEach(function(e) {$('#'+e).collapse('hide')});
     }
+
+    function skiptotab(name) {
+      $('#pillphase3').tab('show');
+    }
+
+
 </script>
 </body>
 </html>
