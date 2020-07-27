@@ -41,7 +41,13 @@
       font-size: 16px;
     }
 
+    code{
+      color: rgb(55, 67, 87);
+    }
 
+    a{
+      color: rgb(46, 110, 130);
+    }
         .qquestion, .qcheck, .qadvice {
             background: rgb(248, 249, 250);
             color: rgb(41, 49, 51);
@@ -176,7 +182,7 @@
         <li class="nav-item pill">
             <a class="nav-link " id="pillphase2" data-toggle="tab" role="tab"
                href="#phase2" aria-controls="phase2" aria-selected="False">
-                2. Version Control for Your Program/Langauge
+                2. Version Control for Your Program/Language
             </a>
         </li>
         
@@ -210,13 +216,14 @@
                The first couple of questions are checking whether the computer you are working on for this research project has all necessary
                applications to work with the <a href = "https://github.com/ccs-amsterdam/compendium" target="_blank"> Standardized Research Compendium</a>.
              </br></br>
-               <ins>Feel free to <a href="#" onclick="skiptotab(3)">skip the first two phases</a>, if you have worked with our Compendium before, or feel that you do not need any information or help for those parts.</ins> </p>
+               <ins>Feel free to <a href="#" onclick="skiptotab(3)">skip the first two phases</a>, if you have worked with our Standardized Research Compendium before,
+                 or feel that you do not need any information or help for those parts. You can always go back to earlier phases.</ins>
         
         
           <div class="row question " id="Q1_1">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
               <p class="lead"> <b>Is it the first time you are working with Version Control?</b> </p>
-              <p> Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.</p>
+              <p> Version control is a system that records changes to a file or set of files over time so that you can recall or restore specific versions later. Working with a version control system increases the transparancy of your project. </p>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -230,10 +237,10 @@
             </div>
             <div class="col-md-4 qadvice">
               <div class="collapse" id="Q1_1_no_advice">
-                <p >I know version control and have worked with it before. </br> </br> If you want to (re)visit or look up some principles of working with version control, A you can find a comprehensive documentation <a href="https://git-scm.com/book/en/v2/" target="_blank"> here</a>.</p>
+                <p >I know version control and have worked with it before. </br> </br> If you want to (re)visit or look up some principles of working with version control, you can find a comprehensive documentation <a href="https://git-scm.com/book/en/v2/" target="_blank"> here</a>.</p>
               </div>
               <div class="collapse" id="Q1_1_yes_advice">
-                <p>Ever produced a text document, script or datafile with a title looking like this: <em>"FinalVersion2.0_REVISITED18may_FL"</em>?</br> Click on more information to learn how to organize your scripts in a reproducible, open, and transparent manner.</p>
+                <p>Ever produced a text document, script or datafile with a title looking like this: <em>"FinalVersion2.0_REVISITED18may_FL"</em>?</br> Click on more information to learn how to organize your scripts in a reproducible, open, and transparent manner, and an additional advantage, you wil no longer produce files with such titles.</p>
                 <!-- Button to Open the Modal -->
                 <div class="col text-center">
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
@@ -251,7 +258,7 @@
                       </div>
                       <!-- Modal body -->
                       <div class="modal-body">
-                        <p>  When working on vast, collaborative scientific projects, keeping track of different versions of your work can be a burden. Still, it is important to store older versions - not only because you might want to revert changes later on in the process, but also because you want to get insight into what changes your coworkers made to your precious file. <br/> Luckily, there now exist digital version control systems, that make version control easy and understandable. Such version control systems save not only new files that you save to the system, but also the changes between the old and new version. This way, you can easily keep track of changes and revert to old versions (or even combine different "branches" of a file) as you please.  <br/> Right now, the most popular software amongst scientists for doing this is Git, a prrogram that manages "repositories" (the "folder" with your project), which stores files and each file's revision history. <a href="https://github.com/" target="_blank"> Github.com </a> is an cloud web server which offers the opportunity to store your repository remotely, to easily collabore on projects with colleagues. A comprehensive documentation on getting started with Git can be found <a href="https://git-scm.com/book/en/v2/" target="_blank"> here</a>. </p>
+                        <p>  When working on vast, collaborative scientific projects, keeping track of different versions of your work can be a burden. Still, it is important to store older versions - not only because you might want to revert changes later on in the process, but also because you want to get insight into what changes your coworkers made to your precious file. <br/> <br/> Luckily, there now exist digital version control systems, that make version control easy and understandable. Such version control systems save not only new files that you save to the system, but also the changes between the old and new version. This way, you can easily keep track of changes and revert to old versions (or even combine different "branches" of a file) as you please.  <br/><br/> Right now, the most popular software amongst scientists for doing this is Git, a prrogram that manages "repositories" (the "folder" with your project), which stores files and each file's revision history. <a href="https://github.com/" target="_blank"> Github.com </a> is an cloud web server which offers the opportunity to store your repository remotely, to easily collabore on projects with colleagues. A comprehensive documentation on getting started with Git can be found <a href="https://git-scm.com/book/en/v2/" target="_blank"> here</a>. </p>
                       </div>
                       <!-- Modal footer -->
                       <div class="modal-footer">
@@ -266,8 +273,8 @@
         
           <div class="row question " id="Q1_2">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
-              <p class="lead"> <b>Is it the first time you are working with Git, Python, and Doit on your current computer?</b> </p>
-              <p> All the things you need.</p>
+              <p class="lead"> <b>Is it the first time you are working with Git, Python, and <em>doit</em> on your current computer?</b> </p>
+              <p> To work with the Standardized Research Compendium, you need to have Python Version XX, the package <em>doit</em>, and Git installed on your current computer. </p>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -281,7 +288,7 @@
             </div>
             <div class="col-md-4 qadvice">
               <div class="collapse" id="Q1_2_no_advice">
-                <p >I have all of this installed. </br> </br> If you want to look into the advantages of the combination of Git, Python and Doit, have a look at <a href = "https://github.com/ccs-amsterdam/compendium" target="_blank"> our Github page</a>. </p>
+                <p >I have all of this installed. </br> </br> If you want to look into the advantages of the combination of Git, Python and <em>doit</em>, have a look at <a href = "https://github.com/ccs-amsterdam/compendium" target="_blank"> our Github page</a>. </p>
               </div>
               <div class="collapse" id="Q1_2_yes_advice">
                 <p>I need help with it</p>
@@ -318,7 +325,7 @@
           <div class="row question collapse" id="Q1_3">
             <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
               <p class="lead"> <b>Is this the first time you are working with Git on this computer?</b> </p>
-              <p> To get you all the code.</p>
+              <p> <a href="https://en.wikipedia.org/wiki/Git" target="_blank"> Git</a> is a distributed version-control system for tracking changes in source code during software development.</p>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -332,7 +339,7 @@
             </div>
             <div class="col-md-4 qadvice">
               <div class="collapse" id="Q1_3_no_advice">
-                <p >I have this Python version installed.</p>
+                <p >I have Git installed on this computer. </br> </br> You can find a comprehensive documentation of working with Git <a href="https://git-scm.com/book/en/v2/" target="_blank"> here</a>.</p>
               </div>
               <div class="collapse" id="Q1_3_yes_advice">
                 <p>I need help with it.</p>
@@ -372,7 +379,7 @@ https://gist.github.com/derhuerst/1b15ff4652a867391f03 </p>
           <div class="row question collapse" id="Q1_4">
             <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
               <p class="lead"> <b>Is this the first time you are working with Python version x on your current computer?</b> </p>
-              <p> To not get any conflicts.</p>
+              <p> <a href="https://en.wikipedia.org/wiki/History_of_Python" target="_blank"> Python has developed over time</a>, using different version can cause conflicts with the proposed workflow of the Standardized Research Compendium.</p>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -386,7 +393,7 @@ https://gist.github.com/derhuerst/1b15ff4652a867391f03 </p>
             </div>
             <div class="col-md-4 qadvice">
               <div class="collapse" id="Q1_4_no_advice">
-                <p >I have this Python version installed.</p>
+                <p >I have this Python version installed. </br> </br> You can find elaborate documentation on working with Python <a href="https://wiki.python.org/moin/" target="_blank">here</a>.</p>
               </div>
               <div class="collapse" id="Q1_4_yes_advice">
                 <p>I have not yet installed this Python version. </p>
@@ -425,8 +432,8 @@ https://wiki.python.org/moin/BeginnersGuide/Download </p>
         
           <div class="row question collapse" id="Q1_5">
             <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-              <p class="lead"> <b>Is it the first time you will be working with the Python package Doit on the current computer?</b> </p>
-              <p> To follow the workflow.</p>
+              <p class="lead"> <b>Is it the first time you will be working with the Python package <a href="https://pydoit.org/contents.html" target="_blank"> <em>doit</em></a> on the current computer?</b> </p>
+              <p> <em>doit</em> is a modern open-source build-tool written in python designed to be simple to use and flexible to deal with complex work-flows.</p>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -440,7 +447,7 @@ https://wiki.python.org/moin/BeginnersGuide/Download </p>
             </div>
             <div class="col-md-4 qadvice">
               <div class="collapse" id="Q1_5_no_advice">
-                <p >I have Doit installed.</p>
+                <p >I have run <code>pip install doit</code> and thereby have installed <em>doit</em> on my computer. </br> </br> You can find more information on <em>doit</em> <a href="https://pydoit.org/" target="_blank">here</a>.</p>
               </div>
               <div class="collapse" id="Q1_5_yes_advice">
                 <p>I need help with it.</p>
@@ -480,8 +487,8 @@ Note: 'pip' is a package installer for Python, which mostly comes pre-installed 
         
           <div class="row question " id="Q1_6">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
-              <p class="lead"> <b>Is it the first time you are creating a version control repository? Or is a version control for this project non-existing?</b> </p>
-              <p> To follow the workflow.</p>
+              <p class="lead"> <b>Is it the first time you are creating a version control repository? Or is a version control repository for this project non-existing?</b> </p>
+              <p> Create a version control repository on <a href="https://github.com/" target="_blank">GitHub</a> or a similar provider, such as <a href="https://bitbucket.org/product" target="_blank"> Bitbucket</a>. Doing this from the start and using a version control repositoty to collaborate internally is a good strategy to ensure all needed data and scripts are always accessable. <a href="https://github.com/" target="_blank">GitHub</a> and other providers allow for private repositories for academic use. </p>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -495,7 +502,7 @@ Note: 'pip' is a package installer for Python, which mostly comes pre-installed 
             </div>
             <div class="col-md-4 qadvice">
               <div class="collapse" id="Q1_6_no_advice">
-                <p >I have created a version control repo.</p>
+                <p >I have created a version control repo.</br> </br> You can find a comprehensive documentation of working with a Git repo <a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository" target="_blank"> here</a>.</p>
               </div>
               <div class="collapse" id="Q1_6_yes_advice">
                 <p>I need help with it.</p>
@@ -533,8 +540,8 @@ If you still feel like creating your own folder structure, you can visit this we
         
           <div class="row question " id="Q1_7">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
-              <p class="lead"> <b>Is it the first time you are going to fork, copy or clone the Version Control Structure proposed by the Standardixed Research Compendium?</b> </p>
-              <p> You can find it on the authors Github page.</p>
+              <p class="lead"> <b>Is it the first time you are going to fork, copy or clone the Version Control Structure proposed by the Standardized Research Compendium?</b> </p>
+              <p> You can find the Version Control Structure proposed by the Standardized Research Compendium on the <a href="https://github.com/ccs-amsterdam/compendium" target="_blank"> authors’ GitHub page</a>.</p>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -548,7 +555,7 @@ If you still feel like creating your own folder structure, you can visit this we
             </div>
             <div class="col-md-4 qadvice">
               <div class="collapse" id="Q1_7_no_advice">
-                <p >I have forked, copied or cloned it.</p>
+                <p >I have forked, copied or cloned the Version Control Structure from the authors’ Github page.. </br> </br> Here you can find a comprehensive documentation of <a href="https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project" target="_blank"> forking</a>,<a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository" target="_blank"> copying</a>, or <a href="https://git-scm.com/docs/git-clone" target="_blank"> cloning</a>.</p>
               </div>
               <div class="collapse" id="Q1_7_yes_advice">
                 <p>I need help with it.</p>
@@ -586,8 +593,8 @@ To fork the template, go to the template page and click 'Fork' button on the top
         
           <div class="row question " id="Q1_8">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
-              <p class="lead"> <b>Would you like guidance or more information about running doit install in the command line to set up the necessary Python and/or R environment for you research project?</b> </p>
-              <p> Getting the system running.</p>
+              <p class="lead"> <b>Would you like guidance or more information about running <code>doit install</code> in the command line to set up the necessary Python and/or R environment for you research project?</b> </p>
+              <p> For the workflow, <code> doit install </code> is essential for the workflow of the Standardized Research Compendium. This will set up the necessary Python and/or R environment.</p>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -601,7 +608,7 @@ To fork the template, go to the template page and click 'Fork' button on the top
             </div>
             <div class="col-md-4 qadvice">
               <div class="collapse" id="Q1_8_no_advice">
-                <p >I have run doit install or know how to do it.</p>
+                <p >I have run <code>doit install</code> or know how to do it.</br> </br> You can find more information on installing Doit <a href="https://pydoit.org/install.html" target="_blank">here</a>.</p>
               </div>
               <div class="collapse" id="Q1_8_yes_advice">
                 <p>I need help with it.</p>
@@ -640,7 +647,7 @@ This is done simply by opening your terminal, nagivating to your repository and 
           <div class="row question " id="Q1_9">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
               <p class="lead"> <b>Have you considered pre-registering your study?</b> </p>
-              <p> Promoting open science.</p>
+              <p> Preregistration is the practice of documenting your research plan at the beginning of your study and storing that plan in a read-only public repository. For an overview of registry services, see <a href="https://osf.io/registries" target="_blank"> OSF Registries</a>.</p>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -654,10 +661,10 @@ This is done simply by opening your terminal, nagivating to your repository and 
             </div>
             <div class="col-md-4 qadvice">
               <div class="collapse" id="Q1_9_no_advice">
-                <p >Not applicable for my study (anymore).</p>
+                <p >Pre-registration is not applicable for my study (anymore). </br> </br> For research that uses existing datasets, there is an increased risk of analysts being biased by preliminary trends in the dataset. <a href="https://osf.io/x4gzt/" target="_blank"> This page</a> provides a framework for preregistering studies that use existing data. </p>
               </div>
               <div class="collapse" id="Q1_9_yes_advice">
-                <p>I plan to preregister my study.</p>
+                <p>I plan to preregister my study. </br> </br> <a href="https://www.nature.com/articles/s41562-019-0772-6" target="_blank">This article</a>, published in <em>Nature</em>, entitled <i>A Consensus-Based Transparency Checklist</i> aims to improve and document the transparency of research reports in social and behavioural research. Their accompanying <a href="http://www.shinyapps.org/apps/TransparencyChecklist/" target="_blank">online application</a> allows users to answer a series of questions and generates a report that they can submit with their manuscript or post to a public repository.</p>
                 <!-- Button to Open the Modal -->
                 <div class="col text-center">
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
@@ -700,8 +707,8 @@ This is done simply by opening your terminal, nagivating to your repository and 
         
           <div class="row question " id="Q2_0">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
-              <p class="lead"> <b>Does your project use python?</b> </p>
-              <p> Python is an interpreted, high-level, general-purpose programming language.</p>
+              <p class="lead"> <b>Does your project use Python?</b> </p>
+              <p> <a href="https://www.python.org/" target="_blank">Python</a>  is an interpreted, high-level, general-purpose programming language.</p>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -751,8 +758,8 @@ This is done simply by opening your terminal, nagivating to your repository and 
         
           <div class="row question collapse" id="Q2_1">
             <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-              <p class="lead"> <b>Have you activated the environment for version control of the package?</b> </p>
-              <p> This means...</p>
+              <p class="lead"> <b>Do you need help with <a href="https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/" target="_blank">activating the environment</a> for version control of the package?</b> </p>
+              <p> Explain <code>dodo.py</code></p>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -803,7 +810,7 @@ This is done simply by opening your terminal, nagivating to your repository and 
           <div class="row question " id="Q2_2">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
               <p class="lead"> <b>Does your project use R?</b> </p>
-              <p> R is a programming language for statistical computing and graphics.</p>
+              <p> <a href="https://www.r-project.org/about.html" target="_blank">R</a> is a programming language for statistical computing and graphics. If you are a beginning user of R, please visit the <a href="https://github.com/ccs-amsterdam/r-course-material" target="_blank">CCS GitHub page</a> for tutorials.</p>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -853,8 +860,8 @@ This is done simply by opening your terminal, nagivating to your repository and 
         
           <div class="row question collapse" id="Q2_3">
             <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-              <p class="lead"> <b>Is it the first you will be working with the packrat package?</b> </p>
-              <p> You can find it here.</p>
+              <p class="lead"> <b>Is it the first you will be working with the <em>packrat</em> package?</b> </p>
+              <p> <a href="https://rstudio.github.io/packrat/" target="_blank"><em>packrat</em></a> is a dependency management system for R packages.</p>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -868,7 +875,7 @@ This is done simply by opening your terminal, nagivating to your repository and 
             </div>
             <div class="col-md-4 qadvice">
               <div class="collapse" id="Q2_3_no_advice">
-                <p >I have installed it or worked with it before.</p>
+                <p >I have installed <em>packrat</em> or worked with it before. </br> </br> You can find information about the <em>packrat</em> package <a href="https://cran.r-project.org/web/packages/packrat/index.html" target="_blank">here</a>, or you can visit the short online tutorial  <a href="https://rstudio.github.io/packrat/" target="_blank">here</a> to revisit some of the <em>packrat</em> principles.</p>
               </div>
               <div class="collapse" id="Q2_3_yes_advice">
                 <p>I need help with it.</p>
@@ -904,8 +911,8 @@ This is done simply by opening your terminal, nagivating to your repository and 
         
           <div class="row question " id="Q2_4">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
-              <p class="lead"> <b>Does your project use another analysis language</b> </p>
-              <p> If you used SPSS/Stata/SAS/MatLAb or anything else.</p>
+              <p class="lead"> <b>Does your project use another – not open source – analysis language?</b> </p>
+              <p> If you used SPSS/Stata/SAS/MatLab/Atlas TI or anything else.</p>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -922,7 +929,7 @@ This is done simply by opening your terminal, nagivating to your repository and 
                 <p ></p>
               </div>
               <div class="collapse" id="Q2_4_yes_advice">
-                <p></p>
+                <p>Add what to do to make the compendium reproducible</p>
                 <!-- Button to Open the Modal -->
                 <div class="col text-center">
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
@@ -935,12 +942,12 @@ This is done simply by opening your terminal, nagivating to your repository and 
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="Q2_4_info_box_header"></h4>
+                        <h4 class="modal-title" id="Q2_4_info_box_header">Other programs and Compendium</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
                       <div class="modal-body">
-                        <p>   </p>
+                        <p>  Add what to do to make the compendium reproducible </p>
                       </div>
                       <!-- Modal footer -->
                       <div class="modal-footer">
@@ -956,7 +963,7 @@ This is done simply by opening your terminal, nagivating to your repository and 
           <div class="row question collapse" id="Q2_5">
             <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
               <p class="lead"> <b>Do you install any extensions when cleaning, processing and/or analyzing the data in your research project?</b> </p>
-              <p> So that others know what they need for your project.</p>
+              <p> Proprietary data refers to any set of statistics, information, or documentation which is controlled solely by you or a third party. The data is typically protected by copyright law, trade secret laws, and even by patent agreement, in some cases.</p>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1016,7 +1023,7 @@ This is done simply by opening your terminal, nagivating to your repository and 
           <div class="row question " id="Q3_1">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
               <p class="lead"> <b>Are multiple researchers involved in this project?</b> </p>
-              <p> Important to keep track of who does what.</p>
+              <p> Regardless of whether you work alone or in a team, commit early, commit often: Don’t procrastinate with adding code or material to GitHub. At a minimum, push changes after every day, but ideally after every coherent change, even if it is work in progress.</p>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1030,10 +1037,10 @@ This is done simply by opening your terminal, nagivating to your repository and 
             </div>
             <div class="col-md-4 qadvice">
               <div class="collapse" id="Q3_1_no_advice">
-                <p >I worked alone on this project</p>
+                <p >If you work on a project on your own, it is very crucial that you commit the changes that you make to your project early and often. This way you can keep track of what you are doing, make sure no data or code is lost and have the ability to work on your project from anywhere. You can find more information on what that is and how to do it <a href="https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository" target="_blank">here</a> and <a href="https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History" target="_blank">here</a>.</p>
               </div>
               <div class="collapse" id="Q3_1_yes_advice">
-                <p>This is a team project</p>
+                <p>If you work together in a team, you also should commit early and often (see <a href="https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository" target="_blank">here</a> and <a href="https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History" target="_blank">here</a>), but you additionally also need to take care of managing a project or even an orgainzation. That way you make sure that the work of everyone gets organized the right way and you can all collaborate on one folder structure. You can find information on this <a href="https://git-scm.com/book/en/v2/GitHub-Maintaining-a-Project" target="_blank">here</a> and <a href="https://git-scm.com/book/en/v2/GitHub-Managing-an-organization" target="_blank">here</a>.</p>
                 <!-- Button to Open the Modal -->
                 <div class="col text-center">
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
@@ -1046,14 +1053,12 @@ This is done simply by opening your terminal, nagivating to your repository and 
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="Q3_1_info_box_header">Working alone or in a team</h4>
+                        <h4 class="modal-title" id="Q3_1_info_box_header"></h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
                       <div class="modal-body">
-                        <p>  If you work on a project no your own, it is very crucial that you commit the changes that you make to your project early and often. This way you can keep track of what you are doing, make sure no data or code is lost and have the ability to work on your project from anywhere. You can find more information on what that is and how to do it here (https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) and here (https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History).
-
-If you work together in a team, you also should commit early and often (see above), but you additionally also need to take care of managing a project or even an orgainzation. That way you make sure that the work of everyone gets organized the right way and you can all collaborate on one folder structure. You can find information on this here (https://git-scm.com/book/en/v2/GitHub-Maintaining-a-Project) and here (https://git-scm.com/book/en/v2/GitHub-Managing-an-organization). </p>
+                        <p>   </p>
                       </div>
                       <!-- Modal footer -->
                       <div class="modal-footer">
@@ -1069,7 +1074,7 @@ If you work together in a team, you also should commit early and often (see abov
           <div class="row question " id="Q3_2">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
               <p class="lead"> <b>Do you work with proprietary data?</b> </p>
-              <p> Explanation</p>
+              <p> The data that you used for your project is owned by an individual or organization and is important enough to give them a competitive advantage. This could for example be usage data from a social network site or text from newspaper articles. This data is not open to the public and you thus need to take extra measures before you make your GitHub public to not violate any laws. </p>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1099,12 +1104,12 @@ If you work together in a team, you also should commit early and often (see abov
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="Q3_2_info_box_header">Proprietary data</h4>
+                        <h4 class="modal-title" id="Q3_2_info_box_header"></h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
                       <div class="modal-body">
-                        <p>  The data that you used for your project is owned by an individual or organization and is important enough to give them a competitive advantage. This could for example be usage data from a social network site or text from newspaper articles. This data is not open to the public and you thus need to take extra measures before you make your GitHub public to not violate any laws.  </p>
+                        <p>   </p>
                       </div>
                       <!-- Modal footer -->
                       <div class="modal-footer">
@@ -1120,7 +1125,7 @@ If you work together in a team, you also should commit early and often (see abov
           <div class="row question " id="Q3_3">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
               <p class="lead"> <b>Do you want to encrypt your data?</b> </p>
-              <p> Explanation</p>
+              <p> Data encryption translates data into another form, or code, so that only people with access to a secret key (formally called a decryption key) or password can read it. Encrypted data is commonly referred to as ciphertext, while unencrypted data is called plaintext. Currently, encryption is one of the most popular and effective data security methods used by organizations. Source: <a href="https://digitalguardian.com/blog/what-data-encryption" target="_blank">The Guardian</a> </br></br> Your data should be encrypted if it is not possible to share your data openly, either because it is proprietary or because it includes sensitive information that cannot be made public as plain text. If you are not sure about matters of encryption and what data need to be encrypted, you should first consult the ethical board of your research institution. </p>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1134,10 +1139,10 @@ If you work together in a team, you also should commit early and often (see abov
             </div>
             <div class="col-md-4 qadvice">
               <div class="collapse" id="Q3_3_no_advice">
-                <p >I do not want to encrypt my data.</p>
+                <p >Encryption is not needed for the type of data I work with. </p>
               </div>
               <div class="collapse" id="Q3_3_yes_advice">
-                <p>I want to encrypt my data.</p>
+                <p>I want to encrypt my data. </br></br> Information on how to encrypt your data in your research compendium can be found by clicking on the button below.</p>
                 <!-- Button to Open the Modal -->
                 <div class="col text-center">
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
@@ -1150,16 +1155,16 @@ If you work together in a team, you also should commit early and often (see abov
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="Q3_3_info_box_header">Encryption</h4>
+                        <h4 class="modal-title" id="Q3_3_info_box_header"></h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
                       <div class="modal-body">
-                        <p>  Data encryption translates data into another form, or code, so that only people with access to a secret key (formally called a decryption key) or password can read it. Encrypted data is commonly referred to as ciphertext, while unencrypted data is called plaintext. Currently, encryption is one of the most popular and effective data security methods used by organizations. (source (https://digitalguardian.com/blog/what-data-encryption)). 
+                        <p>  
 
-Your data should be encrypted if it is not possible to share your data openly, either because it is proprietary or because it includes sensitive information that cannot be made public as plain text. If you are not sure about matters of encryption and what data need to be encrypted, you should first consult the ethical board of your research institution. 
 
-Information on how to encrypt your data in your research compendium can be found here: (ADD LINK) </p>
+
+ </p>
                       </div>
                       <!-- Modal footer -->
                       <div class="modal-footer">
@@ -1175,7 +1180,7 @@ Information on how to encrypt your data in your research compendium can be found
           <div class="row question " id="Q3_4">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
               <p class="lead"> <b>Does your project involve data processing or cleaning?</b> </p>
-              <p> Explanation [WvA: not sure I actually understood this question]</p>
+              <p> Raw data is the data that you collected e.g. in your survey, your experiment, the data you scraped or retrieved from an API. There are many different forms of raw data - the important thing is that it has not been through any form of processing yet. It is crucial to preserve the raw data of your project if possible. Processed data is raw data that was modified by certain forms of data cleaning and processing such as dealing with missing values, making scales, aggregating data etc. In a research compendium, you should put the raw data in the "raw" folder (possibly encrypted).</p>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1189,10 +1194,10 @@ Information on how to encrypt your data in your research compendium can be found
             </div>
             <div class="col-md-4 qadvice">
               <div class="collapse" id="Q3_4_no_advice">
-                <p >I work with the raw data.</p>
+                <p >I work with the raw data. This means my paper/report does not produce any visualization or analysis of the data. Remember that data visualizations makes it easier to communicate your ideas and findings to other people. </p>
               </div>
               <div class="collapse" id="Q3_4_yes_advice">
-                <p>I work with processed data.</p>
+                <p>I work with processed data. The follow-up question check whether the folder structure to make <b>Open Science Fun &amp Easy </b> offered by The Standardized Research Compendium is in tact.</p>
                 <!-- Button to Open the Modal -->
                 <div class="col text-center">
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
@@ -1205,16 +1210,12 @@ Information on how to encrypt your data in your research compendium can be found
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="Q3_4_info_box_header">Raw and processed data</h4>
+                        <h4 class="modal-title" id="Q3_4_info_box_header"></h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
                       <div class="modal-body">
-                        <p>  Raw data is the data that you collected e.g. in your survey, your experiment, the data you scraped or retrieved from an API. There are many different forms of raw data - the important thing is that it has not been through any form of processing yet. It is crucial to preserve the raw data of your project if possible. 
-
-Processed data is raw data that was modified by certain forms of data cleaning and processing such as dealing with missing values, making scales, aggregating data etc. 
-
-In a research compendium, you should put the raw data in the "raw" folder (possibly encrypted) (MORE INFO NEEDED HERE) </p>
+                        <p>   </p>
                       </div>
                       <!-- Modal footer -->
                       <div class="modal-footer">
@@ -1230,7 +1231,7 @@ In a research compendium, you should put the raw data in the "raw" folder (possi
           <div class="row question collapse" id="Q3_5">
             <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
               <p class="lead"> <b>Have you written functions yourself on which the data-processing or analysis depend?</b> </p>
-              <p> Explanation</p>
+              <p> Often you use already existing functions (pieces of code to be reused) from packages. This is very common for example for R or Python. Sometimes, however, you will need your own specialized functions to deal with your data or do analyses. It is then important to preserve the code that you used in the compendium so that other researchers can re-run your analyses and adapt them where necessary.</p>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1260,12 +1261,12 @@ In a research compendium, you should put the raw data in the "raw" folder (possi
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="Q3_5_info_box_header">Functions</h4>
+                        <h4 class="modal-title" id="Q3_5_info_box_header"></h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
                       <div class="modal-body">
-                        <p>  Often you use already existing functions (pieces of code to be reused) from packages. This is very common for example for R or Python. Sometimes, however, you will need your own specialized functions to deal with your data or do analyses. It is then important to preserve the code that you used in the compendium so that other researchers can re-run your analyses and adapt them where necessary. </p>
+                        <p>   </p>
                       </div>
                       <!-- Modal footer -->
                       <div class="modal-footer">
@@ -1281,7 +1282,7 @@ In a research compendium, you should put the raw data in the "raw" folder (possi
           <div class="row question collapse" id="Q3_6">
             <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
               <p class="lead"> <b>Have you saved the functions in a script in the folder src/lib?</b> </p>
-              <p> Explanation</p>
+              <p> </p>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1332,7 +1333,7 @@ In a research compendium, you should put the raw data in the "raw" folder (possi
           <div class="row question collapse" id="Q3_7">
             <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
               <p class="lead"> <b>Have you saved the data cleaning / processing sripts that generate any intermediate or temporary data files needed by the analyses in src/data-processing?</b> </p>
-              <p> Explanation</p>
+              <p> </p>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1382,8 +1383,8 @@ In a research compendium, you should put the raw data in the "raw" folder (possi
         
           <div class="row question collapse" id="Q3_8">
             <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-              <p class="lead"> <b>Have you saved scripts or notebooks that contain the actual analysis</b> </p>
-              <p>  should produce the files in the folder report?</p>
+              <p class="lead"> <b>Have you saved the files that contain the actual analysis?</b> </p>
+              <p> </p>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1397,10 +1398,10 @@ In a research compendium, you should put the raw data in the "raw" folder (possi
             </div>
             <div class="col-md-4 qadvice">
               <div class="collapse" id="Q3_8_no_advice">
-                <p >img/info.svg</p>
+                <p >I have saved them.</p>
               </div>
               <div class="collapse" id="Q3_8_yes_advice">
-                <p>img/yes.svg</p>
+                <p>I have saved them.</p>
                 <!-- Button to Open the Modal -->
                 <div class="col text-center">
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
@@ -1413,7 +1414,7 @@ In a research compendium, you should put the raw data in the "raw" folder (possi
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="Q3_8_info_box_header">Saved_datasets</h4>
+                        <h4 class="modal-title" id="Q3_8_info_box_header"></h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
@@ -1434,7 +1435,7 @@ In a research compendium, you should put the raw data in the "raw" folder (possi
           <div class="row question collapse" id="Q3_9">
             <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
               <p class="lead"> <b>Have you saved the finished data sets that are of general interest in results/datasets?</b> </p>
-              <p> Explanation</p>
+              <p> </p>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1485,7 +1486,7 @@ In a research compendium, you should put the raw data in the "raw" folder (possi
           <div class="row question collapse" id="Q3_10">
             <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
               <p class="lead"> <b>Have you saved the written descriptions of results, i.e. a final paper in results/report?</b> </p>
-              <p> Explanation</p>
+              <p> </p>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1536,7 +1537,7 @@ In a research compendium, you should put the raw data in the "raw" folder (possi
           <div class="row question collapse" id="Q3_11">
             <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
               <p class="lead"> <b>Are your analyses in the paper visualized?</b> </p>
-              <p> Explanation</p>
+              <p> Graphs and charts let you explore and learn about the structure of the information you collect. Good data visualizations also make it easier to communicate your ideas and findings to other people. </p>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1587,7 +1588,7 @@ In a research compendium, you should put the raw data in the "raw" folder (possi
           <div class="row question collapse" id="Q3_12">
             <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
               <p class="lead"> <b>Have you saved the figures in results/figures?</b> </p>
-              <p> Explanation</p>
+              <p> </p>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1647,7 +1648,7 @@ In a research compendium, you should put the raw data in the "raw" folder (possi
           <div class="row question " id="Q4_2">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
               <p class="lead"> <b>Does the code in your compendium produce all statistics, tables, figures, etc. in your manuscript?</b> </p>
-              <p> Explanation.</p>
+              <p> Open science, i.e. “making the content and process of producing evidence and claims transparent and accessible to others” (Munafo et al., 2017, p. 5) improves the robustness of scientific research by contributing to reproducibility, replicability, and generalizability of findings.</p>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1661,10 +1662,10 @@ In a research compendium, you should put the raw data in the "raw" folder (possi
             </div>
             <div class="col-md-4 qadvice">
               <div class="collapse" id="Q4_2_no_advice">
-                <p >The code does not produce everything.</p>
+                <p >The code does not (yet) produce everything. Run <code>git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY</code>) followed by <code>doit</code> and check where your code is not fully reproducible. </p>
               </div>
               <div class="collapse" id="Q4_2_yes_advice">
-                <p>The code produces everything.</p>
+                <p>The code documented in the compendium produces everything.</br></br> To check this, run <code>git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY</code>) followed by <code>doit</code>.</p>
                 <!-- Button to Open the Modal -->
                 <div class="col text-center">
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
@@ -1677,12 +1678,12 @@ In a research compendium, you should put the raw data in the "raw" folder (possi
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="Q4_2_info_box_header">Refer to the Compendium</h4>
+                        <h4 class="modal-title" id="Q4_2_info_box_header"></h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
                       <div class="modal-body">
-                        <p>  If you use a compendium folder structure to organize and share your research, you should use the following citation: (ADD CITATION) </p>
+                        <p>   </p>
                       </div>
                       <!-- Modal footer -->
                       <div class="modal-footer">
@@ -1697,8 +1698,8 @@ In a research compendium, you should put the raw data in the "raw" folder (possi
         
           <div class="row question " id="Q4_3">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
-              <p class="lead"> <b>Does the manuscript refer to the compendium?</b> </p>
-              <p> Explanation.</p>
+              <p class="lead"> <b>Does the manuscript refer to the Standardized Research Compendium article?</b> </p>
+              <p> We appreciate your use of our checklist! Please reference <a href="#" target="_blank">our article</a>.</p>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1749,7 +1750,7 @@ In a research compendium, you should put the raw data in the "raw" folder (possi
           <div class="row question " id="Q4_4">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
               <p class="lead"> <b>Did you have another person or another computer try to run the compendium, and checked the results?</b> </p>
-              <p> Explanation.</p>
+              <p> At each major milestone or release, check your compendium by cloning it and running <code>doit</code> on a new computer or virtual server. Doing this ensures your scripts are fully reproducible, transparent and open.</p>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1763,10 +1764,10 @@ In a research compendium, you should put the raw data in the "raw" folder (possi
             </div>
             <div class="col-md-4 qadvice">
               <div class="collapse" id="Q4_4_no_advice">
-                <p >I did not check it on another computer.</p>
+                <p >I did not check my scripts for my compendium on another computer. </br></br> Clone your compendium (<code>git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY</code>) and run <code>doit</code> on a new computer or virtual server.</p>
               </div>
               <div class="collapse" id="Q4_4_yes_advice">
-                <p>I checked it on another computer.</p>
+                <p>I have checked my compendium by cloning it (<code>git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY</code>) and running <code>doit</code> on a new computer or virtual server.</p>
                 <!-- Button to Open the Modal -->
                 <div class="col text-center">
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
@@ -1780,6 +1781,57 @@ In a research compendium, you should put the raw data in the "raw" folder (possi
                       <!-- Modal Header -->
                       <div class="modal-header">
                         <h4 class="modal-title" id="Q4_4_info_box_header"></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <p>   </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="row question " id="Q4_5">
+            <div class="col-md-6 qquestion" style="padding-right: 2em">
+              <p class="lead"> <b>Did you anonymize your repository before submitting?</b> </p>
+              <p> Obviously, you are hiding your name in the text of the article. However, sending a link to your GitHub repository will make identity known to the revieweers, which, in turn, defeats the purpose of a blind review.</p>
+            </div>
+            <div class="col-md-2 qcheck">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-yes yes" onclick="toggle('Q4_5', true)">
+                  <input type="radio" name="options" id="#Q4_5_yes" onclick="event.stopPropagation()">Yes
+                </label>
+                <label class="btn btn-no no" onclick="toggle('Q4_5', false)">
+                  <input type="radio" name="options" id="#Q4_5_no" onclick="event.stopPropagation()">No
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4 qadvice">
+              <div class="collapse" id="Q4_5_no_advice">
+                <p ><a href="http://anonymous.4open.science/" target="_blank">Anonymous GitHub</a> is a system to anonymize Github repositories so you can refer to your online compendium during the double-blind paper submission process. </p>
+              </div>
+              <div class="collapse" id="Q4_5_yes_advice">
+                <p></p>
+                <!-- Button to Open the Modal -->
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+                    <b> More Information</b>
+                  </button>
+                </div>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title" id="Q4_5_info_box_header"></h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->

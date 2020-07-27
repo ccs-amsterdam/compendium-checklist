@@ -5,12 +5,12 @@ from jinja2 import Template
 
 template = Template(open("mock_template.html").read())
 
-PHASES = ["Getting Started", "Version Control for Your Program/Langauge", "Structure of Your Project Folders", "Checks Before Submitting Your Manuscript"]
+PHASES = ["Getting Started", "Version Control for Your Program/Language", "Structure of Your Project Folders", "Checks Before Submitting Your Manuscript"]
 
 
 class Question:
     def __init__(self, phase, q, followup, followup_if, title, explanation, yes_explanation,
-    no_explanation, info_box_header, info_box_content, **_):
+    no_explanation, followup_box, info_box_header, info_box_content, **_):
         self.phase = PHASES[int(phase) - 1]
         self.q = q.replace(".", "_")
         self.followup = followup.replace(".", "_")
@@ -21,6 +21,7 @@ class Question:
         self.no_explanation = no_explanation
         self.info_box_header = info_box_header
         self.info_box_content = info_box_content
+        self.followup_box = followup_box
 
 phases = {phase: [] for phase in PHASES}
 
@@ -34,6 +35,8 @@ for q in questions:
         target = qdict[q.followup]
         when = {"y": "yes", "n": "no"}[q.followup_if]
         dependencies.setdefault(target.q, {}).setdefault(when, []).append(q.q)
+    if q.followup_box:
+        when = {"y": "yes", "n": "no"}[q.followup_box]
 
 
 open("mock.html", "w").write(template.render(**locals()))
