@@ -153,8 +153,9 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="https://github.com/vanatteveldt/compendium-checklist" target="_blank">
-      <h1>Compendium Checklist to Make Open Science Fun &amp Easy!<br/></h1>
-      <i>Wouter van Atteveldt, Anne Kroon, Felicia Loecherbach, Mickey Steijaert, Joanna Strychach, Damian Trilling, Mariken A.C.G. van der Velden &amp Kasper Welbers </i> </a>
+      <h1>Compendium Checklist to Make Open Science Fun &amp Easy!</h1>
+      <i>Wouter van Atteveldt, Anne Kroon, Felicia Loecherbach, Mickey Steijaert, Joanna Strychach,
+        Damian Trilling, Mariken A.C.G. van der Velden &amp Kasper Welbers </i> </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -208,7 +209,8 @@
                On the right side you will see additional information and links.
                The first couple of questions are checking whether the computer you are working on for this research project has all necessary
                applications to work with the <a href = "https://github.com/ccs-amsterdam/compendium" target="_blank"> Standardized Research Compendium</a>.
-               <ins>Feel free to skip certain questions or phases if you feel you do not need any information or help for those parts.</ins> </p>
+             </br></br>
+               <ins>Feel free to <a href="#" onclick="skiptotab(3)">skip the first two phases</a>, if you have worked with our Compendium before, or feel that you do not need any information or help for those parts.</ins> </p>
         
         
           <div class="row question " id="Q1_1">
@@ -244,7 +246,7 @@
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="<__main__.Question object at 0x10e934fd0>_info_box_header">Version control</h4>
+                        <h4 class="modal-title" id="Q1_1_info_box_header">Version control</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
@@ -295,7 +297,7 @@
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="<__main__.Question object at 0x10e934cf8>_info_box_header">Working from a Terminal</h4>
+                        <h4 class="modal-title" id="Q1_2_info_box_header">Working from a Terminal</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
@@ -346,7 +348,7 @@
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="<__main__.Question object at 0x10e934e80>_info_box_header">Installing Git</h4>
+                        <h4 class="modal-title" id="Q1_3_info_box_header">Installing Git</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
@@ -400,7 +402,7 @@ https://gist.github.com/derhuerst/1b15ff4652a867391f03 </p>
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="<__main__.Question object at 0x10e934b00>_info_box_header">Installing Python</h4>
+                        <h4 class="modal-title" id="Q1_4_info_box_header">Installing Python</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
@@ -454,7 +456,7 @@ https://wiki.python.org/moin/BeginnersGuide/Download </p>
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="<__main__.Question object at 0x10e99f208>_info_box_header">Installing doit</h4>
+                        <h4 class="modal-title" id="Q1_5_info_box_header">Installing doit</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
@@ -509,7 +511,7 @@ Note: 'pip' is a package installer for Python, which mostly comes pre-installed 
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="<__main__.Question object at 0x10e99f320>_info_box_header">The compendium structure</h4>
+                        <h4 class="modal-title" id="Q1_6_info_box_header">The compendium structure</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
@@ -562,7 +564,7 @@ If you still feel like creating your own folder structure, you can visit this we
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="<__main__.Question object at 0x10e99f3c8>_info_box_header">Forking the compendiium structure</h4>
+                        <h4 class="modal-title" id="Q1_7_info_box_header">Forking the compendiium structure</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
@@ -615,7 +617,7 @@ To fork the template, go to the template page and click 'Fork' button on the top
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="<__main__.Question object at 0x10e99f240>_info_box_header">Run doit install</h4>
+                        <h4 class="modal-title" id="Q1_8_info_box_header">Run doit install</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
@@ -668,7 +670,7 @@ This is done simply by opening your terminal, nagivating to your repository and 
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="<__main__.Question object at 0x10e99f0b8>_info_box_header"></h4>
+                        <h4 class="modal-title" id="Q1_9_info_box_header"></h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
@@ -729,7 +731,7 @@ This is done simply by opening your terminal, nagivating to your repository and 
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="<__main__.Question object at 0x10e99f4a8>_info_box_header"></h4>
+                        <h4 class="modal-title" id="Q2_0_info_box_header"></h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
@@ -780,7 +782,7 @@ This is done simply by opening your terminal, nagivating to your repository and 
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="<__main__.Question object at 0x10e99f550>_info_box_header"></h4>
+                        <h4 class="modal-title" id="Q2_1_info_box_header"></h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
@@ -831,7 +833,7 @@ This is done simply by opening your terminal, nagivating to your repository and 
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="<__main__.Question object at 0x10e99f630>_info_box_header"></h4>
+                        <h4 class="modal-title" id="Q2_2_info_box_header"></h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
@@ -882,7 +884,7 @@ This is done simply by opening your terminal, nagivating to your repository and 
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="<__main__.Question object at 0x10e99f358>_info_box_header"></h4>
+                        <h4 class="modal-title" id="Q2_3_info_box_header"></h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
@@ -933,7 +935,7 @@ This is done simply by opening your terminal, nagivating to your repository and 
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="<__main__.Question object at 0x10e99f668>_info_box_header"></h4>
+                        <h4 class="modal-title" id="Q2_4_info_box_header"></h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
@@ -984,7 +986,7 @@ This is done simply by opening your terminal, nagivating to your repository and 
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="<__main__.Question object at 0x10e99f710>_info_box_header"></h4>
+                        <h4 class="modal-title" id="Q2_5_info_box_header"></h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
@@ -1044,7 +1046,7 @@ This is done simply by opening your terminal, nagivating to your repository and 
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="<__main__.Question object at 0x10e99f780>_info_box_header">Working alone or in a team</h4>
+                        <h4 class="modal-title" id="Q3_1_info_box_header">Working alone or in a team</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
@@ -1097,7 +1099,7 @@ If you work together in a team, you also should commit early and often (see abov
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="<__main__.Question object at 0x10e99f898>_info_box_header">Proprietary data</h4>
+                        <h4 class="modal-title" id="Q3_2_info_box_header">Proprietary data</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
@@ -1148,7 +1150,7 @@ If you work together in a team, you also should commit early and often (see abov
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="<__main__.Question object at 0x10e99f2b0>_info_box_header">Encryption</h4>
+                        <h4 class="modal-title" id="Q3_3_info_box_header">Encryption</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
@@ -1203,7 +1205,7 @@ Information on how to encrypt your data in your research compendium can be found
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="<__main__.Question object at 0x10e99f8d0>_info_box_header">Raw and processed data</h4>
+                        <h4 class="modal-title" id="Q3_4_info_box_header">Raw and processed data</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
@@ -1258,7 +1260,7 @@ In a research compendium, you should put the raw data in the "raw" folder (possi
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="<__main__.Question object at 0x10e99f978>_info_box_header">Functions</h4>
+                        <h4 class="modal-title" id="Q3_5_info_box_header">Functions</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
@@ -1309,7 +1311,7 @@ In a research compendium, you should put the raw data in the "raw" folder (possi
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="<__main__.Question object at 0x10e99fa20>_info_box_header"></h4>
+                        <h4 class="modal-title" id="Q3_6_info_box_header"></h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
@@ -1360,7 +1362,7 @@ In a research compendium, you should put the raw data in the "raw" folder (possi
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="<__main__.Question object at 0x10e99fac8>_info_box_header"></h4>
+                        <h4 class="modal-title" id="Q3_7_info_box_header"></h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
@@ -1411,7 +1413,7 @@ In a research compendium, you should put the raw data in the "raw" folder (possi
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="<__main__.Question object at 0x10e99fb70>_info_box_header">Saved_datasets</h4>
+                        <h4 class="modal-title" id="Q3_8_info_box_header">Saved_datasets</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
@@ -1462,7 +1464,7 @@ In a research compendium, you should put the raw data in the "raw" folder (possi
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="<__main__.Question object at 0x10e99fc18>_info_box_header"></h4>
+                        <h4 class="modal-title" id="Q3_9_info_box_header"></h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
@@ -1513,7 +1515,7 @@ In a research compendium, you should put the raw data in the "raw" folder (possi
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="<__main__.Question object at 0x10e99fcc0>_info_box_header"></h4>
+                        <h4 class="modal-title" id="Q3_10_info_box_header"></h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
@@ -1564,7 +1566,7 @@ In a research compendium, you should put the raw data in the "raw" folder (possi
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="<__main__.Question object at 0x10e99fd68>_info_box_header"></h4>
+                        <h4 class="modal-title" id="Q3_11_info_box_header"></h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
@@ -1615,7 +1617,7 @@ In a research compendium, you should put the raw data in the "raw" folder (possi
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="<__main__.Question object at 0x10e99fe48>_info_box_header"></h4>
+                        <h4 class="modal-title" id="Q3_12_info_box_header"></h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
@@ -1675,7 +1677,7 @@ In a research compendium, you should put the raw data in the "raw" folder (possi
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="<__main__.Question object at 0x10e99ff60>_info_box_header">Refer to the Compendium</h4>
+                        <h4 class="modal-title" id="Q4_2_info_box_header">Refer to the Compendium</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
@@ -1726,7 +1728,7 @@ In a research compendium, you should put the raw data in the "raw" folder (possi
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="<__main__.Question object at 0x10e99ff98>_info_box_header"></h4>
+                        <h4 class="modal-title" id="Q4_3_info_box_header"></h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
@@ -1777,7 +1779,7 @@ In a research compendium, you should put the raw data in the "raw" folder (possi
                     <div class="modal-content">
                       <!-- Modal Header -->
                       <div class="modal-header">
-                        <h4 class="modal-title" id="<__main__.Question object at 0x10e99fe80>_info_box_header"></h4>
+                        <h4 class="modal-title" id="Q4_4_info_box_header"></h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <!-- Modal body -->
