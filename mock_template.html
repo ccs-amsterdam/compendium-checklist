@@ -206,7 +206,7 @@
           <p>These questions allow you to set up the folder structure for your project. </p>
        {% elif loop.index == 4 %}
           <h3>Finish Your Project's Compendium!</h3> <hr />
-          <p>These questions allow you to conduct the final checks for your online compendium before submitting your manuscript.</p>
+          <p>These four questions allow you to conduct the final checks for your online compendium before submitting your manuscript.</p>
         {% endif %}
         {% for q in questions %}
           <div class="row question {% if q.followup %}collapse{% endif %}" id="{{q.q}}">
