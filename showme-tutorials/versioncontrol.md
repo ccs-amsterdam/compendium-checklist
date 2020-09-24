@@ -1,7 +1,6 @@
 ### About Version Control
 
-<img src="vc-xkcd.jpg"
-     alt="Markdown Monster icon"
+<img src="figures/vc-xkcd.jpg"
      style="float: center; margin-right: 10px;" />
 
 What is "version control", and why should you care?
