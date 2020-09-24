@@ -13,5 +13,5 @@ Chances are, you already employ your own version control system, even if you don
 Many modern editors such as Microsoft Word and Apple Pages have this facility built in. Also Dropbox maintains a full history of all of the files you have deletes and edited during the last month.
 
 You have almost certainly employed your own simple form of a version control system in the past. Here is an example:
-<img src="figures/local_version.png"
+<img src="figures/local_versions.png"
      style="float: center; margin-right: 10px;" />
