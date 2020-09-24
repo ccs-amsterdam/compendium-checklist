@@ -1,6 +1,6 @@
 ### About Version Control
 
-<img src="vc-xkcd.png"
+<img src="vc-xkcd.jpg"
      alt="Markdown Monster icon"
      style="float: left; margin-right: 10px;" />
 
