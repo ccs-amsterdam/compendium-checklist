@@ -3,6 +3,7 @@
 <img src="figures/vc-xkcd.jpg"
      style="float: center; margin-right: 10px;" />
 
+<p style='text-align: justify;'>
 What is "version control", and why should you care?
 Ever produced a text document, script or datafile with a title looking like this: <em>"FinalVersion2.0_REVISITED18may_FL"</em>?</br>
 Version control is a way to organize your scripts in a reproducible, open, and transparent manner, and an additional advantage, you wil no longer produce files with such titles.
@@ -15,3 +16,5 @@ Many modern editors such as Microsoft Word and Apple Pages have this facility bu
 You have almost certainly employed your own simple form of a version control system in the past. Here is an example:
 <img src="figures/local_versions.png"
      style="float: center; margin-right: 10px;" />
+
+</p>     
