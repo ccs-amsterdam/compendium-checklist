@@ -1,0 +1,170 @@
+p{
+  text-align: justify;
+  font-family: Arial, Verdana, sans-serif;
+  font-size: 14px;
+  line-height: 1.8em;
+  background-color: rgb(248, 249, 250);
+  border-radius: 25px 25px 25px 25px;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: .5px;
+  margin-right: .5px;}
+
+h3{
+  line-height: 2em;
+  font-family: Arial, Verdana, sans-serif;
+  text-align: center;
+  background-color: rgb(248, 249, 250);
+  border-radius: 25px 25px 25px 25px;
+  padding-left: 1em;
+  padding-right: 1em;}
+
+hr{
+  height: 2px;
+  background-color: rgb(41, 49, 51);
+  border: none;}
+
+body{
+  background-color: rgb(255, 255, 255);
+  opacity: 0.9;
+  font-size: 14px;
+}
+
+code{
+  color: rgb(55, 67, 87);
+}
+
+a{
+  color: rgb(46, 110, 130);
+}
+    .qquestion, .qcheck, .qadvice {
+        background: rgb(248, 249, 250);
+        color: rgb(41, 49, 51);
+        border-color: rgb(41, 49, 51);
+        margin-top: 2px;
+        margin-bottom: 1px;
+        font-family: Arial, Verdana, sans-serif;
+        font-size: 14px;
+    }
+    .qcheck {
+        display: flex;
+        align-items: center;
+        border-color: rgb(41, 49, 51);}
+    .qquestion {border-radius: 25px 0px 0px 25px;
+      border-color: rgb(41, 49, 51);}
+    .qadvice   {border-radius: 0px 25px 25px 0px;
+      border-color: rgb(41, 49, 51);}
+
+    .yes::before {
+        display: inline-block;
+        content: "";
+        /*background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'><path fill-rule='evenodd' d='M13.854 3.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3.5-3.5a.5.5 0 11.708-.708L6.5 10.293l6.646-6.647a.5.5 0 01.708 0z' clip-rule='evenodd'/></svg>");*/
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'><path fill-rule='evenodd' d='M15.354 2.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L8 9.293l6.646-6.647a.5.5 0 01.708 0z' clip-rule='evenodd'/><path fill-rule='evenodd' d='M8 2.5A5.5 5.5 0 1013.5 8a.5.5 0 011 0 6.5 6.5 0 11-3.25-5.63.5.5 0 11-.5.865A5.472 5.472 0 008 2.5z' clip-rule='evenodd'/></svg>");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 2em; height: 2em;
+    }
+
+    .no::before {
+        display: inline-block;
+        content: "";
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'><path fill-rule='evenodd' d='M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z' clip-rule='evenodd'/><path fill-rule='evenodd' d='M11.854 4.146a.5.5 0 010 .708l-7 7a.5.5 0 01-.708-.708l7-7a.5.5 0 01.708 0z' clip-rule='evenodd'/><path fill-rule='evenodd' d='M4.146 4.146a.5.5 0 000 .708l7 7a.5.5 0 00.708-.708l-7-7a.5.5 0 00-.708 0z' clip-rule='evenodd'/></svg>");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 2em; height: 2em;
+    }
+
+    .btn-yes, btn-yes:hover {
+        color: white !important;
+        background-color: #A7DFB3;
+        border-color: #A7DFB3;
+    }
+
+    .btn-yes.active {
+        background-color: #28cF4C;
+    }
+
+    .btn-no, btn-no:hover {
+        color: white !important;
+        background-color: #FFC0C0;
+        border-color: #FFC0C0;
+    }
+
+    .btn-no.active {
+        background-color: #FF4040;
+    }
+
+    .nav-pills{
+      background-color: rgb(41, 49, 51);
+      display: flex;
+      justify-content: center;
+      font-size: 1.3em;
+    }
+
+    .pill a {
+      color: rgb(248, 249, 250);
+    }
+
+    .pill .nav-link.active {
+      background-color: rgb(248, 249, 250)!important;
+      color: rgb(41, 49, 51)!important;
+      cursor:pointer;
+    }
+
+    .navbar-brand {
+      float: left;
+      padding: 15px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .btn-primary {
+      background-color: rgb(41, 49, 51);
+      border-color: rgb(41, 49, 51);
+      color: rgb(248, 249, 250);
+    }
+
+    .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+      background-color: rgb(41, 49, 51)!important;
+      border-color: rgb(41, 49, 51)!important;
+      color: rgb(248, 249, 250)!important;
+    }
+
+    .btn-secondary {
+      background-color: rgb(41, 49, 51);
+      border-color: rgb(41, 49, 51);
+      color: rgb(248, 249, 250);
+    }
+
+    .btn-secondary:active {
+      color: rgb(248, 249, 250)!important;
+      background-color: rgb(41, 49, 51)!important;
+    }
+
+    .hiddendiv {
+        display: none;
+    }
+
+    .check-btn input:checked ~ .hiddendiv {
+        display: inline-block;
+    }   
+
+    .check-btn label {
+        display: inline-block;
+    }
+
+    .check-btn input {
+        display: none;
+    }
+
+    .parent {
+        display: flex;
+    }
+
+    .children {
+        height: 100%;
+        width: 100%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
