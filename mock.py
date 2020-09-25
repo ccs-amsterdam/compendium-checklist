@@ -10,7 +10,7 @@ PHASES = ["Getting Started", "Version Control for Your Program/Language", "Struc
 
 class Question:
     def __init__(self, phase, q, followup, followup_if, title, explanation, yes_explanation,
-    no_explanation, followup_box, info_box_header, info_box_content, **_):
+    no_explanation, followup_box, info_box_header, info_box_content, yes_answer, show_me,**_):
         self.phase = PHASES[int(phase) - 1]
         self.q = q.replace(".", "_")
         self.followup = followup.replace(".", "_")
@@ -22,6 +22,8 @@ class Question:
         self.info_box_header = info_box_header
         self.info_box_content = info_box_content
         self.followup_box = followup_box
+        self.yes_answer = yes_answer
+        self.show_me = show_me
 
 phases = {phase: [] for phase in PHASES}
 
@@ -36,7 +38,7 @@ for q in questions:
         when = {"y": "yes", "n": "no"}[q.followup_if]
         dependencies.setdefault(target.q, {}).setdefault(when, []).append(q.q)
     if q.followup_box:
-        when = {"y": "yes", "n": "no"}[q.followup_box]
+        when = {"Yes": "yes", "n": "no"}[q.yes_answer]
 
 
 open("mock.html", "w").write(template.render(**locals()))

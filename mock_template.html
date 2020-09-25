@@ -7,158 +7,18 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <style>
-
-    p{
-      text-align: justify;
-      font-family: Arial, Verdana, sans-serif;
-      font-size: 16px;
-      line-height: 1.8em;
-      background-color: rgb(248, 249, 250);
-      border-radius: 25px 25px 25px 25px;
-      padding-left: 1em;
-      padding-right: 1em;
-      margin-left: .5px;
-      margin-right: .5px;}
-
-    h3{
-      line-height: 2.5em;
-      font-family: Arial, Verdana, sans-serif;
-      text-align: center;
-      background-color: rgb(248, 249, 250);
-      border-radius: 25px 25px 25px 25px;
-      padding-left: 1em;
-      padding-right: 1em;}
-
-    hr{
-      height: 2px;
-      background-color: rgb(41, 49, 51);
-      border: none;}
-
-    body{
-      background-color: rgb(255, 255, 255);
-      opacity: 0.9;
-      font-size: 16px;
-    }
-
-    code{
-      color: rgb(55, 67, 87);
-    }
-
-    a{
-      color: rgb(46, 110, 130);
-    }
-        .qquestion, .qcheck, .qadvice {
-            background: rgb(248, 249, 250);
-            color: rgb(41, 49, 51);
-            border-color: rgb(41, 49, 51);
-            margin-top: 2px;
-            margin-bottom: 1px;
-            font-family: Arial, Verdana, sans-serif;
-            font-size: 16px;
-        }
-        .qcheck {
-            display: flex;
-            align-items: center;
-            border-color: rgb(41, 49, 51);}
-        .qquestion {border-radius: 25px 0px 0px 25px;
-          border-color: rgb(41, 49, 51);}
-        .qadvice   {border-radius: 0px 25px 25px 0px;
-          border-color: rgb(41, 49, 51);}
-
-        .yes::before {
-            display: inline-block;
-            content: "";
-            /*background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'><path fill-rule='evenodd' d='M13.854 3.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3.5-3.5a.5.5 0 11.708-.708L6.5 10.293l6.646-6.647a.5.5 0 01.708 0z' clip-rule='evenodd'/></svg>");*/
-            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'><path fill-rule='evenodd' d='M15.354 2.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L8 9.293l6.646-6.647a.5.5 0 01.708 0z' clip-rule='evenodd'/><path fill-rule='evenodd' d='M8 2.5A5.5 5.5 0 1013.5 8a.5.5 0 011 0 6.5 6.5 0 11-3.25-5.63.5.5 0 11-.5.865A5.472 5.472 0 008 2.5z' clip-rule='evenodd'/></svg>");
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            width: 2em; height: 2em;
-        }
-
-        .no::before {
-            display: inline-block;
-            content: "";
-            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'><path fill-rule='evenodd' d='M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z' clip-rule='evenodd'/><path fill-rule='evenodd' d='M11.854 4.146a.5.5 0 010 .708l-7 7a.5.5 0 01-.708-.708l7-7a.5.5 0 01.708 0z' clip-rule='evenodd'/><path fill-rule='evenodd' d='M4.146 4.146a.5.5 0 000 .708l7 7a.5.5 0 00.708-.708l-7-7a.5.5 0 00-.708 0z' clip-rule='evenodd'/></svg>");
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            width: 2em; height: 2em;
-        }
-
-        .btn-yes, btn-yes:hover {
-            color: white !important;
-            background-color: #A7DFB3;
-            border-color: #A7DFB3;
-        }
-
-        .btn-yes.active {
-            background-color: #28cF4C;
-        }
-
-        .btn-no, btn-no:hover {
-            color: white !important;
-            background-color: #FFC0C0;
-            border-color: #FFC0C0;
-        }
-
-        .btn-no.active {
-            background-color: #FF4040;
-        }
-
-        .nav-pills{
-          background-color: rgb(41, 49, 51);
-          display: flex;
-          justify-content: center;
-          font-size: 1.3em;
-        }
-
-        .pill a {
-          color: rgb(248, 249, 250);
-        }
-
-        .pill .nav-link.active {
-          background-color: rgb(248, 249, 250)!important;
-          color: rgb(41, 49, 51)!important;
-          cursor:pointer;
-        }
-
-        .navbar-brand {
-          float: left;
-          padding: 15px;
-          text-align: center;
-          width: 100%;
-        }
-
-        .btn-primary {
-          background-color: rgb(41, 49, 51);
-          border-color: rgb(41, 49, 51);
-          color: rgb(248, 249, 250);
-        }
-
-        .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
-          background-color: rgb(41, 49, 51)!important;
-          border-color: rgb(41, 49, 51)!important;
-          color: rgb(248, 249, 250)!important;
-        }
-
-        .btn-secondary {
-          background-color: rgb(41, 49, 51);
-          border-color: rgb(41, 49, 51);
-          color: rgb(248, 249, 250);
-        }
-
-        .btn-secondary:active {
-          color: rgb(248, 249, 250)!important;
-          background-color: rgb(41, 49, 51)!important;
-        }
-
-    </style>
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet"
+    href="static/mystyle.css">
 
     <title>Open Science: Fun &amp Easy!</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="https://github.com/vanatteveldt/compendium-checklist" target="_blank">
+      <img src='static/dodo-sticker-1.png' width='125px' height='125px' align="left">
       <h1>Compendium Checklist to Make Open Science Fun &amp Easy!</h1>
       <i>Wouter van Atteveldt, Anne Kroon, Felicia Loecherbach, Mickey Steijaert, Joanna Strychach,
         Damian Trilling, Mariken A.C.G. van der Velden &amp Kasper Welbers </i> </a>
@@ -186,15 +46,14 @@
         <div class="tab-pane fade {% if loop.first %}show active{% endif %}" id="phase{{loop.index}}"
              role="tabpanel" aria-labelledby="phase{{loop.index}}-tab" style="margin-left: 1em; margin-right: -1em;padding-right: 2em">
         {% if loop.index == 1 %}
-          <h3>Welcome to our Compendium Checklist!</h3> <hr />
-          <p> This website created by the <a href = "http://ccs.amsterdam/" target="_blank">Computational Communication Science Amsterdam</a>
-               is designed to walk you through the different steps of creating an <em>Open Science Compendium</em> for your own research project.
-               The whole process is divided into four phases (on the top) and for each phase you can answer questions that are either aimed at reminding you
-               of things that need to be done or give you additional information on what to install/how to set things up if you are not yet familiar with it.
-               On the right side you will see additional information and links.
+        <h3>Welcome to our Compendium Checklist! &nbsp; &nbsp;          
+          <a href="info.html"><i class="fas fa-info-circle" style="color:#293133;" target="_blank"></i></a> </h3>           
+        <hr /> 
+
+        <p> 
                The first couple of questions are checking whether the computer you are working on for this research project has all necessary
                applications to work with the <a href = "https://github.com/ccs-amsterdam/compendium" target="_blank"> Standardized Research Compendium</a>.
-             </br></br>
+        <br>
                <ins>Feel free to <a href="#" onclick="skiptotab(3)">skip the first two phases</a>, if you have worked with our Standardized Research Compendium before,
                  or feel that you do not need any information or help for those parts. You can always go back to earlier phases.</ins>
         {% elif loop.index == 2 %}
@@ -209,10 +68,19 @@
           <p>These four questions allow you to conduct the final checks for your online compendium before submitting your manuscript.</p>
         {% endif %}
         {% for q in questions %}
-          <div class="row question {% if q.followup %}collapse{% endif %}" id="{{q.q}}">
+          <div class="row mb-2 question {% if q.followup %}collapse{% endif %}" id="{{q.q}}">
             <div class="col-md-6 qquestion" style="{% if q.followup %}margin-left: 2em; margin-right: -2em;{% endif %}padding-right: 2em">
-              <p class="lead"> <b>{{ q.title }}</b> </p>
-              <p> {{q.explanation}}</p>
+              <div class="check-btn">
+                <input id="myid_{{q.q}}" type="checkbox" >
+                <label for="myid_{{q.q}}" class="clicker">
+                  <p class="lead"> 
+                    <b>{{ q.title }} &nbsp; &nbsp;</b>
+                    <i id = "arrow" class="fas fa-angle-double-down fa-xs" style="color:#293133;"></i>
+                  </p>
+                </label>
+                <p class="hiddendiv">{{q.explanation}}</p>
+
+              </div>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -224,20 +92,25 @@
                 </label>
               </div>
             </div>
-            <div class="col-md-4 qadvice">
+            <div class="col-md-4 qadvice parent">
               <div class="collapse" id="{{q.q}}_no_advice">
                 <p >{{q.no_explanation}}</p>
               </div>
-              <div class="collapse" id="{{q.q}}_yes_advice">
-                <p>{{q.yes_explanation}}</p>
+              <div class="collapse text-center children" id="{{q.q}}_yes_advice">
                 <!-- Button to Open the Modal -->
-                <div class="col text-center">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#{{q.q}}_q" >
                     <b> More Information</b>
                   </button>
-                </div>
+                  {% if q.show_me != 'NO' %}
+                  &nbsp; &nbsp;
+                  <a class="btn btn-primary" href="{{q.show_me}}" target="_blank">
+                    <b> Show me how</b>
+                  </a>
+                  {% endif %}
+
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="{{q.q}}_q">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <!-- Modal Header -->
@@ -264,6 +137,8 @@
       {% endfor %}
     </div>
 </div>
+<br>
+<br>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

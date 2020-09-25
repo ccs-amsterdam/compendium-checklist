@@ -7,158 +7,18 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <style>
-
-    p{
-      text-align: justify;
-      font-family: Arial, Verdana, sans-serif;
-      font-size: 16px;
-      line-height: 1.8em;
-      background-color: rgb(248, 249, 250);
-      border-radius: 25px 25px 25px 25px;
-      padding-left: 1em;
-      padding-right: 1em;
-      margin-left: .5px;
-      margin-right: .5px;}
-
-    h3{
-      line-height: 2.5em;
-      font-family: Arial, Verdana, sans-serif;
-      text-align: center;
-      background-color: rgb(248, 249, 250);
-      border-radius: 25px 25px 25px 25px;
-      padding-left: 1em;
-      padding-right: 1em;}
-
-    hr{
-      height: 2px;
-      background-color: rgb(41, 49, 51);
-      border: none;}
-
-    body{
-      background-color: rgb(255, 255, 255);
-      opacity: 0.9;
-      font-size: 16px;
-    }
-
-    code{
-      color: rgb(55, 67, 87);
-    }
-
-    a{
-      color: rgb(46, 110, 130);
-    }
-        .qquestion, .qcheck, .qadvice {
-            background: rgb(248, 249, 250);
-            color: rgb(41, 49, 51);
-            border-color: rgb(41, 49, 51);
-            margin-top: 2px;
-            margin-bottom: 1px;
-            font-family: Arial, Verdana, sans-serif;
-            font-size: 16px;
-        }
-        .qcheck {
-            display: flex;
-            align-items: center;
-            border-color: rgb(41, 49, 51);}
-        .qquestion {border-radius: 25px 0px 0px 25px;
-          border-color: rgb(41, 49, 51);}
-        .qadvice   {border-radius: 0px 25px 25px 0px;
-          border-color: rgb(41, 49, 51);}
-
-        .yes::before {
-            display: inline-block;
-            content: "";
-            /*background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'><path fill-rule='evenodd' d='M13.854 3.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3.5-3.5a.5.5 0 11.708-.708L6.5 10.293l6.646-6.647a.5.5 0 01.708 0z' clip-rule='evenodd'/></svg>");*/
-            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'><path fill-rule='evenodd' d='M15.354 2.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L8 9.293l6.646-6.647a.5.5 0 01.708 0z' clip-rule='evenodd'/><path fill-rule='evenodd' d='M8 2.5A5.5 5.5 0 1013.5 8a.5.5 0 011 0 6.5 6.5 0 11-3.25-5.63.5.5 0 11-.5.865A5.472 5.472 0 008 2.5z' clip-rule='evenodd'/></svg>");
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            width: 2em; height: 2em;
-        }
-
-        .no::before {
-            display: inline-block;
-            content: "";
-            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'><path fill-rule='evenodd' d='M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z' clip-rule='evenodd'/><path fill-rule='evenodd' d='M11.854 4.146a.5.5 0 010 .708l-7 7a.5.5 0 01-.708-.708l7-7a.5.5 0 01.708 0z' clip-rule='evenodd'/><path fill-rule='evenodd' d='M4.146 4.146a.5.5 0 000 .708l7 7a.5.5 0 00.708-.708l-7-7a.5.5 0 00-.708 0z' clip-rule='evenodd'/></svg>");
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            width: 2em; height: 2em;
-        }
-
-        .btn-yes, btn-yes:hover {
-            color: white !important;
-            background-color: #A7DFB3;
-            border-color: #A7DFB3;
-        }
-
-        .btn-yes.active {
-            background-color: #28cF4C;
-        }
-
-        .btn-no, btn-no:hover {
-            color: white !important;
-            background-color: #FFC0C0;
-            border-color: #FFC0C0;
-        }
-
-        .btn-no.active {
-            background-color: #FF4040;
-        }
-
-        .nav-pills{
-          background-color: rgb(41, 49, 51);
-          display: flex;
-          justify-content: center;
-          font-size: 1.3em;
-        }
-
-        .pill a {
-          color: rgb(248, 249, 250);
-        }
-
-        .pill .nav-link.active {
-          background-color: rgb(248, 249, 250)!important;
-          color: rgb(41, 49, 51)!important;
-          cursor:pointer;
-        }
-
-        .navbar-brand {
-          float: left;
-          padding: 15px;
-          text-align: center;
-          width: 100%;
-        }
-
-        .btn-primary {
-          background-color: rgb(41, 49, 51);
-          border-color: rgb(41, 49, 51);
-          color: rgb(248, 249, 250);
-        }
-
-        .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
-          background-color: rgb(41, 49, 51)!important;
-          border-color: rgb(41, 49, 51)!important;
-          color: rgb(248, 249, 250)!important;
-        }
-
-        .btn-secondary {
-          background-color: rgb(41, 49, 51);
-          border-color: rgb(41, 49, 51);
-          color: rgb(248, 249, 250);
-        }
-
-        .btn-secondary:active {
-          color: rgb(248, 249, 250)!important;
-          background-color: rgb(41, 49, 51)!important;
-        }
-
-    </style>
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet"
+    href="static/mystyle.css">
 
     <title>Open Science: Fun &amp Easy!</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="https://github.com/vanatteveldt/compendium-checklist" target="_blank">
+      <img src='static/dodo-sticker-1.png' width='125px' height='125px' align="left">
       <h1>Compendium Checklist to Make Open Science Fun &amp Easy!</h1>
       <i>Wouter van Atteveldt, Anne Kroon, Felicia Loecherbach, Mickey Steijaert, Joanna Strychach,
         Damian Trilling, Mariken A.C.G. van der Velden &amp Kasper Welbers </i> </a>
@@ -207,23 +67,31 @@
         <div class="tab-pane fade show active" id="phase1"
              role="tabpanel" aria-labelledby="phase1-tab" style="margin-left: 1em; margin-right: -1em;padding-right: 2em">
         
-          <h3>Welcome to our Compendium Checklist!</h3> <hr />
-          <p> This website created by the <a href = "http://ccs.amsterdam/" target="_blank">Computational Communication Science Amsterdam</a>
-               is designed to walk you through the different steps of creating an <em>Open Science Compendium</em> for your own research project.
-               The whole process is divided into four phases (on the top) and for each phase you can answer questions that are either aimed at reminding you
-               of things that need to be done or give you additional information on what to install/how to set things up if you are not yet familiar with it.
-               On the right side you will see additional information and links.
+        <h3>Welcome to our Compendium Checklist! &nbsp; &nbsp;          
+          <a href="info.html"><i class="fas fa-info-circle" style="color:#293133;" target="_blank"></i></a> </h3>           
+        <hr /> 
+
+        <p> 
                The first couple of questions are checking whether the computer you are working on for this research project has all necessary
                applications to work with the <a href = "https://github.com/ccs-amsterdam/compendium" target="_blank"> Standardized Research Compendium</a>.
-             </br></br>
+        <br>
                <ins>Feel free to <a href="#" onclick="skiptotab(3)">skip the first two phases</a>, if you have worked with our Standardized Research Compendium before,
                  or feel that you do not need any information or help for those parts. You can always go back to earlier phases.</ins>
         
         
-          <div class="row question " id="Q1_1">
+          <div class="row mb-2 question " id="Q1_1">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
-              <p class="lead"> <b>Is it the first time you are working with Version Control?</b> </p>
-              <p> Version control is a system that records changes to a file or set of files over time so that you can recall or restore specific versions later. Working with a version control system increases the transparancy of your project. </p>
+              <div class="check-btn">
+                <input id="myid_Q1_1" type="checkbox" >
+                <label for="myid_Q1_1" class="clicker">
+                  <p class="lead"> 
+                    <b>Is it the first time you are working with Version Control? &nbsp; &nbsp;</b>
+                    <i id = "arrow" class="fas fa-angle-double-down fa-xs" style="color:#293133;"></i>
+                  </p>
+                </label>
+                <p class="hiddendiv">Version control is a system that records changes to a file or set of files over time so that you can recall or restore specific versions later. Working with a version control system increases the transparancy of your project. </p>
+
+              </div>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -235,20 +103,20 @@
                 </label>
               </div>
             </div>
-            <div class="col-md-4 qadvice">
+            <div class="col-md-4 qadvice parent">
               <div class="collapse" id="Q1_1_no_advice">
                 <p >I know version control and have worked with it before. </br> </br> If you want to (re)visit or look up some principles of working with version control, you can find a comprehensive documentation <a href="https://git-scm.com/book/en/v2/" target="_blank"> here</a>.</p>
               </div>
-              <div class="collapse" id="Q1_1_yes_advice">
-                <p>Ever produced a text document, script or datafile with a title looking like this: <em>"FinalVersion2.0_REVISITED18may_FL"</em>?</br> Click on more information to learn how to organize your scripts in a reproducible, open, and transparent manner, and an additional advantage, you wil no longer produce files with such titles.</p>
+              <div class="collapse text-center children" id="Q1_1_yes_advice">
                 <!-- Button to Open the Modal -->
-                <div class="col text-center">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Q1_1_q" >
                     <b> More Information</b>
                   </button>
-                </div>
+                  
+
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="Q1_1_q">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <!-- Modal Header -->
@@ -271,10 +139,19 @@
             </div>
           </div>
         
-          <div class="row question " id="Q1_2">
+          <div class="row mb-2 question " id="Q1_2">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
-              <p class="lead"> <b>Is it the first time you are working with Git, Python, and <em>doit</em> on your current computer?</b> </p>
-              <p> To work with the Standardized Research Compendium, you need to have Python Version XX, the package <em>doit</em>, and Git installed on your current computer. </p>
+              <div class="check-btn">
+                <input id="myid_Q1_2" type="checkbox" >
+                <label for="myid_Q1_2" class="clicker">
+                  <p class="lead"> 
+                    <b>Is it the first time you are working with Git, Python, and <em>doit</em> on your current computer? &nbsp; &nbsp;</b>
+                    <i id = "arrow" class="fas fa-angle-double-down fa-xs" style="color:#293133;"></i>
+                  </p>
+                </label>
+                <p class="hiddendiv">To work with the Standardized Research Compendium, you need to have Python Version XX, the package <em>doit</em>, and Git installed on your current computer. </p>
+
+              </div>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -286,20 +163,20 @@
                 </label>
               </div>
             </div>
-            <div class="col-md-4 qadvice">
+            <div class="col-md-4 qadvice parent">
               <div class="collapse" id="Q1_2_no_advice">
                 <p >I have all of this installed. </br> </br> If you want to look into the advantages of the combination of Git, Python and <em>doit</em>, have a look at <a href = "https://github.com/ccs-amsterdam/compendium" target="_blank"> our GitHub page</a>. </p>
               </div>
-              <div class="collapse" id="Q1_2_yes_advice">
-                <p>I need help with it</p>
+              <div class="collapse text-center children" id="Q1_2_yes_advice">
                 <!-- Button to Open the Modal -->
-                <div class="col text-center">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Q1_2_q" >
                     <b> More Information</b>
                   </button>
-                </div>
+                  
+
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="Q1_2_q">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <!-- Modal Header -->
@@ -322,10 +199,19 @@
             </div>
           </div>
         
-          <div class="row question collapse" id="Q1_3">
+          <div class="row mb-2 question collapse" id="Q1_3">
             <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-              <p class="lead"> <b>Is this the first time you are working with Git on this computer?</b> </p>
-              <p> <a href="https://en.wikipedia.org/wiki/Git" target="_blank"> Git</a> is a distributed version-control system for tracking changes in source code during software development.</p>
+              <div class="check-btn">
+                <input id="myid_Q1_3" type="checkbox" >
+                <label for="myid_Q1_3" class="clicker">
+                  <p class="lead"> 
+                    <b>Is this the first time you are working with Git on this computer? &nbsp; &nbsp;</b>
+                    <i id = "arrow" class="fas fa-angle-double-down fa-xs" style="color:#293133;"></i>
+                  </p>
+                </label>
+                <p class="hiddendiv"><a href="https://en.wikipedia.org/wiki/Git" target="_blank"> Git</a> is a distributed version-control system for tracking changes in source code during software development.</p>
+
+              </div>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -337,20 +223,25 @@
                 </label>
               </div>
             </div>
-            <div class="col-md-4 qadvice">
+            <div class="col-md-4 qadvice parent">
               <div class="collapse" id="Q1_3_no_advice">
                 <p >I have Git installed on this computer. </br> </br> You can find a comprehensive documentation of working with Git <a href="https://git-scm.com/book/en/v2/" target="_blank"> here</a>.</p>
               </div>
-              <div class="collapse" id="Q1_3_yes_advice">
-                <p>I need help with it.</p>
+              <div class="collapse text-center children" id="Q1_3_yes_advice">
                 <!-- Button to Open the Modal -->
-                <div class="col text-center">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Q1_3_q" >
                     <b> More Information</b>
                   </button>
-                </div>
+                  
+                  &nbsp; &nbsp;
+                  <a class="btn btn-primary" href="https://github.com/vanatteveldt/compendium-checklist/blob/master/showme-tutorials/versioncontrol.md" target="_blank">
+                    <b> Show me how</b>
+                  </a>
+                  
+
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="Q1_3_q">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <!-- Modal Header -->
@@ -376,10 +267,19 @@ https://gist.github.com/derhuerst/1b15ff4652a867391f03 </p>
             </div>
           </div>
         
-          <div class="row question collapse" id="Q1_4">
+          <div class="row mb-2 question collapse" id="Q1_4">
             <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-              <p class="lead"> <b>Is this the first time you are working with Python version x on your current computer?</b> </p>
-              <p> <a href="https://en.wikipedia.org/wiki/History_of_Python" target="_blank"> Python has developed over time</a>, using different version can cause conflicts with the proposed workflow of the Standardized Research Compendium.</p>
+              <div class="check-btn">
+                <input id="myid_Q1_4" type="checkbox" >
+                <label for="myid_Q1_4" class="clicker">
+                  <p class="lead"> 
+                    <b>Is this the first time you are working with Python version x on your current computer? &nbsp; &nbsp;</b>
+                    <i id = "arrow" class="fas fa-angle-double-down fa-xs" style="color:#293133;"></i>
+                  </p>
+                </label>
+                <p class="hiddendiv"><a href="https://en.wikipedia.org/wiki/History_of_Python" target="_blank"> Python has developed over time</a>, using different version can cause conflicts with the proposed workflow of the Standardized Research Compendium.</p>
+
+              </div>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -391,20 +291,25 @@ https://gist.github.com/derhuerst/1b15ff4652a867391f03 </p>
                 </label>
               </div>
             </div>
-            <div class="col-md-4 qadvice">
+            <div class="col-md-4 qadvice parent">
               <div class="collapse" id="Q1_4_no_advice">
                 <p >I have this Python version installed. </br> </br> You can find elaborate documentation on working with Python <a href="https://wiki.python.org/moin/" target="_blank">here</a>.</p>
               </div>
-              <div class="collapse" id="Q1_4_yes_advice">
-                <p>I have not yet installed this Python version. </p>
+              <div class="collapse text-center children" id="Q1_4_yes_advice">
                 <!-- Button to Open the Modal -->
-                <div class="col text-center">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Q1_4_q" >
                     <b> More Information</b>
                   </button>
-                </div>
+                  
+                  &nbsp; &nbsp;
+                  <a class="btn btn-primary" href="https://github.com/vanatteveldt/compendium-checklist/blob/master/showme-tutorials/python.md" target="_blank">
+                    <b> Show me how</b>
+                  </a>
+                  
+
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="Q1_4_q">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <!-- Modal Header -->
@@ -430,10 +335,19 @@ https://wiki.python.org/moin/BeginnersGuide/Download </p>
             </div>
           </div>
         
-          <div class="row question collapse" id="Q1_5">
+          <div class="row mb-2 question collapse" id="Q1_5">
             <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-              <p class="lead"> <b>Is it the first time you will be working with the Python package <a href="https://pydoit.org/contents.html" target="_blank"> <em>doit</em></a> on the current computer?</b> </p>
-              <p> <em>doit</em> is a modern open-source build-tool written in python designed to be simple to use and flexible to deal with complex work-flows.</p>
+              <div class="check-btn">
+                <input id="myid_Q1_5" type="checkbox" >
+                <label for="myid_Q1_5" class="clicker">
+                  <p class="lead"> 
+                    <b>Is it the first time you will be working with the Python package <a href="https://pydoit.org/contents.html" target="_blank"> <em>doit</em></a> on the current computer? &nbsp; &nbsp;</b>
+                    <i id = "arrow" class="fas fa-angle-double-down fa-xs" style="color:#293133;"></i>
+                  </p>
+                </label>
+                <p class="hiddendiv"><em>doit</em> is a modern open-source build-tool written in python designed to be simple to use and flexible to deal with complex work-flows.</p>
+
+              </div>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -445,20 +359,25 @@ https://wiki.python.org/moin/BeginnersGuide/Download </p>
                 </label>
               </div>
             </div>
-            <div class="col-md-4 qadvice">
+            <div class="col-md-4 qadvice parent">
               <div class="collapse" id="Q1_5_no_advice">
                 <p >I have run <code>pip install doit</code> and thereby have installed <em>doit</em> on my computer. </br> </br> You can find more information on <em>doit</em> <a href="https://pydoit.org/" target="_blank">here</a>.</p>
               </div>
-              <div class="collapse" id="Q1_5_yes_advice">
-                <p>I need help with it.</p>
+              <div class="collapse text-center children" id="Q1_5_yes_advice">
                 <!-- Button to Open the Modal -->
-                <div class="col text-center">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Q1_5_q" >
                     <b> More Information</b>
                   </button>
-                </div>
+                  
+                  &nbsp; &nbsp;
+                  <a class="btn btn-primary" href="https://github.com/vanatteveldt/compendium-checklist/blob/master/showme-tutorials/doit.md" target="_blank">
+                    <b> Show me how</b>
+                  </a>
+                  
+
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="Q1_5_q">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <!-- Modal Header -->
@@ -485,10 +404,19 @@ Note: 'pip' is a package installer for Python, which mostly comes pre-installed 
             </div>
           </div>
         
-          <div class="row question " id="Q1_6">
+          <div class="row mb-2 question " id="Q1_6">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
-              <p class="lead"> <b>Is it the first time you are creating a version control repository? Or is a version control repository for this project non-existing?</b> </p>
-              <p> Create a version control repository on <a href="https://github.com/" target="_blank">GitHub</a> or a similar provider, such as <a href="https://bitbucket.org/product" target="_blank"> Bitbucket</a>. Doing this from the start and using a version control repositoty to collaborate internally is a good strategy to ensure all needed data and scripts are always accessable. <a href="https://github.com/" target="_blank">GitHub</a> and other providers allow for private repositories for academic use. </p>
+              <div class="check-btn">
+                <input id="myid_Q1_6" type="checkbox" >
+                <label for="myid_Q1_6" class="clicker">
+                  <p class="lead"> 
+                    <b>Is it the first time you are creating a version control repository? Or is a version control repository for this project non-existing? &nbsp; &nbsp;</b>
+                    <i id = "arrow" class="fas fa-angle-double-down fa-xs" style="color:#293133;"></i>
+                  </p>
+                </label>
+                <p class="hiddendiv">Create a version control repository on <a href="https://github.com/" target="_blank">GitHub</a> or a similar provider, such as <a href="https://bitbucket.org/product" target="_blank"> Bitbucket</a>. Doing this from the start and using a version control repositoty to collaborate internally is a good strategy to ensure all needed data and scripts are always accessable. <a href="https://github.com/" target="_blank">GitHub</a> and other providers allow for private repositories for academic use. </p>
+
+              </div>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -500,20 +428,25 @@ Note: 'pip' is a package installer for Python, which mostly comes pre-installed 
                 </label>
               </div>
             </div>
-            <div class="col-md-4 qadvice">
+            <div class="col-md-4 qadvice parent">
               <div class="collapse" id="Q1_6_no_advice">
                 <p >I have created a version control repo.</br> </br> You can find a comprehensive documentation of working with a Git repo <a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository" target="_blank"> here</a>.</p>
               </div>
-              <div class="collapse" id="Q1_6_yes_advice">
-                <p>I need help with it.</p>
+              <div class="collapse text-center children" id="Q1_6_yes_advice">
                 <!-- Button to Open the Modal -->
-                <div class="col text-center">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Q1_6_q" >
                     <b> More Information</b>
                   </button>
-                </div>
+                  
+                  &nbsp; &nbsp;
+                  <a class="btn btn-primary" href="https://github.com/vanatteveldt/compendium-checklist/blob/master/showme-tutorials/myfirstgithub-page.md" target="_blank">
+                    <b> Show me how</b>
+                  </a>
+                  
+
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="Q1_6_q">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <!-- Modal Header -->
@@ -538,10 +471,19 @@ If you still feel like creating your own folder structure, you can visit this we
             </div>
           </div>
         
-          <div class="row question " id="Q1_7">
+          <div class="row mb-2 question " id="Q1_7">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
-              <p class="lead"> <b>Is it the first time you are going to fork, copy or clone the Version Control Structure proposed by the Standardized Research Compendium?</b> </p>
-              <p> You can find the Version Control Structure proposed by the Standardized Research Compendium on the <a href="https://github.com/ccs-amsterdam/compendium" target="_blank"> authors’ GitHub page</a>.</p>
+              <div class="check-btn">
+                <input id="myid_Q1_7" type="checkbox" >
+                <label for="myid_Q1_7" class="clicker">
+                  <p class="lead"> 
+                    <b>Is it the first time you are going to fork, copy or clone the Version Control Structure proposed by the Standardized Research Compendium? &nbsp; &nbsp;</b>
+                    <i id = "arrow" class="fas fa-angle-double-down fa-xs" style="color:#293133;"></i>
+                  </p>
+                </label>
+                <p class="hiddendiv">You can find the Version Control Structure proposed by the Standardized Research Compendium on the <a href="https://github.com/ccs-amsterdam/compendium" target="_blank"> authors’ GitHub page</a>.</p>
+
+              </div>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -553,20 +495,25 @@ If you still feel like creating your own folder structure, you can visit this we
                 </label>
               </div>
             </div>
-            <div class="col-md-4 qadvice">
+            <div class="col-md-4 qadvice parent">
               <div class="collapse" id="Q1_7_no_advice">
                 <p >I have forked, copied or cloned the Version Control Structure from the authors’ Github page.. </br> </br> Here you can find a comprehensive documentation of <a href="https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project" target="_blank"> forking</a>,<a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository" target="_blank"> copying</a>, or <a href="https://git-scm.com/docs/git-clone" target="_blank"> cloning</a>.</p>
               </div>
-              <div class="collapse" id="Q1_7_yes_advice">
-                <p>I need help with it.</p>
+              <div class="collapse text-center children" id="Q1_7_yes_advice">
                 <!-- Button to Open the Modal -->
-                <div class="col text-center">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Q1_7_q" >
                     <b> More Information</b>
                   </button>
-                </div>
+                  
+                  &nbsp; &nbsp;
+                  <a class="btn btn-primary" href="https://github.com/vanatteveldt/compendium-checklist/blob/master/showme-tutorials/myfirstgithub-page.md" target="_blank">
+                    <b> Show me how</b>
+                  </a>
+                  
+
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="Q1_7_q">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <!-- Modal Header -->
@@ -591,10 +538,19 @@ To fork the template, go to the template page and click 'Fork' button on the top
             </div>
           </div>
         
-          <div class="row question " id="Q1_8">
+          <div class="row mb-2 question " id="Q1_8">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
-              <p class="lead"> <b>Do you need help or would you like more information about running <code>doit install</code> in the command line to set up the necessary Python and/or R environment for you research project?</b> </p>
-              <p> For the workflow, <code> doit install </code> is essential for the workflow of the Standardized Research Compendium. This will set up the necessary Python and/or R environment.</p>
+              <div class="check-btn">
+                <input id="myid_Q1_8" type="checkbox" >
+                <label for="myid_Q1_8" class="clicker">
+                  <p class="lead"> 
+                    <b>Do you need help or would you like more information about running <code>doit install</code> in the command line to set up the necessary Python and/or R environment for you research project? &nbsp; &nbsp;</b>
+                    <i id = "arrow" class="fas fa-angle-double-down fa-xs" style="color:#293133;"></i>
+                  </p>
+                </label>
+                <p class="hiddendiv">For the workflow, <code> doit install </code> is essential for the workflow of the Standardized Research Compendium. This will set up the necessary Python and/or R environment.</p>
+
+              </div>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -606,20 +562,25 @@ To fork the template, go to the template page and click 'Fork' button on the top
                 </label>
               </div>
             </div>
-            <div class="col-md-4 qadvice">
+            <div class="col-md-4 qadvice parent">
               <div class="collapse" id="Q1_8_no_advice">
                 <p >I have run <code>doit install</code> or know how to do it.</br> </br> You can find more information on installing <em>doit</em> <a href="https://pydoit.org/install.html" target="_blank">here</a>.</p>
               </div>
-              <div class="collapse" id="Q1_8_yes_advice">
-                <p>I need help with it.</p>
+              <div class="collapse text-center children" id="Q1_8_yes_advice">
                 <!-- Button to Open the Modal -->
-                <div class="col text-center">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Q1_8_q" >
                     <b> More Information</b>
                   </button>
-                </div>
+                  
+                  &nbsp; &nbsp;
+                  <a class="btn btn-primary" href="https://github.com/vanatteveldt/compendium-checklist/blob/master/showme-tutorials/doit.md" target="_blank">
+                    <b> Show me how</b>
+                  </a>
+                  
+
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="Q1_8_q">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <!-- Modal Header -->
@@ -644,10 +605,19 @@ This is done simply by opening your terminal, nagivating to your repository and 
             </div>
           </div>
         
-          <div class="row question " id="Q1_9">
+          <div class="row mb-2 question " id="Q1_9">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
-              <p class="lead"> <b>Have you considered pre-registering your study?</b> </p>
-              <p> Preregistration is the practice of documenting your research plan at the beginning of your study and storing that plan in a read-only public repository. For an overview of registry services, see <a href="https://osf.io/registries" target="_blank"> OSF Registries</a>.</p>
+              <div class="check-btn">
+                <input id="myid_Q1_9" type="checkbox" >
+                <label for="myid_Q1_9" class="clicker">
+                  <p class="lead"> 
+                    <b>Have you considered pre-registering your study? &nbsp; &nbsp;</b>
+                    <i id = "arrow" class="fas fa-angle-double-down fa-xs" style="color:#293133;"></i>
+                  </p>
+                </label>
+                <p class="hiddendiv">Preregistration is the practice of documenting your research plan at the beginning of your study and storing that plan in a read-only public repository. For an overview of registry services, see <a href="https://osf.io/registries" target="_blank"> OSF Registries</a>.</p>
+
+              </div>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -659,20 +629,25 @@ This is done simply by opening your terminal, nagivating to your repository and 
                 </label>
               </div>
             </div>
-            <div class="col-md-4 qadvice">
+            <div class="col-md-4 qadvice parent">
               <div class="collapse" id="Q1_9_no_advice">
                 <p >Pre-registration is not applicable for my study (anymore). </br> </br> For research that uses existing datasets, there is an increased risk of analysts being biased by preliminary trends in the dataset. <a href="https://osf.io/x4gzt/" target="_blank"> This page</a> provides a framework for preregistering studies that use existing data. </p>
               </div>
-              <div class="collapse" id="Q1_9_yes_advice">
-                <p>I plan to preregister my study. </br> </br> <a href="https://www.nature.com/articles/s41562-019-0772-6" target="_blank">This article</a>, published in <em>Nature</em>, entitled <i>A Consensus-Based Transparency Checklist</i> aims to improve and document the transparency of research reports in social and behavioural research. Their accompanying <a href="http://www.shinyapps.org/apps/TransparencyChecklist/" target="_blank">online application</a> allows users to answer a series of questions and generates a report that they can submit with their manuscript or post to a public repository.</p>
+              <div class="collapse text-center children" id="Q1_9_yes_advice">
                 <!-- Button to Open the Modal -->
-                <div class="col text-center">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Q1_9_q" >
                     <b> More Information</b>
                   </button>
-                </div>
+                  
+                  &nbsp; &nbsp;
+                  <a class="btn btn-primary" href="https://github.com/vanatteveldt/compendium-checklist/blob/master/showme-tutorials/preregistration.md" target="_blank">
+                    <b> Show me how</b>
+                  </a>
+                  
+
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="Q1_9_q">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <!-- Modal Header -->
@@ -705,10 +680,19 @@ This is done simply by opening your terminal, nagivating to your repository and 
                If you think you do not need any explanations regarding this part, <a href="#" onclick="skiptotab(3)">you can just skip it</a>. </p>
        
         
-          <div class="row question " id="Q2_0">
+          <div class="row mb-2 question " id="Q2_0">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
-              <p class="lead"> <b>Does your project use Python?</b> </p>
-              <p> <a href="https://www.python.org/" target="_blank">Python</a>  is an interpreted, high-level, general-purpose programming language.</p>
+              <div class="check-btn">
+                <input id="myid_Q2_0" type="checkbox" >
+                <label for="myid_Q2_0" class="clicker">
+                  <p class="lead"> 
+                    <b>Does your project use Python? &nbsp; &nbsp;</b>
+                    <i id = "arrow" class="fas fa-angle-double-down fa-xs" style="color:#293133;"></i>
+                  </p>
+                </label>
+                <p class="hiddendiv"><a href="https://www.python.org/" target="_blank">Python</a>  is an interpreted, high-level, general-purpose programming language.</p>
+
+              </div>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -720,20 +704,20 @@ This is done simply by opening your terminal, nagivating to your repository and 
                 </label>
               </div>
             </div>
-            <div class="col-md-4 qadvice">
+            <div class="col-md-4 qadvice parent">
               <div class="collapse" id="Q2_0_no_advice">
                 <p ></p>
               </div>
-              <div class="collapse" id="Q2_0_yes_advice">
-                <p></p>
+              <div class="collapse text-center children" id="Q2_0_yes_advice">
                 <!-- Button to Open the Modal -->
-                <div class="col text-center">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Q2_0_q" >
                     <b> More Information</b>
                   </button>
-                </div>
+                  
+
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="Q2_0_q">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <!-- Modal Header -->
@@ -756,10 +740,19 @@ This is done simply by opening your terminal, nagivating to your repository and 
             </div>
           </div>
         
-          <div class="row question collapse" id="Q2_1">
+          <div class="row mb-2 question collapse" id="Q2_1">
             <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-              <p class="lead"> <b>Do you need help with <a href="https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/" target="_blank">activating the environment</a> for version control of the package?</b> </p>
-              <p> Explain <code>dodo.py</code></p>
+              <div class="check-btn">
+                <input id="myid_Q2_1" type="checkbox" >
+                <label for="myid_Q2_1" class="clicker">
+                  <p class="lead"> 
+                    <b>Do you need help with <a href="https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/" target="_blank">activating the environment</a> for version control of the package? &nbsp; &nbsp;</b>
+                    <i id = "arrow" class="fas fa-angle-double-down fa-xs" style="color:#293133;"></i>
+                  </p>
+                </label>
+                <p class="hiddendiv">Explain <code>dodo.py</code></p>
+
+              </div>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -771,20 +764,20 @@ This is done simply by opening your terminal, nagivating to your repository and 
                 </label>
               </div>
             </div>
-            <div class="col-md-4 qadvice">
+            <div class="col-md-4 qadvice parent">
               <div class="collapse" id="Q2_1_no_advice">
                 <p >I need help with it.</p>
               </div>
-              <div class="collapse" id="Q2_1_yes_advice">
-                <p>I have activated it.</p>
+              <div class="collapse text-center children" id="Q2_1_yes_advice">
                 <!-- Button to Open the Modal -->
-                <div class="col text-center">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Q2_1_q" >
                     <b> More Information</b>
                   </button>
-                </div>
+                  
+
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="Q2_1_q">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <!-- Modal Header -->
@@ -807,10 +800,19 @@ This is done simply by opening your terminal, nagivating to your repository and 
             </div>
           </div>
         
-          <div class="row question " id="Q2_2">
+          <div class="row mb-2 question " id="Q2_2">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
-              <p class="lead"> <b>Does your project use R?</b> </p>
-              <p> <a href="https://www.r-project.org/about.html" target="_blank">R</a> is a programming language for statistical computing and graphics. If you are a beginning user of R, please visit the <a href="https://github.com/ccs-amsterdam/r-course-material" target="_blank">CCS GitHub page</a> for tutorials.</p>
+              <div class="check-btn">
+                <input id="myid_Q2_2" type="checkbox" >
+                <label for="myid_Q2_2" class="clicker">
+                  <p class="lead"> 
+                    <b>Does your project use R? &nbsp; &nbsp;</b>
+                    <i id = "arrow" class="fas fa-angle-double-down fa-xs" style="color:#293133;"></i>
+                  </p>
+                </label>
+                <p class="hiddendiv"><a href="https://www.r-project.org/about.html" target="_blank">R</a> is a programming language for statistical computing and graphics. If you are a beginning user of R, please visit the <a href="https://github.com/ccs-amsterdam/r-course-material" target="_blank">CCS GitHub page</a> for tutorials.</p>
+
+              </div>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -822,20 +824,20 @@ This is done simply by opening your terminal, nagivating to your repository and 
                 </label>
               </div>
             </div>
-            <div class="col-md-4 qadvice">
+            <div class="col-md-4 qadvice parent">
               <div class="collapse" id="Q2_2_no_advice">
                 <p ></p>
               </div>
-              <div class="collapse" id="Q2_2_yes_advice">
-                <p></p>
+              <div class="collapse text-center children" id="Q2_2_yes_advice">
                 <!-- Button to Open the Modal -->
-                <div class="col text-center">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Q2_2_q" >
                     <b> More Information</b>
                   </button>
-                </div>
+                  
+
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="Q2_2_q">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <!-- Modal Header -->
@@ -858,10 +860,19 @@ This is done simply by opening your terminal, nagivating to your repository and 
             </div>
           </div>
         
-          <div class="row question collapse" id="Q2_3">
+          <div class="row mb-2 question collapse" id="Q2_3">
             <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-              <p class="lead"> <b>Is it the first you will be working with the <em>packrat</em> package?</b> </p>
-              <p> <a href="https://rstudio.github.io/packrat/" target="_blank"><em>packrat</em></a> is a dependency management system for R packages.</p>
+              <div class="check-btn">
+                <input id="myid_Q2_3" type="checkbox" >
+                <label for="myid_Q2_3" class="clicker">
+                  <p class="lead"> 
+                    <b>Is it the first you will be working with the <em>packrat</em> package? &nbsp; &nbsp;</b>
+                    <i id = "arrow" class="fas fa-angle-double-down fa-xs" style="color:#293133;"></i>
+                  </p>
+                </label>
+                <p class="hiddendiv"><a href="https://rstudio.github.io/packrat/" target="_blank"><em>packrat</em></a> is a dependency management system for R packages.</p>
+
+              </div>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -873,20 +884,25 @@ This is done simply by opening your terminal, nagivating to your repository and 
                 </label>
               </div>
             </div>
-            <div class="col-md-4 qadvice">
+            <div class="col-md-4 qadvice parent">
               <div class="collapse" id="Q2_3_no_advice">
                 <p >I have installed <em>packrat</em> or worked with it before. </br> </br> You can find information about the <em>packrat</em> package <a href="https://cran.r-project.org/web/packages/packrat/index.html" target="_blank">here</a>, or you can visit the short online tutorial  <a href="https://rstudio.github.io/packrat/" target="_blank">here</a> to revisit some of the <em>packrat</em> principles.</p>
               </div>
-              <div class="collapse" id="Q2_3_yes_advice">
-                <p>I need help with it.</p>
+              <div class="collapse text-center children" id="Q2_3_yes_advice">
                 <!-- Button to Open the Modal -->
-                <div class="col text-center">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Q2_3_q" >
                     <b> More Information</b>
                   </button>
-                </div>
+                  
+                  &nbsp; &nbsp;
+                  <a class="btn btn-primary" href="https://github.com/vanatteveldt/compendium-checklist/blob/master/showme-tutorials/packrat.md" target="_blank">
+                    <b> Show me how</b>
+                  </a>
+                  
+
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="Q2_3_q">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <!-- Modal Header -->
@@ -909,10 +925,19 @@ This is done simply by opening your terminal, nagivating to your repository and 
             </div>
           </div>
         
-          <div class="row question " id="Q2_4">
+          <div class="row mb-2 question " id="Q2_4">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
-              <p class="lead"> <b>Does your project use another – not open source – analysis language?</b> </p>
-              <p> If you used SPSS/Stata/SAS/MatLab/Atlas TI or anything else.</p>
+              <div class="check-btn">
+                <input id="myid_Q2_4" type="checkbox" >
+                <label for="myid_Q2_4" class="clicker">
+                  <p class="lead"> 
+                    <b>Does your project use another – not open source – analysis language? &nbsp; &nbsp;</b>
+                    <i id = "arrow" class="fas fa-angle-double-down fa-xs" style="color:#293133;"></i>
+                  </p>
+                </label>
+                <p class="hiddendiv">If you used SPSS/Stata/SAS/MatLab/Atlas TI or anything else.</p>
+
+              </div>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -924,20 +949,20 @@ This is done simply by opening your terminal, nagivating to your repository and 
                 </label>
               </div>
             </div>
-            <div class="col-md-4 qadvice">
+            <div class="col-md-4 qadvice parent">
               <div class="collapse" id="Q2_4_no_advice">
                 <p ></p>
               </div>
-              <div class="collapse" id="Q2_4_yes_advice">
-                <p>Add what to do to make the compendium reproducible</p>
+              <div class="collapse text-center children" id="Q2_4_yes_advice">
                 <!-- Button to Open the Modal -->
-                <div class="col text-center">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Q2_4_q" >
                     <b> More Information</b>
                   </button>
-                </div>
+                  
+
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="Q2_4_q">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <!-- Modal Header -->
@@ -960,10 +985,19 @@ This is done simply by opening your terminal, nagivating to your repository and 
             </div>
           </div>
         
-          <div class="row question collapse" id="Q2_5">
+          <div class="row mb-2 question collapse" id="Q2_5">
             <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-              <p class="lead"> <b>Do you install any extensions when cleaning, processing and/or analyzing the data in your research project?</b> </p>
-              <p> Proprietary data refers to any set of statistics, information, or documentation which is controlled solely by you or a third party. The data is typically protected by copyright law, trade secret laws, and even by patent agreement, in some cases.</p>
+              <div class="check-btn">
+                <input id="myid_Q2_5" type="checkbox" >
+                <label for="myid_Q2_5" class="clicker">
+                  <p class="lead"> 
+                    <b>Do you install any extensions when cleaning, processing and/or analyzing the data in your research project? &nbsp; &nbsp;</b>
+                    <i id = "arrow" class="fas fa-angle-double-down fa-xs" style="color:#293133;"></i>
+                  </p>
+                </label>
+                <p class="hiddendiv">Proprietary data refers to any set of statistics, information, or documentation which is controlled solely by you or a third party. The data is typically protected by copyright law, trade secret laws, and even by patent agreement, in some cases.</p>
+
+              </div>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -975,20 +1009,20 @@ This is done simply by opening your terminal, nagivating to your repository and 
                 </label>
               </div>
             </div>
-            <div class="col-md-4 qadvice">
+            <div class="col-md-4 qadvice parent">
               <div class="collapse" id="Q2_5_no_advice">
                 <p >I have not installed any extensions.</p>
               </div>
-              <div class="collapse" id="Q2_5_yes_advice">
-                <p>I have installed extensions.</p>
+              <div class="collapse text-center children" id="Q2_5_yes_advice">
                 <!-- Button to Open the Modal -->
-                <div class="col text-center">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Q2_5_q" >
                     <b> More Information</b>
                   </button>
-                </div>
+                  
+
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="Q2_5_q">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <!-- Modal Header -->
@@ -1020,10 +1054,19 @@ This is done simply by opening your terminal, nagivating to your repository and 
           <p>These questions allow you to set up the folder structure for your project. </p>
        
         
-          <div class="row question " id="Q3_1">
+          <div class="row mb-2 question " id="Q3_1">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
-              <p class="lead"> <b>Are multiple researchers involved in this project?</b> </p>
-              <p> Regardless of whether you work alone or in a team, commit early, commit often: Don’t procrastinate with adding code or material to GitHub. At a minimum, push changes after every day, but ideally after every coherent change, even if it is work in progress.</p>
+              <div class="check-btn">
+                <input id="myid_Q3_1" type="checkbox" >
+                <label for="myid_Q3_1" class="clicker">
+                  <p class="lead"> 
+                    <b>Are multiple researchers involved in this project? &nbsp; &nbsp;</b>
+                    <i id = "arrow" class="fas fa-angle-double-down fa-xs" style="color:#293133;"></i>
+                  </p>
+                </label>
+                <p class="hiddendiv">Regardless of whether you work alone or in a team, commit early, commit often: Don’t procrastinate with adding code or material to GitHub. At a minimum, push changes after every day, but ideally after every coherent change, even if it is work in progress.</p>
+
+              </div>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1035,20 +1078,20 @@ This is done simply by opening your terminal, nagivating to your repository and 
                 </label>
               </div>
             </div>
-            <div class="col-md-4 qadvice">
+            <div class="col-md-4 qadvice parent">
               <div class="collapse" id="Q3_1_no_advice">
                 <p >If you work on a project on your own, it is very crucial that you commit the changes that you make to your project early and often. This way you can keep track of what you are doing, make sure no data or code is lost and have the ability to work on your project from anywhere. You can find more information on what that is and how to do it <a href="https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository" target="_blank">here</a> and <a href="https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History" target="_blank">here</a>.</p>
               </div>
-              <div class="collapse" id="Q3_1_yes_advice">
-                <p>If you work together in a team, you also should commit early and often (see <a href="https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository" target="_blank">here</a> and <a href="https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History" target="_blank">here</a>), but you additionally also need to take care of managing a project or even an orgainzation. That way you make sure that the work of everyone gets organized the right way and you can all collaborate on one folder structure. You can find information on this <a href="https://git-scm.com/book/en/v2/GitHub-Maintaining-a-Project" target="_blank">here</a> and <a href="https://git-scm.com/book/en/v2/GitHub-Managing-an-organization" target="_blank">here</a>.</p>
+              <div class="collapse text-center children" id="Q3_1_yes_advice">
                 <!-- Button to Open the Modal -->
-                <div class="col text-center">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Q3_1_q" >
                     <b> More Information</b>
                   </button>
-                </div>
+                  
+
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="Q3_1_q">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <!-- Modal Header -->
@@ -1071,10 +1114,19 @@ This is done simply by opening your terminal, nagivating to your repository and 
             </div>
           </div>
         
-          <div class="row question " id="Q3_2">
+          <div class="row mb-2 question " id="Q3_2">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
-              <p class="lead"> <b>Do you work with proprietary data?</b> </p>
-              <p> The data that you used for your project is owned by an individual or organization and is important enough to give them a competitive advantage. This could for example be usage data from a social network site or text from newspaper articles. This data is not open to the public and you thus need to take extra measures before you make your GitHub public to not violate any laws. </p>
+              <div class="check-btn">
+                <input id="myid_Q3_2" type="checkbox" >
+                <label for="myid_Q3_2" class="clicker">
+                  <p class="lead"> 
+                    <b>Do you work with proprietary data? &nbsp; &nbsp;</b>
+                    <i id = "arrow" class="fas fa-angle-double-down fa-xs" style="color:#293133;"></i>
+                  </p>
+                </label>
+                <p class="hiddendiv">The data that you used for your project is owned by an individual or organization and is important enough to give them a competitive advantage. This could for example be usage data from a social network site or text from newspaper articles. This data is not open to the public and you thus need to take extra measures before you make your GitHub public to not violate any laws. </p>
+
+              </div>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1086,20 +1138,20 @@ This is done simply by opening your terminal, nagivating to your repository and 
                 </label>
               </div>
             </div>
-            <div class="col-md-4 qadvice">
+            <div class="col-md-4 qadvice parent">
               <div class="collapse" id="Q3_2_no_advice">
                 <p >I do not work with proprietary data.</p>
               </div>
-              <div class="collapse" id="Q3_2_yes_advice">
-                <p>I work with proprietary data.</p>
+              <div class="collapse text-center children" id="Q3_2_yes_advice">
                 <!-- Button to Open the Modal -->
-                <div class="col text-center">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Q3_2_q" >
                     <b> More Information</b>
                   </button>
-                </div>
+                  
+
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="Q3_2_q">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <!-- Modal Header -->
@@ -1122,10 +1174,19 @@ This is done simply by opening your terminal, nagivating to your repository and 
             </div>
           </div>
         
-          <div class="row question " id="Q3_3">
+          <div class="row mb-2 question " id="Q3_3">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
-              <p class="lead"> <b>Do you want to encrypt your data?</b> </p>
-              <p> Data encryption translates data into another form, or code, so that only people with access to a secret key (formally called a decryption key) or password can read it. Encrypted data is commonly referred to as ciphertext, while unencrypted data is called plaintext. Currently, encryption is one of the most popular and effective data security methods used by organizations. Source: <a href="https://digitalguardian.com/blog/what-data-encryption" target="_blank">The Guardian</a> </br></br> Your data should be encrypted if it is not possible to share your data openly, either because it is proprietary or because it includes sensitive information that cannot be made public as plain text. If you are not sure about matters of encryption and what data need to be encrypted, you should first consult the ethical board of your research institution. </p>
+              <div class="check-btn">
+                <input id="myid_Q3_3" type="checkbox" >
+                <label for="myid_Q3_3" class="clicker">
+                  <p class="lead"> 
+                    <b>Do you want to encrypt your data? &nbsp; &nbsp;</b>
+                    <i id = "arrow" class="fas fa-angle-double-down fa-xs" style="color:#293133;"></i>
+                  </p>
+                </label>
+                <p class="hiddendiv">Data encryption translates data into another form, or code, so that only people with access to a secret key (formally called a decryption key) or password can read it. Encrypted data is commonly referred to as ciphertext, while unencrypted data is called plaintext. Currently, encryption is one of the most popular and effective data security methods used by organizations. Source: <a href="https://digitalguardian.com/blog/what-data-encryption" target="_blank">The Guardian</a> </br></br> Your data should be encrypted if it is not possible to share your data openly, either because it is proprietary or because it includes sensitive information that cannot be made public as plain text. If you are not sure about matters of encryption and what data need to be encrypted, you should first consult the ethical board of your research institution. </p>
+
+              </div>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1137,20 +1198,25 @@ This is done simply by opening your terminal, nagivating to your repository and 
                 </label>
               </div>
             </div>
-            <div class="col-md-4 qadvice">
+            <div class="col-md-4 qadvice parent">
               <div class="collapse" id="Q3_3_no_advice">
                 <p >Encryption is not needed for the type of data I work with. </p>
               </div>
-              <div class="collapse" id="Q3_3_yes_advice">
-                <p>I want to encrypt my data. </br></br> Information on how to encrypt your data in your research compendium can be found by clicking on the button below.</p>
+              <div class="collapse text-center children" id="Q3_3_yes_advice">
                 <!-- Button to Open the Modal -->
-                <div class="col text-center">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Q3_3_q" >
                     <b> More Information</b>
                   </button>
-                </div>
+                  
+                  &nbsp; &nbsp;
+                  <a class="btn btn-primary" href="https://github.com/vanatteveldt/compendium-checklist/blob/master/showme-tutorials/encrypt-data.md" target="_blank">
+                    <b> Show me how</b>
+                  </a>
+                  
+
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="Q3_3_q">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <!-- Modal Header -->
@@ -1177,10 +1243,19 @@ This is done simply by opening your terminal, nagivating to your repository and 
             </div>
           </div>
         
-          <div class="row question " id="Q3_4">
+          <div class="row mb-2 question " id="Q3_4">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
-              <p class="lead"> <b>Does your project involve data processing or cleaning?</b> </p>
-              <p> Raw data is the data that you collected e.g. in your survey, your experiment, the data you scraped or retrieved from an API. There are many different forms of raw data - the important thing is that it has not been through any form of processing yet. It is crucial to preserve the raw data of your project if possible. Processed data is raw data that was modified by certain forms of data cleaning and processing such as dealing with missing values, making scales, aggregating data etc. In a research compendium, you should put the raw data in the "raw" folder (possibly encrypted).</p>
+              <div class="check-btn">
+                <input id="myid_Q3_4" type="checkbox" >
+                <label for="myid_Q3_4" class="clicker">
+                  <p class="lead"> 
+                    <b>Does your project involve data processing or cleaning? &nbsp; &nbsp;</b>
+                    <i id = "arrow" class="fas fa-angle-double-down fa-xs" style="color:#293133;"></i>
+                  </p>
+                </label>
+                <p class="hiddendiv">Raw data is the data that you collected e.g. in your survey, your experiment, the data you scraped or retrieved from an API. There are many different forms of raw data - the important thing is that it has not been through any form of processing yet. It is crucial to preserve the raw data of your project if possible. Processed data is raw data that was modified by certain forms of data cleaning and processing such as dealing with missing values, making scales, aggregating data etc. In a research compendium, you should put the raw data in the "raw" folder (possibly encrypted).</p>
+
+              </div>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1192,20 +1267,20 @@ This is done simply by opening your terminal, nagivating to your repository and 
                 </label>
               </div>
             </div>
-            <div class="col-md-4 qadvice">
+            <div class="col-md-4 qadvice parent">
               <div class="collapse" id="Q3_4_no_advice">
                 <p >I work with the raw data. This means my paper/report does not produce any visualization or analysis of the data. Remember that data visualizations makes it easier to communicate your ideas and findings to other people. </p>
               </div>
-              <div class="collapse" id="Q3_4_yes_advice">
-                <p>I work with processed data. The follow-up question check whether the folder structure to make <b>Open Science Fun &amp Easy </b> offered by The Standardized Research Compendium is in tact.</p>
+              <div class="collapse text-center children" id="Q3_4_yes_advice">
                 <!-- Button to Open the Modal -->
-                <div class="col text-center">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Q3_4_q" >
                     <b> More Information</b>
                   </button>
-                </div>
+                  
+
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="Q3_4_q">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <!-- Modal Header -->
@@ -1228,10 +1303,19 @@ This is done simply by opening your terminal, nagivating to your repository and 
             </div>
           </div>
         
-          <div class="row question collapse" id="Q3_5">
+          <div class="row mb-2 question collapse" id="Q3_5">
             <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-              <p class="lead"> <b>Have you written functions yourself on which the data-processing or analysis depend?</b> </p>
-              <p> Often you use already existing functions (pieces of code to be reused) from packages. This is very common for example for R or Python. Sometimes, however, you will need your own specialized functions to deal with your data or do analyses. It is then important to preserve the code that you used in the compendium so that other researchers can re-run your analyses and adapt them where necessary.</p>
+              <div class="check-btn">
+                <input id="myid_Q3_5" type="checkbox" >
+                <label for="myid_Q3_5" class="clicker">
+                  <p class="lead"> 
+                    <b>Have you written functions yourself on which the data-processing or analysis depend? &nbsp; &nbsp;</b>
+                    <i id = "arrow" class="fas fa-angle-double-down fa-xs" style="color:#293133;"></i>
+                  </p>
+                </label>
+                <p class="hiddendiv">Often you use already existing functions (pieces of code to be reused) from packages. This is very common for example for R or Python. Sometimes, however, you will need your own specialized functions to deal with your data or do analyses. It is then important to preserve the code that you used in the compendium so that other researchers can re-run your analyses and adapt them where necessary.</p>
+
+              </div>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1243,20 +1327,20 @@ This is done simply by opening your terminal, nagivating to your repository and 
                 </label>
               </div>
             </div>
-            <div class="col-md-4 qadvice">
+            <div class="col-md-4 qadvice parent">
               <div class="collapse" id="Q3_5_no_advice">
                 <p >I did not write any functions myself.</p>
               </div>
-              <div class="collapse" id="Q3_5_yes_advice">
-                <p>I wrote functions myself.</p>
+              <div class="collapse text-center children" id="Q3_5_yes_advice">
                 <!-- Button to Open the Modal -->
-                <div class="col text-center">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Q3_5_q" >
                     <b> More Information</b>
                   </button>
-                </div>
+                  
+
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="Q3_5_q">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <!-- Modal Header -->
@@ -1279,10 +1363,19 @@ This is done simply by opening your terminal, nagivating to your repository and 
             </div>
           </div>
         
-          <div class="row question collapse" id="Q3_6">
+          <div class="row mb-2 question collapse" id="Q3_6">
             <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-              <p class="lead"> <b>Have you saved the functions in a script in the folder src/lib?</b> </p>
-              <p> </p>
+              <div class="check-btn">
+                <input id="myid_Q3_6" type="checkbox" >
+                <label for="myid_Q3_6" class="clicker">
+                  <p class="lead"> 
+                    <b>Have you saved the functions in a script in the folder src/lib? &nbsp; &nbsp;</b>
+                    <i id = "arrow" class="fas fa-angle-double-down fa-xs" style="color:#293133;"></i>
+                  </p>
+                </label>
+                <p class="hiddendiv"></p>
+
+              </div>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1294,20 +1387,20 @@ This is done simply by opening your terminal, nagivating to your repository and 
                 </label>
               </div>
             </div>
-            <div class="col-md-4 qadvice">
+            <div class="col-md-4 qadvice parent">
               <div class="collapse" id="Q3_6_no_advice">
                 <p >I did not save them.</p>
               </div>
-              <div class="collapse" id="Q3_6_yes_advice">
-                <p>I have saved them.</p>
+              <div class="collapse text-center children" id="Q3_6_yes_advice">
                 <!-- Button to Open the Modal -->
-                <div class="col text-center">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Q3_6_q" >
                     <b> More Information</b>
                   </button>
-                </div>
+                  
+
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="Q3_6_q">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <!-- Modal Header -->
@@ -1330,10 +1423,19 @@ This is done simply by opening your terminal, nagivating to your repository and 
             </div>
           </div>
         
-          <div class="row question collapse" id="Q3_7">
+          <div class="row mb-2 question collapse" id="Q3_7">
             <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-              <p class="lead"> <b>Have you saved the data cleaning / processing sripts that generate any intermediate or temporary data files needed by the analyses in src/data-processing?</b> </p>
-              <p> </p>
+              <div class="check-btn">
+                <input id="myid_Q3_7" type="checkbox" >
+                <label for="myid_Q3_7" class="clicker">
+                  <p class="lead"> 
+                    <b>Have you saved the data cleaning / processing sripts that generate any intermediate or temporary data files needed by the analyses in src/data-processing? &nbsp; &nbsp;</b>
+                    <i id = "arrow" class="fas fa-angle-double-down fa-xs" style="color:#293133;"></i>
+                  </p>
+                </label>
+                <p class="hiddendiv"></p>
+
+              </div>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1345,20 +1447,20 @@ This is done simply by opening your terminal, nagivating to your repository and 
                 </label>
               </div>
             </div>
-            <div class="col-md-4 qadvice">
+            <div class="col-md-4 qadvice parent">
               <div class="collapse" id="Q3_7_no_advice">
                 <p >I did not save them.</p>
               </div>
-              <div class="collapse" id="Q3_7_yes_advice">
-                <p>I have saved them.</p>
+              <div class="collapse text-center children" id="Q3_7_yes_advice">
                 <!-- Button to Open the Modal -->
-                <div class="col text-center">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Q3_7_q" >
                     <b> More Information</b>
                   </button>
-                </div>
+                  
+
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="Q3_7_q">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <!-- Modal Header -->
@@ -1381,10 +1483,19 @@ This is done simply by opening your terminal, nagivating to your repository and 
             </div>
           </div>
         
-          <div class="row question collapse" id="Q3_8">
+          <div class="row mb-2 question collapse" id="Q3_8">
             <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-              <p class="lead"> <b>Have you saved the files that contain the actual analysis?</b> </p>
-              <p> </p>
+              <div class="check-btn">
+                <input id="myid_Q3_8" type="checkbox" >
+                <label for="myid_Q3_8" class="clicker">
+                  <p class="lead"> 
+                    <b>Have you saved the files that contain the actual analysis? &nbsp; &nbsp;</b>
+                    <i id = "arrow" class="fas fa-angle-double-down fa-xs" style="color:#293133;"></i>
+                  </p>
+                </label>
+                <p class="hiddendiv"></p>
+
+              </div>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1396,20 +1507,20 @@ This is done simply by opening your terminal, nagivating to your repository and 
                 </label>
               </div>
             </div>
-            <div class="col-md-4 qadvice">
+            <div class="col-md-4 qadvice parent">
               <div class="collapse" id="Q3_8_no_advice">
                 <p >I have saved them.</p>
               </div>
-              <div class="collapse" id="Q3_8_yes_advice">
-                <p>I have saved them.</p>
+              <div class="collapse text-center children" id="Q3_8_yes_advice">
                 <!-- Button to Open the Modal -->
-                <div class="col text-center">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Q3_8_q" >
                     <b> More Information</b>
                   </button>
-                </div>
+                  
+
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="Q3_8_q">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <!-- Modal Header -->
@@ -1432,10 +1543,19 @@ This is done simply by opening your terminal, nagivating to your repository and 
             </div>
           </div>
         
-          <div class="row question collapse" id="Q3_9">
+          <div class="row mb-2 question collapse" id="Q3_9">
             <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-              <p class="lead"> <b>Have you saved the finished data sets that are of general interest in results/datasets?</b> </p>
-              <p> </p>
+              <div class="check-btn">
+                <input id="myid_Q3_9" type="checkbox" >
+                <label for="myid_Q3_9" class="clicker">
+                  <p class="lead"> 
+                    <b>Have you saved the finished data sets that are of general interest in results/datasets? &nbsp; &nbsp;</b>
+                    <i id = "arrow" class="fas fa-angle-double-down fa-xs" style="color:#293133;"></i>
+                  </p>
+                </label>
+                <p class="hiddendiv"></p>
+
+              </div>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1447,20 +1567,20 @@ This is done simply by opening your terminal, nagivating to your repository and 
                 </label>
               </div>
             </div>
-            <div class="col-md-4 qadvice">
+            <div class="col-md-4 qadvice parent">
               <div class="collapse" id="Q3_9_no_advice">
                 <p >I did not save them.</p>
               </div>
-              <div class="collapse" id="Q3_9_yes_advice">
-                <p>I have saved them.</p>
+              <div class="collapse text-center children" id="Q3_9_yes_advice">
                 <!-- Button to Open the Modal -->
-                <div class="col text-center">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Q3_9_q" >
                     <b> More Information</b>
                   </button>
-                </div>
+                  
+
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="Q3_9_q">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <!-- Modal Header -->
@@ -1483,10 +1603,19 @@ This is done simply by opening your terminal, nagivating to your repository and 
             </div>
           </div>
         
-          <div class="row question collapse" id="Q3_10">
+          <div class="row mb-2 question collapse" id="Q3_10">
             <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-              <p class="lead"> <b>Have you saved the written descriptions of results, i.e. a final paper in results/report?</b> </p>
-              <p> </p>
+              <div class="check-btn">
+                <input id="myid_Q3_10" type="checkbox" >
+                <label for="myid_Q3_10" class="clicker">
+                  <p class="lead"> 
+                    <b>Have you saved the written descriptions of results, i.e. a final paper in results/report? &nbsp; &nbsp;</b>
+                    <i id = "arrow" class="fas fa-angle-double-down fa-xs" style="color:#293133;"></i>
+                  </p>
+                </label>
+                <p class="hiddendiv"></p>
+
+              </div>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1498,20 +1627,20 @@ This is done simply by opening your terminal, nagivating to your repository and 
                 </label>
               </div>
             </div>
-            <div class="col-md-4 qadvice">
+            <div class="col-md-4 qadvice parent">
               <div class="collapse" id="Q3_10_no_advice">
                 <p >I did not save them.</p>
               </div>
-              <div class="collapse" id="Q3_10_yes_advice">
-                <p>I have saved them.</p>
+              <div class="collapse text-center children" id="Q3_10_yes_advice">
                 <!-- Button to Open the Modal -->
-                <div class="col text-center">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Q3_10_q" >
                     <b> More Information</b>
                   </button>
-                </div>
+                  
+
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="Q3_10_q">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <!-- Modal Header -->
@@ -1534,10 +1663,19 @@ This is done simply by opening your terminal, nagivating to your repository and 
             </div>
           </div>
         
-          <div class="row question collapse" id="Q3_11">
+          <div class="row mb-2 question collapse" id="Q3_11">
             <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-              <p class="lead"> <b>Are your analyses in the paper visualized?</b> </p>
-              <p> Graphs and charts let you explore and learn about the structure of the information you collect. Good data visualizations also make it easier to communicate your ideas and findings to other people. </p>
+              <div class="check-btn">
+                <input id="myid_Q3_11" type="checkbox" >
+                <label for="myid_Q3_11" class="clicker">
+                  <p class="lead"> 
+                    <b>Are your analyses in the paper visualized? &nbsp; &nbsp;</b>
+                    <i id = "arrow" class="fas fa-angle-double-down fa-xs" style="color:#293133;"></i>
+                  </p>
+                </label>
+                <p class="hiddendiv">Graphs and charts let you explore and learn about the structure of the information you collect. Good data visualizations also make it easier to communicate your ideas and findings to other people. </p>
+
+              </div>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1549,20 +1687,20 @@ This is done simply by opening your terminal, nagivating to your repository and 
                 </label>
               </div>
             </div>
-            <div class="col-md-4 qadvice">
+            <div class="col-md-4 qadvice parent">
               <div class="collapse" id="Q3_11_no_advice">
                 <p >The results are not visualized.</p>
               </div>
-              <div class="collapse" id="Q3_11_yes_advice">
-                <p>The results are visualized.</p>
+              <div class="collapse text-center children" id="Q3_11_yes_advice">
                 <!-- Button to Open the Modal -->
-                <div class="col text-center">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Q3_11_q" >
                     <b> More Information</b>
                   </button>
-                </div>
+                  
+
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="Q3_11_q">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <!-- Modal Header -->
@@ -1585,10 +1723,19 @@ This is done simply by opening your terminal, nagivating to your repository and 
             </div>
           </div>
         
-          <div class="row question collapse" id="Q3_12">
+          <div class="row mb-2 question collapse" id="Q3_12">
             <div class="col-md-6 qquestion" style="margin-left: 2em; margin-right: -2em;padding-right: 2em">
-              <p class="lead"> <b>Have you saved the figures in results/figures?</b> </p>
-              <p> </p>
+              <div class="check-btn">
+                <input id="myid_Q3_12" type="checkbox" >
+                <label for="myid_Q3_12" class="clicker">
+                  <p class="lead"> 
+                    <b>Have you saved the figures in results/figures? &nbsp; &nbsp;</b>
+                    <i id = "arrow" class="fas fa-angle-double-down fa-xs" style="color:#293133;"></i>
+                  </p>
+                </label>
+                <p class="hiddendiv"></p>
+
+              </div>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1600,20 +1747,20 @@ This is done simply by opening your terminal, nagivating to your repository and 
                 </label>
               </div>
             </div>
-            <div class="col-md-4 qadvice">
+            <div class="col-md-4 qadvice parent">
               <div class="collapse" id="Q3_12_no_advice">
                 <p >I did not save them.</p>
               </div>
-              <div class="collapse" id="Q3_12_yes_advice">
-                <p>I have saved them.</p>
+              <div class="collapse text-center children" id="Q3_12_yes_advice">
                 <!-- Button to Open the Modal -->
-                <div class="col text-center">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Q3_12_q" >
                     <b> More Information</b>
                   </button>
-                </div>
+                  
+
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="Q3_12_q">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <!-- Modal Header -->
@@ -1645,10 +1792,19 @@ This is done simply by opening your terminal, nagivating to your repository and 
           <p>These four questions allow you to conduct the final checks for your online compendium before submitting your manuscript.</p>
         
         
-          <div class="row question " id="Q4_2">
+          <div class="row mb-2 question " id="Q4_2">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
-              <p class="lead"> <b>Does the code in your compendium produce all statistics, tables, figures, etc. in your manuscript?</b> </p>
-              <p> Open science, i.e. “making the content and process of producing evidence and claims transparent and accessible to others” (Munafo et al., 2017, p. 5) improves the robustness of scientific research by contributing to reproducibility, replicability, and generalizability of findings.</p>
+              <div class="check-btn">
+                <input id="myid_Q4_2" type="checkbox" >
+                <label for="myid_Q4_2" class="clicker">
+                  <p class="lead"> 
+                    <b>Does the code in your compendium produce all statistics, tables, figures, etc. in your manuscript? &nbsp; &nbsp;</b>
+                    <i id = "arrow" class="fas fa-angle-double-down fa-xs" style="color:#293133;"></i>
+                  </p>
+                </label>
+                <p class="hiddendiv">Open science, i.e. “making the content and process of producing evidence and claims transparent and accessible to others” (Munafo et al., 2017, p. 5) improves the robustness of scientific research by contributing to reproducibility, replicability, and generalizability of findings.</p>
+
+              </div>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1660,20 +1816,20 @@ This is done simply by opening your terminal, nagivating to your repository and 
                 </label>
               </div>
             </div>
-            <div class="col-md-4 qadvice">
+            <div class="col-md-4 qadvice parent">
               <div class="collapse" id="Q4_2_no_advice">
                 <p >The code does not (yet) produce everything. Run <code>git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY</code>) followed by <code>doit</code> and check where your code is not fully reproducible. </p>
               </div>
-              <div class="collapse" id="Q4_2_yes_advice">
-                <p>The code documented in the compendium produces everything.</br></br> To check this, run <code>git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY</code>) followed by <code>doit</code>.</p>
+              <div class="collapse text-center children" id="Q4_2_yes_advice">
                 <!-- Button to Open the Modal -->
-                <div class="col text-center">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Q4_2_q" >
                     <b> More Information</b>
                   </button>
-                </div>
+                  
+
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="Q4_2_q">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <!-- Modal Header -->
@@ -1696,10 +1852,19 @@ This is done simply by opening your terminal, nagivating to your repository and 
             </div>
           </div>
         
-          <div class="row question " id="Q4_3">
+          <div class="row mb-2 question " id="Q4_3">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
-              <p class="lead"> <b>Does the manuscript refer to the Standardized Research Compendium article?</b> </p>
-              <p> We appreciate your use of our checklist! Please reference <a href="#" target="_blank">our article</a>.</p>
+              <div class="check-btn">
+                <input id="myid_Q4_3" type="checkbox" >
+                <label for="myid_Q4_3" class="clicker">
+                  <p class="lead"> 
+                    <b>Does the manuscript refer to the Standardized Research Compendium article? &nbsp; &nbsp;</b>
+                    <i id = "arrow" class="fas fa-angle-double-down fa-xs" style="color:#293133;"></i>
+                  </p>
+                </label>
+                <p class="hiddendiv">We appreciate your use of our checklist! Please reference <a href="#" target="_blank">our article</a>.</p>
+
+              </div>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1711,20 +1876,20 @@ This is done simply by opening your terminal, nagivating to your repository and 
                 </label>
               </div>
             </div>
-            <div class="col-md-4 qadvice">
+            <div class="col-md-4 qadvice parent">
               <div class="collapse" id="Q4_3_no_advice">
                 <p >Please reference our article: </br> <ul> <li>APA: </li>  <li>Chicago: </li> <li>Bibtex: </li> <li>Endnote: </li> </ul></p>
               </div>
-              <div class="collapse" id="Q4_3_yes_advice">
-                <p>We appreciate your use of our checklist! Thank you for your reference <a href="#" target="_blank">our article</a>!</p>
+              <div class="collapse text-center children" id="Q4_3_yes_advice">
                 <!-- Button to Open the Modal -->
-                <div class="col text-center">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Q4_3_q" >
                     <b> More Information</b>
                   </button>
-                </div>
+                  
+
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="Q4_3_q">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <!-- Modal Header -->
@@ -1747,10 +1912,19 @@ This is done simply by opening your terminal, nagivating to your repository and 
             </div>
           </div>
         
-          <div class="row question " id="Q4_4">
+          <div class="row mb-2 question " id="Q4_4">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
-              <p class="lead"> <b>Did you have another person or another computer try to run the compendium, and checked the results?</b> </p>
-              <p> At each major milestone or release, check your compendium by cloning it and running <code>doit</code> on a new computer or virtual server. Doing this ensures your scripts are fully reproducible, transparent and open.</p>
+              <div class="check-btn">
+                <input id="myid_Q4_4" type="checkbox" >
+                <label for="myid_Q4_4" class="clicker">
+                  <p class="lead"> 
+                    <b>Did you have another person or another computer try to run the compendium, and checked the results? &nbsp; &nbsp;</b>
+                    <i id = "arrow" class="fas fa-angle-double-down fa-xs" style="color:#293133;"></i>
+                  </p>
+                </label>
+                <p class="hiddendiv">At each major milestone or release, check your compendium by cloning it and running <code>doit</code> on a new computer or virtual server. Doing this ensures your scripts are fully reproducible, transparent and open.</p>
+
+              </div>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1762,20 +1936,20 @@ This is done simply by opening your terminal, nagivating to your repository and 
                 </label>
               </div>
             </div>
-            <div class="col-md-4 qadvice">
+            <div class="col-md-4 qadvice parent">
               <div class="collapse" id="Q4_4_no_advice">
                 <p >I did not check my scripts for my compendium on another computer. </br></br> Clone your compendium (<code>git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY</code>) and run <code>doit</code> on a new computer or virtual server.</p>
               </div>
-              <div class="collapse" id="Q4_4_yes_advice">
-                <p>I have checked my compendium by cloning it (<code>git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY</code>) and running <code>doit</code> on a new computer or virtual server.</p>
+              <div class="collapse text-center children" id="Q4_4_yes_advice">
                 <!-- Button to Open the Modal -->
-                <div class="col text-center">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Q4_4_q" >
                     <b> More Information</b>
                   </button>
-                </div>
+                  
+
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="Q4_4_q">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <!-- Modal Header -->
@@ -1798,10 +1972,19 @@ This is done simply by opening your terminal, nagivating to your repository and 
             </div>
           </div>
         
-          <div class="row question " id="Q4_5">
+          <div class="row mb-2 question " id="Q4_5">
             <div class="col-md-6 qquestion" style="padding-right: 2em">
-              <p class="lead"> <b>Did you anonymize your repository before submitting?</b> </p>
-              <p> Obviously, you are hiding your name in the text of the article. However, sending a link to your GitHub repository will make identity known to the revieweers, which, in turn, defeats the purpose of a blind review.</p>
+              <div class="check-btn">
+                <input id="myid_Q4_5" type="checkbox" >
+                <label for="myid_Q4_5" class="clicker">
+                  <p class="lead"> 
+                    <b>Did you anonymize your repository before submitting? &nbsp; &nbsp;</b>
+                    <i id = "arrow" class="fas fa-angle-double-down fa-xs" style="color:#293133;"></i>
+                  </p>
+                </label>
+                <p class="hiddendiv">Obviously, you are hiding your name in the text of the article. However, sending a link to your GitHub repository will make identity known to the revieweers, which, in turn, defeats the purpose of a blind review.</p>
+
+              </div>
             </div>
             <div class="col-md-2 qcheck">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1813,20 +1996,20 @@ This is done simply by opening your terminal, nagivating to your repository and 
                 </label>
               </div>
             </div>
-            <div class="col-md-4 qadvice">
+            <div class="col-md-4 qadvice parent">
               <div class="collapse" id="Q4_5_no_advice">
                 <p ><a href="http://anonymous.4open.science/" target="_blank">Anonymous GitHub</a> is a system to anonymize Github repositories so you can refer to your online compendium during the double-blind paper submission process. </p>
               </div>
-              <div class="collapse" id="Q4_5_yes_advice">
-                <p></p>
+              <div class="collapse text-center children" id="Q4_5_yes_advice">
                 <!-- Button to Open the Modal -->
-                <div class="col text-center">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Q4_5_q" >
                     <b> More Information</b>
                   </button>
-                </div>
+                  
+
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="Q4_5_q">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <!-- Modal Header -->
@@ -1853,6 +2036,8 @@ This is done simply by opening your terminal, nagivating to your repository and 
       
     </div>
 </div>
+<br>
+<br>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
