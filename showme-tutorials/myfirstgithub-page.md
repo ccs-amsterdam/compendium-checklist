@@ -39,6 +39,7 @@ The instructions how to create a new repo can be found <a href="https://git-scm.
 To begin, open up a terminal and go to the place on your local machine where you want to place your project.
 To change directories, you use the <code>cd</code> command.
 For example, if you have a 'projects' folder on your desktop, you do something like:
+
 ```shell
 joetheplumber:Desktop joetheplumber$ cd ~/Desktop
 joetheplumber:Desktop joetheplumber$ mkdir myproject
@@ -46,6 +47,7 @@ joetheplumber:Desktop joetheplumber$ cd myproject/
 ```
 
 To connect (initialize) a git repository in the root of the folder, run the <a href="https://git-scm.com/docs/git-init" target="_blank"><code>git init</code></a> command:  
+
 ```shell
 joetheplumber:myproject joetheplumber$ git init
 Initialized empty Git repository in /Users/joetheplumber/Desktop/myproject/.git/
@@ -54,6 +56,7 @@ Initialized empty Git repository in /Users/joetheplumber/Desktop/myproject/.git/
 <h3 id="step3">3. Add a new file to the repo</h3>
 When your project on your local machine is connected to the online git repository, you can start adding files to your project.
 This can be done using any text editor you like, or by running a <a href="https://linux.die.net/man/1/touch" target="_blank"><code>touch</code></a> command:
+
 ```shell
 joetheplumber:myproject mnelson$ touch joetheplumber.txt
 joetheplumber:myproject joetheplumber$ ls
