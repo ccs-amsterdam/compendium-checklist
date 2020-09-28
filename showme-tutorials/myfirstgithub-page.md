@@ -18,15 +18,17 @@ Follow the steps below to get comfortable making changes to the code base, openi
 ### 1. Install git and create a GitHub account
 To start, (a) install git, and (b) create a free Github account. <br> <br>
 
-The first step is to install git.
-For this tutorial, we will be using the command line only:
+<strong>(a) Installing git </strong><br>
+For this tutorial, we recommend to use the command line:
 <ul>
   <li> For Windows users, ...  </li>
   <li> For Mac users, use <em>Finder</> to search for <em>Terminal</em> in the <em>Applications</em>. </li>
   <li> For Linux users,  ... </li>
 </ul>
+The instructions are documented <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank">here</a>.  
 
+<strong>(b) Free GitHub account </strong><br>
+Once you have installed git on your computer, create a GitHub account <a href="https://github.com/" target="_blank">here</a>.
+(GitHub has <a href="https://docs.github.com/en/free-pro-team@latest/github/teaching-and-learning-with-github-education/applying-for-an-educator-or-researcher-discount" target="_blank">special accounts</a> for academic researchers.)
 
-Follow the instructions here to install git (if it's not already installed). Note that for this tutorial we will be using git on the command line only. While there are some great git GUIs (graphical user interfaces), I think it's easier to learn git using git-specific commands first and then to try out a git GUI once you're more comfortable with the command.
-
-Once you've done that, create a GitHub account here.  (Accounts are free for public repositories, but there's a charge for private repositories.)
+### 2. Create a local git repository
