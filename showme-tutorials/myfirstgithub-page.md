@@ -47,7 +47,16 @@ joetheplumber:Desktop joetheplumber$ cd myproject/
 
 To initialize a git repository in the root of the folder, run the <a href="https://git-scm.com/docs/git-init" target="_blank"><code>git init</code></a> command:  
 ```shell
-joetheplumber:Desktop joetheplumber$ cd ~/Desktop
-joetheplumber:Desktop joetheplumber$ mkdir myproject
-joetheplumber:Desktop joetheplumber$ cd myproject/
+joetheplumber:myproject joetheplumber$ git init
+Initialized empty Git repository in /Users/joetheplumber/Desktop/myproject/.git/
 ```
+
+### 3. Add a new file to the repo
+
+### 4. Add a file to the staging environment
+
+### 5.  Create a commit
+
+### 6. Create a new branch
+
+### 7. Create a new repository on GitHub
