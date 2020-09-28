@@ -1,4 +1,4 @@
-### About Version Control
+## About Version Control
 
 <img src="figures/vc-xkcd.jpg"
      style="float: center; margin-right: 10px;" />
