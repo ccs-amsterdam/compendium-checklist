@@ -129,20 +129,23 @@ joetheplumber:myproject joetheplumber$ git commit -m "This is my first commit!"
 ```
 
 The message at the end of the commit should be something related to what the commit contains - maybe it's a new feature, maybe it's a bug fix, maybe it's just fixing a typo.
-Don't put a message like "asdfadsf" or "foobar".
-That makes the other people who see your commit sad. Very, very, sad.
+Don't put a message like "<em>asdfadsf</em>" or "<em>foobar</em>".
+That makes the other people who see your commit sad.
+Very, very, sad.
 
 <h3 id="step6">6. Create a new branch</h3>
 
-Now that you've made a new commit, let's try something a little more advanced.
+What if you want to try out some code, and you do not want to make changes to the main project, until you know the new code is running?
+This is where <a href="https://git-scm.com/docs/git-branch" target="_blank"><code>git branch</code></a> come in.
 
-Say you want to make a new feature but are worried about making changes to the main project while developing the feature. This is where git branches come in.
+Branches allow you to move back and forth between 'states' of a project. For instance, if you want to add a new page to your website you can create a new branch just for that page without affecting the main part of the project.
+Once you're done with the page, you can <a href="https://git-scm.com/docs/git-merge" target="_blank">merge</a> your changes from your branch into the primary branch.
+When you create a new branch, Git keeps track of which commit your branch 'branched' off of, so it knows the history behind all the files.
 
-Branches allow you to move back and forth between 'states' of a project. For instance, if you want to add a new page to your website you can create a new branch just for that page without affecting the main part of the project. Once you're done with the page, you can merge your changes from your branch into the primary branch. When you create a new branch, Git keeps track of which commit your branch 'branched' off of, so it knows the history behind all the files.
+Let's say you are on the primary branch and want to create a new branch to develop your web page.
+Here's what you'll do: <a href="https://git-scm.com/docs/git-checkout" target="_blank"><code>Run git checkout -b [my branch name]</code></a>. This command will automatically create a new branch and then 'check you out' on it, meaning git will move you to that branch, off of the primary (master) branch.
 
-Let's say you are on the primary branch and want to create a new branch to develop your web page. Here's what you'll do: Run git checkout -b <my branch name>. This command will automatically create a new branch and then 'check you out' on it, meaning git will move you to that branch, off of the primary branch.
-
-After running the above command, you can use the git branch command to confirm that your branch was created:
+After running the above command, you can use the <a href="https://git-scm.com/docs/git-branch" target="_blank"><code>git branch</code></a> command to confirm that your branch was created:
 
 ```shell
 joetheplumber:myproject joetheplumber$ git branch
@@ -152,21 +155,24 @@ joetheplumber:myproject joetheplumber$ git branch
 
 The branch name with the asterisk next to it indicates which branch you're pointed to at that given time.
 
-Now, if you switch back to the primary branch and make some more commits, your new branch won't see any of those changes until you merge those changes onto your new branch.
+Now, if you switch back to the primary branch and make some more commits, your new branch won't see any of those changes until you <a href="https://git-scm.com/docs/git-merge" target="_blank">merge</a> those changes onto your new branch.
 
 <h3 id="step7">7. Create a new repository on GitHub</h3>
 
 If you only want to keep track of your code locally, you don't need to use GitHub. But if you want to work with a team, you can use GitHub to collaboratively modify the project's code.
 
-
-
 To create a new repo on GitHub, log in and go to the GitHub home page. You should see a green '+ New repository' button:
+
+[add screenshot via ccs github]
 
 After clicking the button, GitHub will ask you to name your repo and provide a brief description:
 
+[add screenshot via ccs github]
+
 When you're done filling out the information, press the 'Create repository' button to make your new repo.
 
-GitHub will ask if you want to create a new repo from scratch or if you want to add a repo you have created locally. In this case, since we've already created a new repo locally, we want to push that onto GitHub so follow the '....or push an existing repository from the command line' section:
+GitHub will ask if you want to create a new repo from scratch or if you want to add a repo you have created locally.
+In this case, since we've already created a new repo locally, we want to push that onto GitHub so follow the <strong>'....or push an existing repository from the command line'</strong> section:
 
 ```shell
 joetheplumber:myproject joetheplumber$ git remote add origin https://github.com/ccs-amsterdam/mynewrepository.git
@@ -182,9 +188,10 @@ Branch master set up to track remote branch master from origin.
 (You'll want to change the URL in the first command line to what GitHub lists in this section since your GitHub username and repo name are different.)
 
 <h3 id="step8">8. Push a branch to GitHub</h3>
-Now we'll push the commit in your branch to your new GitHub repo. This allows other people to see the changes you've made. If they're approved by the repository's owner, the changes can then be merged into the primary branch.
+Now we will <a href="https://git-scm.com/docs/git-push" target="_blank">push</a> the commit in your branch to your new GitHub repo.
+This allows other people to see the changes you've made. If they're approved by the repository's owner, the changes can then be merged into the primary branch.
 
-To push changes onto a new branch on GitHub, you'll want to run git push origin yourbranchname. GitHub will automatically create the branch for you on the remote repository:
+To push changes onto a new branch on GitHub, you'll want to run <code>git push origin yourbranchname</code>. GitHub will automatically create the branch for you on the remote repository:
 
 ```shell
 joetheplumber:myproject joetheplumber$ git push origin my-new-branch
@@ -197,11 +204,20 @@ To https://github.com/ccs-amsterdam/mynewrepository.git
  * [new branch]      my-new-branch -> my-new-branch
 ```
 
-You might be wondering what that "origin" word means in the command above. What happens is that when you clone a remote repository to your local machine, git creates an alias for you. In nearly all cases this alias is called "origin." It's essentially shorthand for the remote repository's URL. So, to push your changes to the remote repository, you could've used either the command: git push git@github.com:git/git.git yourbranchname or git push origin yourbranchname
+You might be wondering what that "origin" word means in the command above.
+What happens is that when you clone a remote repository to your local machine, git creates an <strong>alias</strong> for you.
+In nearly all cases this alias is called "<a href="https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes" target="_blank">origin</a>."
+It's essentially shorthand for the remote repository's URL.
+So, to push your changes to the remote repository, you could've used either the command: <code>git push git@github.com:git/git.git yourbranchname or git push origin yourbranchname</code>
 
 (If this is your first time using GitHub locally, it might prompt you to log in with your GitHub username and password.)
 
-If you refresh the GitHub page, you'll see note saying a branch with your name has just been pushed into the repository. You can also click the 'branches' link to see your branch listed there.
+If you refresh the GitHub page, you will see note saying a branch with your name has just been pushed into the repository.
+You can also click the 'branches' link to see your branch listed there.
+
+[add screenshot via ccs github]
+
+Now click the green button in the screenshot above. We are going to make a <strong>pull request</strong>!
 
 <h3 id="step9">9. Create a Pull Request (PR)</h3>
 
@@ -209,29 +225,43 @@ A pull request (or PR) is a way to alert a repo's owners that you want to make s
 
 This is what the PR page looks like before you've submitted it:
 
+[add screenshot via ccs github]
+
 And this is what it looks like once you've submitted the PR request:
+
+[add screenshot via ccs github]
 
 You might see a big green button at the bottom that says 'Merge pull request'. Clicking this means you'll merge your changes into the primary branch.
 
-Note that this button won't always be green. In some cases it'll be grey, which means you're faced with a merge conflict. This is when there is a change in one file that conflicts with a change in another file and git can't figure out which version to use. You'll have to manually go in and tell git which version to use.
+Note that this button won't always be green.
+In some cases it'll be grey, which means you're faced with a <strong>merge conflict</strong>.
+This is when there is a change in one file that conflicts with a change in another file and git can't figure out which version to use.
+You'll have to manually go in and tell git which version to use.
 
 Sometimes you'll be a co-owner or the sole owner of a repo, in which case you may not need to create a PR to merge your changes. However, it's still a good idea to make one so you can keep a more complete history of your updates and to make sure you always create a new branch when making changes.
 
 <h3 id="step10">10. Merge a PR</h3>
 Go ahead and click the green 'Merge pull request' button. This will merge your changes into the primary branch.
 
+[add screenshot via ccs github]
+
 When you're done, I recommend deleting your branch (too many branches can become messy), so hit that grey 'Delete branch' button as well.
 
 You can double check that your commits were merged by clicking on the 'Commits' link on the first page of your new repo.
 
+[add screenshot via ccs github]
+
 This will show you a list of all the commits in that branch. You can see the one I just merged right up top (Merge pull request \#2).
 
-You can also see the hash code of the commit on the right hand side. A hash code is a unique identifier for that specific commit. It's useful for referring to specific commits and when undoing changes (use the git revert <hash code number> command to backtrack).
+[add screenshot via ccs github]
+
+You can also see the <a href="https://git-scm.com/docs/git-hash-object" target="_blank">hash code</a> of the commit on the right hand side. A hash code is a unique identifier for that specific commit. It's useful for referring to specific commits and when undoing changes (use the <a href="https://git-scm.com/docs/git-revert" target="_blank"><code>git revert</a> [hash code number]</code> command to backtrack).
 
 <h3 id="step11">11. Get changes on GitHub back to your computer</h3>
-Right now, the repo on GitHub looks a little different than what you have on your local machine. For example, the commit you made in your branch and merged into the primary branch doesn't exist in the primary branch on your local machine.
+Right now, the repo on GitHub looks a little different than what you have on your local machine.
+For example, the commit you made in your branch and merged into the primary branch doesn't exist in the primary branch on your local machine.
 
-In order to get the most recent changes that you or others have merged on GitHub, use the git pull origin master command (when working on the primary branch).
+In order to get the most recent changes that you or others have merged on GitHub, use the <code>git pull origin master</code> command (when working on the primary branch).
 
 ```shell
 joetheplumber:myproject joetheplumber$ git pull origin master
@@ -248,9 +278,9 @@ Merge made by the 'recursive' strategy.
 
 This shows you all the files that have changed and how they've changed.
 
-Now we can use the git log command again to see all new commits.
+Now we can use the <a href="https://git-scm.com/docs/git-log" target="_blank"><code>git log</code></a> command again to see all new commits.
 
-(You may need to switch branches back to the primary branch. You can do that using the git checkout master command.)
+(You may need to switch branches back to the primary branch. You can do that using the <code>git checkout master</code> command.)
 
 ```shell
 joetheplumber:myproject joetheplumber$ git log
@@ -290,8 +320,7 @@ Date:   Thu Sep 10 17:42:15 2015 -0400
 ```
 <h3 id="step12">12. Bask in your git glory</h3>
 
-You've successfully made a PR and merged your code to the primary branch. Congratulations! If you'd like to dive a little deeper, check out the files in this Git101 folder for even more tips and tricks on using git and GitHub.
+You've successfully made a PR and merged your code to the primary branch. Congratulations! If you'd like to dive a little deeper, check out the files in <a href="https://github.com/cubeton/git101/tree/master/TurtorialInfo" target="_blank">this Git101 folder</a> for even more tips and tricks on using git and GitHub.
 
-I also recommend finding some time to work with your team on simulating a smaller group project like we did here. Have your team make a new folder with your team name, and add some files with text to it. Then, try pushing those changes to this remote repo. That way, your team can start making changes to files they didn't originally create and practice using the PR feature. And, use the git blame and git history tools on GitHub to get familiar with tracking which changes have been made in a file and who made those changes.
-
-The more you use git, the more comfortable you'll... git with it. (I couldn't resist.)
+### reference
+This tutorial is adapted from <a href="https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners" target="_blank">the tutorial</a> developed by <a href="https://product.hubspot.com/blog/author/meghan-nelson" target="_blank"><Meghan Nelson</a>
