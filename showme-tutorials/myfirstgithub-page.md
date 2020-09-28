@@ -82,9 +82,9 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```
-What this basically says is, "<em>Hey, we noticed you created a new file called `mytext.txt`, but unless you use the</em> <code>git add</code> <em>command we aren't going to do anything with it</em>."
+What this basically says is, "<em>Hey, we noticed you created a new file called "mytext.txt", but unless you use the</em> <code>git add</code> <em>command we aren't going to do anything with it</em>."
 
-
+If you want git to save the changes you made to your repo, you need the <code>git add <filename> command</code> (see <a href="#step3">Step 3</a> below).
 
 #### An interlude: The staging environment, the commit, and you
 
