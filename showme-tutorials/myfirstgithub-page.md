@@ -62,7 +62,7 @@ joetheplumber.txt
 
 When you add or modify files in a folder containing a git repo, git will notice that changes have been made inside the repo.
 But, git <strong>will not </strong> officially keep track of the file.
-That is, <strong> git will not save it,/strong>, or more precisely put it in a <code>commit</code> -- more about commits next -- unless you explicitly tell git to keep track of your changes.
+That is, <strong> git will not save it,</strong>, or more precisely put it in a <code>commit</code> -- more about commits next -- unless you explicitly tell git to keep track of your changes.
 
 After creating the new file, you can use the <a href="https://git-scm.com/docs/git-status" target="_blank"><code>git status</code></a> command to see which files git know exist.
 
