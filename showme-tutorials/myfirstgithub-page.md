@@ -7,12 +7,12 @@ This tutorial guides you through the first steps to find your way on GitHub.
 Follow the steps below to get comfortable making changes to the code base, opening up a pull request (PR), and merging code into the primary branch. Any important git and GitHub terms are in bold with links to the official git reference materials.
 <ol>
   <li> <a href="#step1">Install git and create a GitHub account</a> </li>
-  <li> Create a local git repository. </li>
-  <li> Add a new file to the repo. </li>
-  <li> Add a file to the staging environment. </li>
-  <li> Create a commit. </li>
-  <li> Create a new branch. </li>
-  <li> Create a new repository on GitHub. </li>
+  <li> <a href="#step2">Create a local git repository </a></li>
+  <li> <a href="#step3">Add a new file to the repo </a></li>
+  <li> <a href="#step4">Add a file to the staging environment </a></li>
+  <li> <a href="#step5">Create a commit </a></li>
+  <li> <a href="#step6">Create a new branch </a></li>
+  <li> <a href="#step7">Create a new repository on GitHub </a></li>
 </ol>
 
 <h3 id="step1">1. Install git and create a GitHub account</h3>
@@ -31,7 +31,7 @@ The instructions to install git are documented <a href="https://git-scm.com/book
 Once you have installed git on your computer, create a GitHub account <a href="https://github.com/" target="_blank">here</a>.
 (GitHub has <a href="https://docs.github.com/en/free-pro-team@latest/github/teaching-and-learning-with-github-education/applying-for-an-educator-or-researcher-discount" target="_blank">special accounts</a> for academic researchers.)
 
-### 2. Create a local git repository
+<h3 id="step2">2. Create a local git repository</h3>
 When you want to create a new project -- ideally when you are at the start of a research project -- on your local machine (that is, your personal computer), you first have to create a new repository (or often, '<b>repo</b>', for short).
 The instructions how to create a new repo can be found <a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository" target="_blank">here</a>. <br> <br>
 
@@ -51,12 +51,13 @@ joetheplumber:myproject joetheplumber$ git init
 Initialized empty Git repository in /Users/joetheplumber/Desktop/myproject/.git/
 ```
 
-### 3. Add a new file to the repo
+<h3 id="step3">3. Add a new file to the repo</h3>
 
-### 4. Add a file to the staging environment
+<h3 id="step4">4. Add a file to the staging environment</h3>
 
-### 5.  Create a commit
+<h3 id="step5">5. Create a commit</h3>
 
-### 6. Create a new branch
+<h3 id="step6">6. Create a new branch</h3>
 
-### 7. Create a new repository on GitHub
+
+<h3 id="step7">7. Create a new repository on GitHub</h3>
