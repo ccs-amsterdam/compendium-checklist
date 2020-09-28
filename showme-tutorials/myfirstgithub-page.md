@@ -1,6 +1,6 @@
 ### Intro to Git and Github for Beginners
 
-<img src="figures/git-xkcd.png"
+<img src="figures/git_xkcd.png"
      style="float: center; margin-right: 10px;" />
 
 <ol>
