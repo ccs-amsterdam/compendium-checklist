@@ -1,7 +1,7 @@
 ### Intro to Git and Github for Beginners
 
 <img src="figures/git_xkcd.png"
-     style="float: center; width: 80%;" />
+     style="float: center; width: 40%;" />
 
 <ol>
   <li> Install git and create a GitHub account. </li>
