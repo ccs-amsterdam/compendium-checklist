@@ -1,7 +1,7 @@
 ## Intro to Git and Github for Beginners
 
 <img src="figures/git_xkcd.png"
-     style="float: center"; style="width:40%" />
+     style="width:40%" />
 
 This tutorial guides you through the first steps to find your way on GitHub.
 Follow the steps below to get comfortable making changes to the code base, opening up a pull request (PR), and merging code into the primary branch. Any important git and GitHub terms are in bold with links to the official git reference materials.
