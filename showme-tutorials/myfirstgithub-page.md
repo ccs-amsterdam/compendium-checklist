@@ -17,7 +17,7 @@ Follow the steps below to get comfortable making changes to the code base, openi
   <li> <a href="#step9">Create a Pull Request (PR)</a></li>
   <li> <a href="#step10">Merge a PR</a></li>
   <li> <a href="#step11">Get changes on GitHub back to your computer</a></li>
-  <li><a href="step12">Bask in your git glory</a></li>
+  <li><a href="#step12">Bask in your git glory</a></li>
 </ol>
 
 <h3 id="step1">1. Install git and create a GitHub account</h3>
