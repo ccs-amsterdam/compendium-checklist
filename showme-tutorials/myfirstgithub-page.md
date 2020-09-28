@@ -322,5 +322,5 @@ Date:   Thu Sep 10 17:42:15 2015 -0400
 
 You've successfully made a PR and merged your code to the primary branch. Congratulations! If you'd like to dive a little deeper, check out the files in <a href="https://github.com/cubeton/git101/tree/master/TurtorialInfo" target="_blank">this Git101 folder</a> for even more tips and tricks on using git and GitHub.
 
-### reference
+### Reference
 This tutorial is adapted from <a href="https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners" target="_blank">the tutorial</a> developed by <a href="https://product.hubspot.com/blog/author/meghan-nelson" target="_blank"><Meghan Nelson</a>
