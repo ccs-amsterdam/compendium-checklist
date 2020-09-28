@@ -45,13 +45,42 @@ joetheplumber:Desktop joetheplumber$ mkdir myproject
 joetheplumber:Desktop joetheplumber$ cd myproject/
 ```
 
-To initialize a git repository in the root of the folder, run the <a href="https://git-scm.com/docs/git-init" target="_blank"><code>git init</code></a> command:  
+To connect (initialize) a git repository in the root of the folder, run the <a href="https://git-scm.com/docs/git-init" target="_blank"><code>git init</code></a> command:  
 ```shell
 joetheplumber:myproject joetheplumber$ git init
 Initialized empty Git repository in /Users/joetheplumber/Desktop/myproject/.git/
 ```
 
 <h3 id="step3">3. Add a new file to the repo</h3>
+When your project on your local machine is connected to the online git repository, you can start adding files to your project.
+This can be done using any text editor you like, or by running a <a href="https://linux.die.net/man/1/touch" target="_blank"><code>touch</code></a> command:
+```shell
+joetheplumber:myproject mnelson$ touch joetheplumber.txt
+joetheplumber:myproject joetheplumber$ ls
+joetheplumber.txt
+```
+
+When you add or modify files in a folder containing a git repo, git will notice that changes have been made inside the repo.
+But, git <strong>will not </strong> officially keep track of the file.
+That is, <strong> git will not save it,/strong>, or more precisely put it in a <code>commit</code> -- more about commits next -- unless you explicitly tell git to keep track of your changes.
+
+After creating the new file, you can use the <a href="https://git-scm.com/docs/git-status" target="_blank"><code>git status</code></a> command to see which files git know exist.
+
+```shell
+joetheplumber:myproject joetheplumber$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	joetheplumber.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+What this basically says is, "<em>Hey, we noticed you created a new file called joetheplumber.txt, but unless you use the <code>git add</code> command we aren't going to do anything with it</em>."
+
 
 <h3 id="step4">4. Add a file to the staging environment</h3>
 
