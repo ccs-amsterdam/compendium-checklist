@@ -15,7 +15,7 @@ Follow the steps below to get comfortable making changes to the code base, openi
   <li> Create a new repository on GitHub. </li>
 </ol>
 
-<a id="lession1">### 1. Install git and create a GitHub account</a>
+<h3 id="step1">1. Install git and create a GitHub account</h3>
 To start, (a) install git, and (b) create a free Github account. <br> <br>
 
 <strong>(a) Installing git </strong><br>
