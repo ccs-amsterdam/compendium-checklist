@@ -82,7 +82,9 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```
-What this basically says is, "<em>Hey, we noticed you created a new file called</em> <code>mytext.txt</code><em>, but unless you use the</em> <code>git add</code> <em>command we aren't going to do anything with it</em>."
+What this basically says is, "<em>Hey, we noticed you created a new file called `mytext.txt`, but unless you use the</em> <code>git add</code> <em>command we aren't going to do anything with it</em>."
+
+
 
 #### An interlude: The staging environment, the commit, and you
 
