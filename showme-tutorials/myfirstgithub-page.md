@@ -25,7 +25,7 @@ For this tutorial, we recommend to use the command line:
   <li> For Mac users, use <em>Finder</em> to search for <em>Terminal</em> in the <em>Applications</em>. </li>
   <li> For Linux users,  ... </li>
 </ul>
-The instructions are documented <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank">here</a>. <br> 
+The instructions to install git are documented <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank">here</a>. <br> 
 
 <strong>(b) Free GitHub account </strong><br>
 Once you have installed git on your computer, create a GitHub account <a href="https://github.com/" target="_blank">here</a>.
