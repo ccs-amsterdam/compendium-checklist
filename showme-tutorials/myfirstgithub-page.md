@@ -6,7 +6,7 @@
 This tutorial guides you through the first steps to find your way on GitHub.
 Follow the steps below to get comfortable making changes to the code base, opening up a pull request (PR), and merging code into the primary branch. Any important git and GitHub terms are in bold with links to the official git reference materials.
 <ol>
-  <li> [Install git and create a GitHub account](#Install-git-and-create-a-GitHub-account-Data) </li>
+  <li> <a href="#step1">Install git and create a GitHub account</a> </li>
   <li> Create a local git repository. </li>
   <li> Add a new file to the repo. </li>
   <li> Add a file to the staging environment. </li>
@@ -15,7 +15,7 @@ Follow the steps below to get comfortable making changes to the code base, openi
   <li> Create a new repository on GitHub. </li>
 </ol>
 
-### 1. Install git and create a GitHub account
+<a id="lession1">### 1. Install git and create a GitHub account</a>
 To start, (a) install git, and (b) create a free Github account. <br> <br>
 
 <strong>(a) Installing git </strong><br>
