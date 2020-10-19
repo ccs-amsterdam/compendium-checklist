@@ -41,4 +41,4 @@ for q in questions:
         when = {"Yes": "yes", "n": "no"}[q.yes_answer]
 
 
-open("index.html", "w").write(template.render(**locals()))
+open("docs/index.html", "w").write(template.render(**locals()))
