@@ -62,8 +62,6 @@ directory, simply run the `snapshot()` function.
 renv::snapshot()
 ```
 
-    ## * The lockfile is already up to date.
-
 You will now see a list of all packages that are used in the project or
 working directory. When asked to proceed, enter `y` in the Console. This
 will create the `renv.lock` file. If you open the lock file, you’ll see
@@ -87,8 +85,6 @@ automatically create the environment.
 ``` r
 renv::restore()
 ```
-
-    ## * The library is already synchronized with the lockfile.
 
 This will automatically install the packages that you need. Also, it
 **initializes** the environment. This means that when you execute R
