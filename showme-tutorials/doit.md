@@ -1,19 +1,18 @@
-## What is `doit`?
-
-
+## Automating Reproducible Science
 
 In a very simple and straightforward research setup, you may have a dataset that is already in exactly the desired format, you have a very straightforward analysis consisting of a simple script, and the only output you care about is some statistic said script produces. Then, to reproduce your research, all you'd need to do is to run that script.
 
-Unfortunately, many research projects involve more steps. Maybe you have to first install some uncommon software libraries, combine data from multiple sources, and run some preprocessing scripts that produce an intermediate dataset, that then is analyzed by several anaysis scripts. Maybe the output of these scripts has then to be processed in some way or anoyher, and maybe your scripts are even written in different languages. Maybe you cannot publicly share your raw data, but others could reproduce your analysis on an aggregate intermediate file. You could, of course, simply write a short instruction file in which you outline to any reader (including your future self) what needs to be done in which order, and how to do that.
+Unfortunately, many research projects involve more steps. Maybe you have to first install some uncommon software libraries, combine data from multiple sources, and run some preprocessing scripts that produce an intermediate dataset, that then is analyzed by several anaysis scripts. Maybe the output of these scripts has then to be processed in some way or anoyher, and maybe your scripts are even written in different languages. Maybe you cannot publicly share your raw data, but others could reproduce your analysis on an aggregate intermediate file. As you can imagine, this becomes complex really quickly...
 
 <img src="figures/doit_xkcd.png"
      style="width:40%" />
      
-This can be automated.
+You could, of course, simply write a short instruction file in which you outline to any reader (including your future self) what needs to be done in which order, and how to do that. But rather than instructing the researcher, why don't we instruct the computer to take the correct steps? In other words, *let's automate the reproduction process*
+
+There are several ways of doing this, such as [shell scripts](https://en.wikipedia.org/wiki/Shell_script) on Linux and MacOS or [batch files](https://en.wikipedia.org/wiki/Batch_file) on Windows. Advanced users of Linux may also have heard of [GNU Makefiles](https://en.wikipedia.org/wiki/Batch_file), which allow to specify, for instance, how to run a series of commands depending on things like the configuration of the system. This is an important point: We want our research to be replicable no matter what specific computer system someone uses. 
 
 ### Just `doit`
 
-There are several ways of doing this, such as [shell scripts](https://en.wikipedia.org/wiki/Shell_script) on Linux and MacOS or [batch files](https://en.wikipedia.org/wiki/Batch_file) on Windows. Advanced users of Linux may also have heard of [GNU Makefiles](https://en.wikipedia.org/wiki/Batch_file), which allow to specify, for instance, how to run a series of commands depending on things like the configuration of the system. This is an important point: We want our research to be replicable no matter what specific computer system someone uses. 
 
 `compendium-dodo` uses a system called `doit`, which is based on Python, which nowadays is preinstalled on almost all computers. 
 Using `doit`, the *compendium creator* can describe a set of **tasks** and their **dependencies**. 
