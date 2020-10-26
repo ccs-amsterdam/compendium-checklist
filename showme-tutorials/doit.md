@@ -28,4 +28,4 @@ As *compendium creator*, we provide a python module [compendium-dodo](https://gi
 to make it as easy as possible for you to get started with your reproducible research compendium.
 In short, `compendium-dodo` will initialize your compendium with the correct folders,
 and automatically create the `dodo.py` file that chains together the steps in your research.
-Please see [using dodod](https://github.com/vanatteveldt/compendium-dodo) for more information.
+Please see [using dodod](https://github.com/ccs-amsterdam/compendium-dodo/blob/main/README.md) for more information.
