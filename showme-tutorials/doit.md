@@ -13,9 +13,10 @@ There are several ways of doing this, such as [shell scripts](https://en.wikiped
 
 ### Just `doit`
 
+The compendium uses a system called [doit](https://pydoit.org/), which is based on Python.
+Fortunately, python is now preinstalled on almost all computers, so that's one less worry.
 
-`compendium-dodo` uses a system called `doit`, which is based on Python, which nowadays is preinstalled on almost all computers. 
-Using `doit`, the *compendium creator* can describe a set of **tasks** and their **dependencies**. 
+Using `doit`, you define the instructions for reproducing your results as a set of **tasks** and their **dependencies**. 
 For example, suppose that to reproduce your analysis we would have to install R and certain packages (with their correct versions); then download and clean a data set; and finally run a substantive analysis for a paper or report. 
 With `doit`, each of those steps is a single **task**, and the system is smart enough that it does not e.g. re-download a data set if it is already present. 
 
