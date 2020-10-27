@@ -1,3 +1,5 @@
+[<img src=https://compendium.ccs.amsterdam/static/dodo-sticker-1.png width="100">](https://compendium.ccs.amsterdam)
+
 # Compendium checklist
 
 Code to reverse-engineer the original checklist html and create a bootstrap version.
